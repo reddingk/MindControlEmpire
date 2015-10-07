@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">	
+  
+  <title>Mind Control Empire</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="wrapper">
+    
+    <!--Header-->
+		<div class="nav-container">
+			
+			<nav class="nav navbar-inverse" id="mce-main-nav" role="navigation">
+				<div class="container relative">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav" id="mce-inside-nav">
+							<li class="nav-link"><%= link_to "Artists", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+							<li class="nav-link"><%= link_to "News", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+							<li class="nav-link-home"><%= link_to "Home", {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %></li>	
+							<li class="nav-link"><%= link_to "Events", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+							<li class="nav-link"><%= link_to "Releases", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+    
+    <!--Body-->
+    <div class="mce-container container">
+      <%= yield %>
+    </div>
+    
+  </div>
+  
+</body>
+</html>
