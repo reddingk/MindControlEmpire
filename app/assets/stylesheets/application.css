@@ -23,6 +23,14 @@ html, body {
 }
 
 /*Navigation Bar*/
+.nav-container { 
+	position: fixed;
+	top: 0;
+  	left: 0;
+  	z-index: 100;
+  	width: 100%;
+}
+
 #mce-inside-nav {
     width: 100%;
 }
@@ -49,4 +57,17 @@ html, body {
 .nav-link .current-page, .nav-link:hover .current-page {
     background-color: rgba(175, 175, 175, 0.8) !important;
     color: #FFCC00 !important;
+}
+
+.nav-bottom { 
+	position: relative;
+	width: 100%;
+	text-align: center;
+	padding: 10px 0px;
+	background-color: rgba(255,204,0,0.9);
+}
+
+/*Main Section*/
+.mce-container {
+    padding-top:70px;
 }
