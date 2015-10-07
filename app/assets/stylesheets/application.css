@@ -10,25 +10,43 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require animate
+ *= require font-awesome
  *= require_tree .
  *= require_self
  */
 
+/*Entire Site*/
+html, body {
+    font-family: 'Roboto Slab', sans-serif;
+    height: 100%;
+}
+
+/*Navigation Bar*/
 #mce-inside-nav {
     width: 100%;
 }
 .nav-link, .nav-link-home {
     width: 20%;
     text-align: center;
+    
+    transition: all 0.3s;
 }
 .nav-link a, .nav-link-home a {
     color: #ffffff !important;
+    font-size: 18px;
+    font-weight: bold;
 }
 .nav-link:hover {
-    background-color: rgba(122, 41, 0, 0.8);
+    background-color: rgba(175, 175, 175, 0.8);
+}
+/*HOME Logo*/
+.nav-link-home .current-page, .nav-link-home:hover .current-page {
+    background-color: rgba(175, 175, 175, 0.8) !important;
+    color: #FFCC00 !important;
 }
 
-.nav-link-home .current-page, .nav-link-home:hover .current-page {
+.nav-link .current-page, .nav-link:hover .current-page {
+    background-color: rgba(175, 175, 175, 0.8) !important;
     color: #FFCC00 !important;
-    background-color: rgba(122, 41, 0, 0.8);
 }

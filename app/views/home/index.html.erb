@@ -1,2 +1,81 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<!--Default Carousel-->
+<div class="container mce-carousel-container">
+    <div class="row">
+        <!-- The carousel -->
+        <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel carousel-animate" data-ride="carousel">
+            <!--Title-->
+            <div class="main-title">Mind Control Empire</div>
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#transition-timer-carousel" data-slide-to="0" class="active"></li>
+				<li data-target="#transition-timer-carousel" data-slide-to="1"></li>
+				<li data-target="#transition-timer-carousel" data-slide-to="2"></li>
+				<li data-target="#transition-timer-carousel" data-slide-to="3"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				<div class="item active">
+                    <img class="carousel-img" src="../siteimg/home1.jpg" />
+                    <div class="carousel-caption">
+                        <h3 data-animation="animated bounceInLeft">
+                          <span class="icon-container"><i class="fa fa-microphone"></i></span> <span>Header 1</span>
+                        </h3>
+                        <p data-animation="animated bounceInRight">
+                          This is the caption for slide 1
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <img class="carousel-img" src="../siteimg/home2.jpg" />
+                    <div class="carousel-caption">
+                        <h3 data-animation="animated bounceInDown">
+                          <span class="icon-container"><i class="fa fa-calendar"></i></span> <span>Header 2</span>
+                        </h3>
+                        <p data-animation="animated bounceInUp">
+                          This is the caption for slide 2
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <img class="carousel-img" src="../siteimg/home3.jpg" />
+                    <div class="carousel-caption">
+                        <h3 data-animation="animated zoomInLeft">
+                          <span class="icon-container"><i class="fa fa-headphones"></i></span> <span>Header 3</span>
+                        </h3>
+                        <p data-animation="animated flipInX">
+                          This is the caption for slide 3
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <img class="carousel-img" src="../siteimg/home4.jpg" />
+                    <div class="carousel-caption">
+                        <h3 data-animation="animated bounceInLeft">
+                          <span class="icon-container"><i class="fa fa-video-camera"></i></span> <span>Header 4</span>
+                        </h3>
+                        <p data-animation="animated bounceInRight">
+                          This is the caption for slide 1
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+			<!-- Controls -->
+			<a class="left carousel-control" href="#transition-timer-carousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#transition-timer-carousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+            
+            <!-- Timer "progress bar" -->
+            <hr class="transition-timer-carousel-progress-bar animate" />
+		</div>
+    </div>
+</div>
+
+
