@@ -1,10 +1,8 @@
-class HomeController < ApplicationController
+class CmSController < ApplicationController
   def index
-    
     @jfile = File.read(Rails.public_path+"info.json")	
   	@jdata = JSON.parse(@jfile)
   	
-  	## New Releases
 	  @newreleases = []
   	@jdata["artists"].each do |artist|
   	  artist["releases"].each do |release|
@@ -22,9 +20,9 @@ class HomeController < ApplicationController
   		  end
   		end
   	end
-  	
-  	## 
+    
   end
-  
-## End Controller  
+
+  def edit
+  end
 end

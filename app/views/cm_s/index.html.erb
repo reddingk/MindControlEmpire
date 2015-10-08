@@ -1,0 +1,8 @@
+<h1>Scrap</h1>
+
+<p><b>Releases </b></p>
+<% @newreleases.each do |release| %>
+	<p><%= release["date"].to_date %> | <%= release["title"] %> | <%= release["url"].split("v=")[1] %> | <%= release["artist"] %> | <%= release["type"] %></p>
+<% end %>
+
+<p>[ <%= "2012-12-13".to_date.strftime('%m/%d/%Y') %> ]</p>

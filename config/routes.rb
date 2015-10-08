@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
+  
+
 # CMS - Editor  
-  get '_cms_/index'
-  get '_cms_/edit'
+  get 'cm_s/index'
+  get 'cm_s/edit'
   
 # Home
   get 'home/index'
