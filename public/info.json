@@ -1,6 +1,6 @@
 {
     "artists":[
-        {"name":"GANDHI ALI", "quote":"Real Live", "bio":"The first solo artist for Mind Control Empire","image":"",
+        {"name":"GANDHI ALI", "quote":"Real Live", "bio":"The first solo artist for Mind Control Empire","image":"GandhiAli-1.jpg",
         "social":[
             {"site":"twitter","handle":"GandhiGandhiAli"}, 
             {"site":"instagram","handle":"Gandhi_Ali"}], 
@@ -18,6 +18,11 @@
             {"title":"My Way", "type":"youtube","date":"2002-05-13","url":"https://www.youtube.com/watch?v=dthjojjVhDo","text":"My Way"}
         ]} 
     ],
-    "events":[],
+    "events":[
+        { "eventname":"Fan Meetup", "location":"DTLR Lakeforest Mall", "date":"2015-12-07", "artistname":"GANDHI ALI", "time":"13:00:00", "tags":[]},
+        { "eventname":"Live Show 1", "location":"Gaithersburg", "date":"2016-03-22", "artistname":"GANDHI ALI", "time":"22:00:00", "tags":[]},
+        { "eventname":"Live Show 2", "location":"Washington, DC", "date":"2016-04-05", "artistname":"GANDHI ALI", "time":"22:00:00", "tags":[]},
+        { "eventname":"Press Launch", "location":"93.9 WKYS", "date":"2015-11-28", "artistname":"", "time":"15:00:00", "tags":[]}
+        ],
     "news":[]
 }

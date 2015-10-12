@@ -34,24 +34,28 @@ html, body {
 #mce-inside-nav {
     width: 100%;
 }
+.mce-nav-logo { 
+    width: 50px;
+    height: 50px;
+}
 .nav-link, .nav-link-home {
     width: 20%;
     text-align: center;
     
     transition: all 0.3s;
 }
-.nav-link a, .nav-link-home a {
+.nav-link a {
     color: #ffffff !important;
     font-size: 18px;
     font-weight: bold;
+   
 }
 .nav-link:hover {
     background-color: rgba(175, 175, 175, 0.8);
 }
 /*HOME Logo*/
-.nav-link-home .current-page, .nav-link-home:hover .current-page {
-    background-color: rgba(175, 175, 175, 0.8) !important;
-    color: #FFCC00 !important;
+.nav-link-home .current-page {
+    
 }
 
 .nav-link .current-page, .nav-link:hover .current-page {
@@ -66,8 +70,15 @@ html, body {
 	padding: 10px 0px;
 	background-color: rgba(255,204,0,0.9);
 }
+.nav-link-home a{
+   padding-top: 0px !important;
+   padding-bottom: 0px !important;
+}
 
 /*Main Section*/
 .mce-container {
     padding-top:70px;
+    background-image: url("logoB.png");
+    background-size: 300px 300px;
+    
 }

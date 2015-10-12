@@ -78,7 +78,7 @@
     </div>
 </div>
 <!--Releases-->
-<div class="row home-row back-color">
+<div class="row home-row back-color-gold">
     <div class="container mce-carousel-container">
         <div class="home-subtitle">Releases</div>
         <!--Release Carosel-->
@@ -117,42 +117,6 @@
                     </div>
                 </div>-->
                 <!-- End Item -->
-                <!--<div class="item">
-                    <div class="release-video-card"></div>
-                    <div class="carousel-caption release-caption">
-                        <div class="col-sm-5 release-video"><object data="https://www.youtube.com/embed/-JYqJd3irRw"></object></div>
-                        <div class="col-sm-4">
-                            <h3>GANDHI ALI</h3>
-                            <p>02/13/15</p>
-                            <p>Poetic Justice Freestyle</p>
-                        </div>
-                    </div>
-                </div>-->
-                <!-- End Item -->
-                <!--<div class="item">
-                    <div class="release-video-card"></div>
-                    <div class="carousel-caption release-caption">
-                        <div class="col-sm-5 release-video"><object data="https://www.youtube.com/embed/UwYWQNkdF1Y"></object></div>
-                        <div class="col-sm-4">
-                            <h3>Artist Name 3</h3>
-                            <p>Date 2</p>
-                            <p>Release title 3</p>
-                        </div>
-                    </div>
-                </div>-->
-                <!-- End Item -->
-                <!--<div class="item">
-                    <img src="http://placehold.it/1200x400/8e44ad/ffffff&text=Services">
-                    <div class="carousel-caption">
-                        <h3>
-                            Headline</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
-                            ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-                    </div>
-                </div>-->
-                <!-- End Item -->
             </div>
             <!-- End Carousel Inner -->
             <ul class="nav nav-pills nav-justified">
@@ -161,15 +125,28 @@
                     <li data-target="#releaseCarousel" data-slide-to="<%= @itemnum %>" class="<%= 'active' if @itemnum == 0 %>"><a href="#"><%= release["title"] %><small><%= release["artist"] %></small></a></li>
                     <% @itemnum = @itemnum + 1 %>
                 <% end %>
-                <!--<li data-target="#releaseCarousel" data-slide-to="0" class="active"><a href="#">Real Live<small>GANDHI ALI</small></a></li>
-                <li data-target="#releaseCarousel" data-slide-to="1"><a href="#">Poetic Justice Freestyle<small>GANDHI ALI</small></a></li>
-                <li data-target="#releaseCarousel" data-slide-to="2"><a href="#">Release Title 3<small>release text 3</small></a></li>
-                <li data-target="#releaseCarousel" data-slide-to="3"><a href="#">Services<small>Lorem ipsum dolor sit</small></a></li>-->
+                <!--<li data-target="#releaseCarousel" data-slide-to="0" class="active"><a href="#">Real Live<small>GANDHI ALI</small></a></li>-->
             </ul>
         </div>
         </div>
         
     </div>
 </div>
-
+<!--Events-->
+<div class="row home-row back-color-grey">
+    <div class="container">
+        <div class="home-subtitle">Events</div>
+        <table class="event-list">
+            <% @newevents.each do |event| %>
+                <tr>
+                    <td class="event-date"><%= event["date"].to_date.strftime('%m/%d/%Y') %></td>
+                    <td class="event-artist"><div><img src='../artists/<%= event["photo"] %>' alt='<%= event["artistname"] %> photo' class="event-photo"></div><div><%= event["artistname"] %></div></td>
+                    <td class="event-name"><%= event["eventname"] %></td>
+                    <td class="event-location"><%= event["location"] %></td>
+                </tr>
+            <% end %>
+        </table>
+    </div>
+    
+</div>
 
