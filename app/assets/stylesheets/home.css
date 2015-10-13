@@ -111,6 +111,10 @@
     font-weight: bold;
 }
 
+.home-subtitle span, .home-subtitle span a {
+    color: #ffffff;
+}
+
 /*Release*/
 .r-container{
     padding-top: 20px;

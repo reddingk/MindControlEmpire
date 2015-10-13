@@ -1,0 +1,40 @@
+<div class="row page-row ">
+    <div class="container page-container">
+        <div class="home-subtitle"><span><a href="">Artists</a> ></span> <%= @talent["name"] %></div>
+        <div class="mce-row artist-about-row">
+            <div class="mce-col col-md-6">
+                <div class="social-list">
+                    <% @talent["social"].each do |social| %>
+                        <% if social["site"] == "twitter" %>
+                            <a href="https://twitter.com/<%= social["handle"] %>" target="_blank" class="social-links"><i class="fa fa-twitter fa-3x"></i></a>
+                        <% elsif social["site"] == "instagram"%>
+                            <a href="https://instagram.com/<%= social["handle"] %>" target="_blank" class="social-links"><i class="fa fa-instagram fa-3x"></i></a>
+                        <% end %>
+                    <% end %>
+                </div>    
+                <p class="artist-quote"><%= @talent["quote"] %></p>
+                <p class="artist-bio"><%= @talent["bio"] %></p>
+                
+            </div>
+                
+            <div class="mce-col col-sm-5 col-sm-offset-1"><img src="../artists/<%= @talent["image"] %>" class="artists-page-image" ></div>
+            <div style="clear:both;"></div>
+        </div>
+        <% if @talent["releases"].count > 0 %>
+            <div class="mce-row artist-release-row">
+                <div class="page-subtitles">Releases</div>
+                <div class="artist-releases">
+                    <% @talent["releases"].each do |release| %>
+                        <div class="col-sm-4">
+                            <div class="artist-release-video"><object data="https://www.youtube.com/embed/<%= release["url"].split("v=")[1] %>"></object></div>
+                            <div class="artist-release-title"><%= release["title"] %></div>
+                        </div>
+                    <% end %>
+                </div>
+                
+                <div style="clear:both;"></div>
+            </div>
+        <% end %>
+    </div>
+</div>
+

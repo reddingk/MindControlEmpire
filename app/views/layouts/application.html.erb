@@ -35,7 +35,7 @@
 					</div>
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav" id="mce-inside-nav">
-							<li class="nav-link"><%= link_to "Artists", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+							<li class="nav-link"><%= link_to "Artists", {controller: "artists", action: "index"}, class: "#{cp({controller: "artists", action: "index"})}" %></li>
 							<li class="nav-link"><%= link_to "News", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
 							<!--<li class="nav-link-home">< %= link_to "Home", {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %></li>	-->
 							<li class="nav-link-home"><%= link_to image_tag('logoW.png', class: 'mce-nav-logo', alt:'Home'), {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %></li>

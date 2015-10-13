@@ -89,8 +89,34 @@ html, body {
 }
 .mce-body {
     padding-bottom: 200px;
+    width: 100%;
+}
+.page-row {
+    padding: 30px 0px;
 }
 
+.page-container {
+    background-color: rgba(255,204,0,0.7);
+    border-radius: 10px;
+    
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.mce-row{
+    padding: 10px 0px;
+}
+.mce-row + .mce-row {
+    border-top: 3px solid #000000;
+}
+.mce-col {
+    padding-left: 0px;
+}
+
+.page-subtitles {
+    color: rgba(0,0,0, 1);
+    font-size: 22px;
+    font-weight: bold;
+}
 /*Footer*/
 .mce-footer { 
 	background-color: #000000;
