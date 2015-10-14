@@ -10,7 +10,7 @@ class ArtistsController < ApplicationController
   	  end
   	  @artists << artist
   	end
-  	
+  ## END index	
   end
 
   def individual
@@ -29,6 +29,18 @@ class ArtistsController < ApplicationController
   	end
   	
   	@releasecount = (@talent["releases"].count / 3.0).ceil
+  	
+  	##Events by artist
+  	@talent["events"] = []
+  	
+  	@jdata["events"].each do |event|
+  	  if event["artistname"] == @talent["name"] && event["date"].to_date > (Date.today - 1.day)
+  	    @talent["events"] << event
+  	  end
+  	end
+   @talent["events"].sort_by!{|e| e["date"].to_date }
+   
+  ## END individual	
   end
   
   def get_artistReleases

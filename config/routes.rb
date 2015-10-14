@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  
+# Empire  
+  get 'MCEmpire/', to: 'empire#index'
+  #get 'empire/index'
+
 # Artists
   get 'Artists/', to: 'artists#index'
   #get 'artists/index'
@@ -13,7 +16,8 @@ Rails.application.routes.draw do
   get 'cm_s/edit'
   
 # Home
-  get 'home/index'
+  get "", to: 'home#index'
+  #get 'home/index'
   root 'home#index'
   get 'home/construction'
  

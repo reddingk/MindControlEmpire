@@ -11,12 +11,12 @@
         {"name":"Usher", "quote":"Yeah", "bio":"Test ARTIST","image":"",
         "social":[
             {"site":"twitter","handle":"Usher"}, 
-            {"site":"instagram","handle":"howuseeit"}], 
+            {"site":"instagram","handle":"TheRealUsher"}], 
         "releases":[
             {"title":"You Make Me Wanna", "type":"youtube","date":"1997-12-13","url":"https://www.youtube.com/watch?v=bQRzrnH6_HY","text":"Throw back usher"},
             {"title":"U Remind Me", "type":"youtube","date":"2001-06-21","url":"https://www.youtube.com/watch?v=Bxau9B3jOHM","text":"You Remind Me"},
-            {"title":"My Way", "type":"youtube","date":"1997-05-13","url":"https://www.youtube.com/watch?v=dthjojjVhDo","text":"My Way"},
-            {"title":"Caught Up", "type":"youtube","date":"2004-07-13","url":"https://www.youtube.com/watch?v=cFkZDhwqoHg", "text":"Caught Up"}
+            {"title":"My Way", "type":"youtube","date":"2002-05-13","url":"https://www.youtube.com/watch?v=dthjojjVhDo","text":"My Way"},
+            {"title":"Caught Up", "type":"youtube","date":"2010-07-13","url":"https://www.youtube.com/watch?v=cFkZDhwqoHg", "text":"Caught Up"}
         ]} 
     ],
     "events":[
@@ -25,10 +25,5 @@
         { "eventname":"Live Show 2", "location":"Washington, DC", "date":"2016-04-05", "artistname":"GANDHI ALI", "time":"22:00:00", "tags":[]},
         { "eventname":"Press Launch", "location":"93.9 WKYS", "date":"2015-11-28", "artistname":"", "time":"15:00:00", "tags":[]}
         ],
-    "news":[],
-    "mcempire":[
-        {"name":"SIR CEO", "position":"CEO", "icon":"fa-building", "bio":"", "social":[{"site":"twitter", "handle":"Sir_CEO"}, {"site":"instagram", "handle":"CEO_KING_FIELDMOB"}]},
-        {"name":"Dwayne", "position":"Videographer & Photographer", "icon":"fa-video-camera", "bio":"", "social":[{"site":"twitter", "handle":"DWJproductions"}]},
-        {"name":"Fields", "position":"Producer", "icon":"fa-headphones", "bio":"", "social":[{"site":"twitter", "handle":"inspiredmindz"}]}
-        ]
+    "news":[]
 }

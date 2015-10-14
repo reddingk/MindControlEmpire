@@ -120,6 +120,7 @@
     font-weight: bold;
 }
 
+/*Releases*/
 .artist-release-row {
     padding: 10px !important;
 }
@@ -168,4 +169,9 @@
 .release-pages .mce-pagination .active a:hover { 
     background-color: #CCA300;
     border-color: #ffffff;
+}
+
+/*Events*/
+.event-time {
+    font-size: 12px;
 }
