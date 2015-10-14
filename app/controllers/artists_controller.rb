@@ -28,5 +28,11 @@ class ArtistsController < ApplicationController
   	  end
   	end
   	
+  	@releasecount = (@talent["releases"].count / 3.0).ceil
+  end
+  
+  def get_artistReleases
+    
+    render :partial => "artistReleases"
   end
 end

@@ -2,9 +2,11 @@ Rails.application.routes.draw do
 
   
 # Artists
-  get 'artists/index'
+  get 'Artists/', to: 'artists#index'
+  #get 'artists/index'
   get 'Artists/Empire', to: 'artists#individual'
   #get 'artists/individual'
+  get 'artists/get_artistReleases'
 
 # CMS - Editor  
   get 'cm_s/index'

@@ -1,6 +1,6 @@
 <div class="row page-row ">
     <div class="container page-container">
-        <div class="home-subtitle"><span><a href="">Artists</a> ></span> <%= @talent["name"] %></div>
+        <div class="home-subtitle"><span><a href="/Artists">Artists</a> ></span> <%= @talent["name"] %></div>
         <div class="mce-row artist-about-row">
             <div class="mce-col col-md-6">
                 <div class="social-list">
@@ -24,12 +24,15 @@
             <div class="mce-row artist-release-row">
                 <div class="page-subtitles">Releases</div>
                 <div class="artist-releases">
-                    <% @talent["releases"].each do |release| %>
-                        <div class="col-sm-4">
-                            <div class="artist-release-video"><object data="https://www.youtube.com/embed/<%= release["url"].split("v=")[1] %>"></object></div>
-                            <div class="artist-release-title"><%= release["title"] %></div>
-                        </div>
-                    <% end %>
+                    <%= render 'artistReleases', a_name: @talent["name"] , page: 1 %>
+                </div>
+                <div style="clear:both;"></div>
+                <div class="release-pages">
+                    <ul class="mce-pagination">
+                        <% for i in 1..@releasecount %>
+                            <li id="pagination<%= i %>"><a data-id=<%= i %> data-artist="<%= @talent["name"] %>"><%= i %></a></li>
+                        <% end %>
+                    </ul>
                 </div>
                 
                 <div style="clear:both;"></div>
