@@ -83,7 +83,7 @@ html, body {
 /*Main Section*/
 .mce-container {
     padding-top:70px;
-    background-image: url("logoB.png");
+    background-image: url("../siteimg/logoB.png");
     background-size: 300px 300px;
     
 }
