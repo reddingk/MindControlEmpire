@@ -5,13 +5,28 @@
     border-radius:10px;
     margin-top: 20px;
 }
-
+.empire-title-container {
+    background-image:url('../siteimg/MCE-metro.png');
+    background-repeat: no-repeat;
+    background-position: -50px -280px; 
+    background-size: 100% 350%;
+}
 .empire-title {
     font-size: 30px;
     font-weight:bold;
-    color: #ffffff;
+    color: #000000;
 }
-
+.empire-title-img {
+    height: 200px;
+    overflow: hidden;
+    position:relative;
+}
+.empire-title-img img{
+    position:absolute;
+    top:-290px;
+    left:50px;
+    width: 80%;
+}
 .empire-member {
     border-bottom: 3px solid #000000;
     padding:0px 7px 5px 7px;

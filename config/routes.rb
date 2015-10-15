@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+# News
+  get 'News/', to: 'news#index'
+  #get 'news/index'
+
 # Empire  
   get 'MCEmpire/', to: 'empire#index'
   #get 'empire/index'

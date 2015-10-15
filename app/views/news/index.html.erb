@@ -1,0 +1,52 @@
+<div class="row home-row back-color-grey">
+    <div class="container">
+        <% @itemnum = 0 %>
+        <% @newsitems.each do |item| %>
+            <p>News<%= @itemnum %>: <%= item["title"]%> | <%= item["date"]%> | <%= item["content"]%> | T: <%= item["tags"]%></p>
+            <% @itemnum = @itemnum + 1 %>
+        <% end %>
+    </div>
+</div>
+
+<div class="row home-row back-color-gold">
+    <div class="container">
+        <!--Style 1 -->
+        <div class="newspaper-container col-sm-6">
+            <div class="row news-title-row">
+                <div class="newspaper-title">Mind Control Empire News</div>
+            </div>
+            <div class="row news-style1">
+                <div class="col-sm-7">
+                    <div class="newspaper-img"><%= image_tag( "logoR_text.png", class: 'news-img', alt: 'newspaper-picture' ) %></div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="newspaper-subtitle"><%= @newsitems[0]["title"]%></div>
+                    <div class="newspaper-date"><%= @newsitems[0]["date"].to_date.strftime('%m/%d/%Y')%></div>
+                    <div class="newspaper-content"><%= @newsitems[0]["content"]%></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Style 2 -->
+        <div class="newspaper-container col-sm-6">
+            <div class="row news-title-row">
+                <div class="newspaper-title">Mind Control Empire News</div>
+            </div>
+            <div class="row news-style2">
+                <div class="col-sm-7">
+                    <div class="newspaper-img"><%= image_tag( "logoW_text.png", class: 'news-img', alt: 'newspaper-picture' ) %></div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="newspaper-subtitle"><%= @newsitems[1]["title"]%></div>
+                    <div class="newspaper-date"><%= @newsitems[1]["date"].to_date.strftime('%m/%d/%Y')%></div>
+                </div>
+            </div>
+            <div class="row news-style2">
+                <div class="col-sm-12">
+                    <div class="newspaper-content"><%= @newsitems[1]["content"]%></div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

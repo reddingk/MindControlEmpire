@@ -25,10 +25,14 @@
         { "eventname":"Live Show 2", "location":"Washington, DC", "date":"2016-04-05", "artistname":"GANDHI ALI", "time":"22:00:00", "tags":[]},
         { "eventname":"Press Launch", "location":"93.9 WKYS", "date":"2015-11-28", "artistname":"", "time":"15:00:00", "tags":[]}
         ],
-    "news":[],
     "mcempire":[
         {"name":"SIR CEO", "position":"CEO", "icon":"fa-building", "bio":"", "social":[{"site":"twitter", "handle":"Sir_CEO"}, {"site":"instagram", "handle":"CEO_KING_FIELDMOB"}]},
         {"name":"Dwayne", "position":"Videographer & Photographer", "icon":"fa-video-camera", "bio":"", "social":[{"site":"twitter", "handle":"DWJproductions"}]},
         {"name":"Fields", "position":"Producer", "icon":"fa-headphones", "bio":"", "social":[{"site":"twitter", "handle":"inspiredmindz"}]}
+        ],
+    "news":[
+        {"title":"Website Launch", "date":"2015-11-15", "content":"The New Mind Control Empire website has officially been launched.  Welcome to the new Mind Control Empire Website", "tags":["Website","Mind Control Empire"]},
+        {"title":"Test 1", "date":"2016-03-12", "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "tags":["Test","Mind Control Empire"]},
+        {"title":"Test 2", "date":"2015-10-22", "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "tags":["Test","Mind Control Empire"]}
         ]
 }
