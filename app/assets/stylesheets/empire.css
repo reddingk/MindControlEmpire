@@ -54,7 +54,11 @@
 }
 .empire-social a i {
     font-size: 20px;
-    color: #ffffff;   
+    color: #000000;
+}
+
+.empire-social a:hover i {
+    color: #ffffff;
 }
 
 .empire-position {
