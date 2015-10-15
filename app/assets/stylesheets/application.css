@@ -90,6 +90,7 @@ html, body {
 .mce-body {
     padding-bottom: 250px;
     width: 100%;
+    min-height: 800px;
 }
 .page-row {
     padding: 30px 0px;
@@ -158,4 +159,31 @@ html, body {
 	position: absolute;
 	bottom: 0;
 	left: 0;
+}
+.mce-footer-container { 
+	max-width: 1170px;
+	margin: 0px auto;
+}
+
+.mce-footer > div > div {
+	margin: 0px 20px;
+}
+.mce-footer > .mce-footer-container > div + div {
+	border-left: 1px solid #ffffff;
+}
+.mce-footer > .mce-footer-container > div > a {
+	display: block;
+	color:  #CCA300;
+}
+.mce-footer > .mce-footer-container > div > a:hover { 
+	text-decoration: none;
+	color: #E0E0E0;
+}
+.mce-footer > .mce-footer-container > div > span { 
+	color: #E0E0E0;
+}
+.mce-footer > .mce-footer-container > div > .fa {
+	display: inline-block;
+	padding: 5px 20px 5px 0px;
+	color:  #CCA300;
 }

@@ -102,6 +102,11 @@
 .back-color-grey{
     background-color: rgba(175, 175, 175, 0.8);
 }
+
+.back-color-red{
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
 .home-row {
     padding: 30px 0px;
 }
