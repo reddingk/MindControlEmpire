@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require home.js
+//= require news.js
 //= require artists.js
 //= require_tree .
 

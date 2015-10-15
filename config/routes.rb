@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'news/get_newsArticles'
   get 'News/Article', to: 'news#newsitem'
 
+
 # Empire  
   get 'MCEmpire/', to: 'empire#index'
   #get 'empire/index'

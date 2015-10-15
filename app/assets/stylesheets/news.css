@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*News Paper*/
 .news-row {
     /*margin: 20px 0px!important;*/
@@ -17,16 +18,31 @@
     padding: 1%;
     
     height: 200px;
+=======
+.newspaper-container {
+    border: 4px solid #000000;
+    font-size: 14px;
+    padding: 1%;
+    
+    height: 250px;
+>>>>>>> 31ea9bbc0ceba284202075e8a67adeb6e37aa040
     overflow: hidden;
     
     background-color: #D4D4D4;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+<<<<<<< HEAD
     transition: all 1s;
 }
 .news-title-row {
     padding: 0 2%;
     margin-bottom: 8px;
+=======
+}
+.news-title-row {
+    padding: 0 2%;
+    margin-bottom: 2px;
+>>>>>>> 31ea9bbc0ceba284202075e8a67adeb6e37aa040
 }
 .newspaper-title {
     border-bottom: 3px double #FF0000;
@@ -43,14 +59,22 @@
 .news-style1 div .newspaper-img {
     border: 1px solid #000000;
     width: 100%;
+<<<<<<< HEAD
     height: 120px;
+=======
+    height: 170px;
+>>>>>>> 31ea9bbc0ceba284202075e8a67adeb6e37aa040
     text-align: center;
     background-color: rgb(0,0,0);
 }
 
 .news-style1 div .newspaper-subtitle {
     font-weight: bold;
+<<<<<<< HEAD
     font-size: 1.6em;
+=======
+    font-size: 1.3em;
+>>>>>>> 31ea9bbc0ceba284202075e8a67adeb6e37aa040
 }
 
 .news-style1 div .newspaper-date {
@@ -61,13 +85,20 @@
     font-size: 1em;
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 31ea9bbc0ceba284202075e8a67adeb6e37aa040
 /*Style 2*/
 .news-style2 div .newspaper-img {
     border: 1px solid #000000;
     width: 100%;
+<<<<<<< HEAD
     height: 75px;
+=======
+    height: 90px;
+>>>>>>> 31ea9bbc0ceba284202075e8a67adeb6e37aa040
     text-align: center;
     background-color: rgb(0,0,0);
 }
@@ -88,6 +119,7 @@
     -webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */
     column-count: 3;
+
 }
 
 /*News Item*/
@@ -139,5 +171,4 @@
 
 .newsitem-page-header {
     margin-top: 20px;
-    
 }
