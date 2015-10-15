@@ -1,0 +1,16 @@
+<div class="row home-row">
+    <div class="container page-container">
+        <div class="home-subtitle"><span><a href="/News"><i class="fa fa-chevron-left"></i> Back To News</a></span></div>
+        
+        <div class="newsitem-page-header">
+            <div class="newsitem-header"><span>News</span></div>
+            <div class="newsitem-title"><span><%= @newsitem["title"]%></span></div>
+            <div class="newsitem-date"><%= @newsitem["date"].to_date.strftime('%b %d %Y')%></div>
+        </div>
+        
+        <div class="newsitem-page-content">
+            <div class="newsitem-content"><%= @newsitem["content"] %></div>
+        </div>
+                
+    </div>
+</div>

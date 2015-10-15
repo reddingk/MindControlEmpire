@@ -1,0 +1,31 @@
+<% 
+    @jfile = File.read(Rails.public_path+"info.json")	
+  	@jdata = JSON.parse(@jfile)
+  	
+  	if params[:a_name] != nil
+  	    a_name = params[:a_name] 
+  	end
+  	if params[:page] != nil
+        page = params[:page]
+    end
+  	
+  	a_releases = []
+  	@jdata["artists"].each do |artist|
+  	  if artist["name"] == a_name
+  	    a_releases = artist["releases"]
+  	  end
+  	end
+  	
+  	a_releases.sort_by!{|e| e["date"].to_date }.reverse!
+  	
+  	@lastrelease = (page.to_i * 3) - 3
+  	@firstrelease = (a_releases.count >= (page.to_i * 3) ? ((page.to_i * 3) - 1) : (a_releases.count - 1))
+
+%>
+
+<% for i in @lastrelease..@firstrelease %>
+    <div class="col-sm-4">
+        <div class="artist-release-video"><object data="https://www.youtube.com/embed/<%= a_releases[i]["url"].split("v=")[1] %>"></object></div>
+        <div class="artist-release-title"><%= a_releases[i]["title"] %></div>
+    </div>
+<% end %>

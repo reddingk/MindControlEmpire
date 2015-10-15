@@ -1,0 +1,79 @@
+<%
+    @jfile = File.read(Rails.public_path+"info.json")	
+  	@jdata = JSON.parse(@jfile)
+  	
+  	newsitems = []
+  	
+  	@jdata["news"].each do |item|
+  	  newsitems << item  
+  	end
+  	
+    if params[:page] != nil
+        page = params[:page]
+    end
+    
+    newsitems.sort_by!{|e| e["date"].to_date }.reverse!
+    @lastarticle = (page.to_i * 3) - 3
+  	@firstarticle = (newsitems.count >= (page.to_i * 3) ? ((page.to_i * 3) - 1) : (newsitems.count - 1))
+    
+%>
+
+<%# @newsitems.each do |item| %>
+<% for i in @lastarticle..@firstarticle %>
+    <a href="/News/Article?item=<%= i %>" class="news-row-link">
+        <div class="row news-row">
+            <% if i % 2 == 0 %>
+                <!--Style 1 -->
+                <div class="newspaper-container col-sm-4">
+                    <div class="row news-title-row">
+                        <div class="newspaper-title">Mind Control Empire News</div>
+                    </div>
+                    <div class="row news-style1">
+                        <div class="col-sm-7">
+                            <div class="newspaper-img"><%= image_tag( "logoR_text.png", class: 'news-img', alt: 'newspaper-picture' ) %></div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="newspaper-subtitle"><%= newsitems[i]["title"]%></div>
+                            <div class="newspaper-date"><%= newsitems[i]["date"].to_date.strftime('%m/%d/%Y')%></div>
+                            <div class="newspaper-content"><%= newsitems[i]["content"]%></div>
+                        </div>
+                    </div>
+                </div>
+            <% elsif i % 2 == 1 %>
+                <!-- Style 2 -->
+                <div class="newspaper-container col-sm-4">
+                    <div class="row news-title-row">
+                        <div class="newspaper-title">Mind Control Empire News</div>
+                    </div>
+                    <div class="row news-style2">
+                        <div class="col-sm-7">
+                            <div class="newspaper-img"><%= image_tag( "logoW_text.png", class: 'news-img', alt: 'newspaper-picture' ) %></div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="newspaper-subtitle"><%= newsitems[i]["title"]%></div>
+                            <div class="newspaper-date"><%= newsitems[i]["date"].to_date.strftime('%m/%d/%Y')%></div>
+                        </div>
+                    </div>
+                    <div class="row news-style2">
+                        <div class="col-sm-12">
+                            <div class="newspaper-content"><%= newsitems[i]["content"]%></div>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+            <div class="col-sm-8 news-content">
+                <div class="newsitem-header"><span>News</span></div>
+                <div class="newsitem-title"><span><%= newsitems[i]["title"]%></span></div>
+                <div class="newsitem-date"><%= newsitems[i]["date"].to_date.strftime('%b %d %Y')%></div>
+                <%  
+                    if newsitems[i]["content"].length > 250
+                        previewcount = 250
+                    else
+                        previewcount = newsitems[i]["content"].length
+                    end
+                %>
+                <div class="newsitem-content"><%= newsitems[i]["content"][0..previewcount] %> ....</div>
+            </div>
+        </div>
+    </a>
+<% end %>

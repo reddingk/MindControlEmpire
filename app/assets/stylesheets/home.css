@@ -1,0 +1,207 @@
+/*Main Title*/
+.main-title { 
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index:10;
+    
+    font-size: 35px;
+    color:#FFFFFF;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.3);
+    padding: 0px 5px;
+}
+/*Home Carousel*/
+.transition-timer-carousel .carousel-caption {
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 4%, rgba(0,0,0,0.5) 32%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(4%,rgba(0,0,0,0.1)), color-stop(32%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	width: 100%;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	text-align: left;
+	padding-top: 5px;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+.transition-timer-carousel .carousel-caption .carousel-caption-header {
+	margin-top: 10px;
+	font-size: 24px;
+}
+
+@media (min-width: 970px) {
+    /* Lower the font size of the carousel caption header so that our caption
+    doesn't take up the full image/slide on smaller screens */
+	.transition-timer-carousel .carousel-caption .carousel-caption-header {
+		font-size: 36px;
+	}
+}
+.transition-timer-carousel .carousel-indicators {
+	bottom: 0px;
+	margin-bottom: 5px;
+}
+.transition-timer-carousel .carousel-control {
+	z-index: 11;
+}
+.transition-timer-carousel .transition-timer-carousel-progress-bar {
+    height: 5px;
+    background-color: #FFCC00;
+    width: 0%;
+    margin: -5px 0px 0px 0px;
+    border: none;
+    z-index: 11;
+    position: relative;
+}
+.transition-timer-carousel .transition-timer-carousel-progress-bar.animate{
+    /* We make the transition time shorter to avoid the slide transitioning
+    before the timer bar is "full" - change the 4.25s here to fit your
+    carousel's transition time */
+    -webkit-transition: width 4.25s linear;
+	-moz-transition: width 4.25s linear;
+	-o-transition: width 4.25s linear;
+	transition: width 4.25s linear;
+}
+
+.carousel-img {
+    width: 100%;
+    max-height: 600px;
+}
+/*Icons*/
+.icon-container {
+	display: inline-block;
+	font-size: 25px;
+	line-height: 25px;
+	padding: 10px 15px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #FFCC00;
+	margin-right:10px;
+}
+
+/*Animation*/
+.carousel-caption h3:first-child {
+	animation-delay: 0.5s;
+}
+.carousel-caption p:nth-child(2) {
+	animation-delay: 1.5s;
+}
+.carousel-caption p:nth-child(3) {
+	animation-delay: 2.5s;
+}
+
+/**/
+.back-color-gold{
+    background-color: rgba(255,204,0,0.7);
+}
+
+.back-color-grey{
+    background-color: rgba(175, 175, 175, 0.8);
+}
+.home-row {
+    padding: 30px 0px;
+}
+.home-subtitle{
+    color: #000000;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.home-subtitle span, .home-subtitle span a {
+    color: #ffffff;
+}
+
+/*Release*/
+.r-container{
+    padding-top: 20px;
+}
+#releaseCarousel .nav a small
+{
+    display: block;
+}
+#releaseCarousel .nav
+{
+    background: #eee;
+}
+.nav-justified > li > a
+{
+    border-radius: 0px;
+}
+.release-video-card {  
+    background-color: #ffffff;
+    min-height: 400px;
+}
+.release-caption { 
+    color: #000000;
+    padding: 30px 20px;
+    left: 0px;
+    right: 0px;
+    bottom:0px;
+    top: 0px;
+    text-align: left ;
+}
+.release-caption div {
+    display: inline-block;
+}
+.release-caption div + div{
+    padding: 0px 20px;
+    bottom: 0px;
+}
+
+.release-video object {
+    width: 420px;
+    height: 315px;
+}
+.nav-pills>li[data-slide-to="0"].active a,
+.nav-pills>li[data-slide-to="1"].active a,
+.nav-pills>li[data-slide-to="2"].active a,
+.nav-pills>li[data-slide-to="3"].active a { background-color: rgba(255,204,0,0.7); }
+
+.nav-pills li a {
+    color:#000000;
+}
+
+/*Events*/
+.event-list {
+    width: 100%;
+}
+.event-list tr {
+    border-bottom: 2px solid #ffffff;
+     background-color: rgba(0,0,0,0.7);
+    
+    transition: all 0.5s;
+}
+
+.event-list tr:hover {
+    background-color: rgba(255,204,0,0.7);
+}
+
+.event-list tr td {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 10px 5px;
+    
+    transition: all 0.5s;
+}
+.event-list tr:hover td { 
+    color: #000000;
+}
+.event-date {
+    text-align: center;
+}
+.event-artist div{
+    display: inline-block;
+}
+.event-artist div + div {
+    margin-left: 10px;
+}
+.event-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}

@@ -1,0 +1,161 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require animate
+ *= require font-awesome
+ *= require_tree .
+ *= require_self
+ */
+
+/*Entire Site*/
+html, body {
+    font-family: 'Roboto Slab', sans-serif;
+    height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	position: relative;
+}
+
+
+/*Navigation Bar*/
+.nav-container { 
+	position: fixed;
+	top: 0;
+  	left: 0;
+  	z-index: 100;
+  	width: 100%;
+}
+
+#mce-inside-nav {
+    width: 100%;
+}
+.mce-nav-logo { 
+    width: 50px;
+    height: 50px;
+}
+.nav-link, .nav-link-home {
+    width: 14%;
+    text-align: center;
+    
+    transition: all 0.3s;
+}
+.nav-link a {
+    color: #ffffff !important;
+    font-size: 18px;
+    font-weight: bold;
+   
+}
+.nav-link:hover {
+    background-color: rgba(175, 175, 175, 0.8);
+}
+/*HOME Logo*/
+.nav-link-home .current-page {
+    
+}
+
+.nav-link .current-page, .nav-link:hover .current-page {
+    background-color: rgba(175, 175, 175, 0.8) !important;
+    color: #FFCC00 !important;
+}
+
+.nav-bottom { 
+	position: relative;
+	width: 100%;
+	text-align: center;
+	padding: 10px 0px;
+	background-color: rgba(255,204,0,0.9);
+}
+.nav-link-home a{
+   padding-top: 0px !important;
+   padding-bottom: 0px !important;
+}
+
+/*Main Section*/
+.mce-container {
+    padding-top:70px;
+    background-image: url("logoB.png");
+    background-size: 300px 300px;
+    
+}
+.mce-body {
+    padding-bottom: 200px;
+    width: 100%;
+}
+.page-row {
+    padding: 30px 0px;
+}
+
+.page-container {
+    background-color: rgba(255,204,0,0.7);
+    border-radius: 10px;
+    
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.mce-row{
+    padding: 10px 0px;
+}
+.mce-row + .mce-row {
+    border-top: 3px solid #000000;
+}
+.mce-col {
+    padding-left: 0px;
+}
+
+.page-subtitles {
+    color: rgba(0,0,0, 1);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/*Pagation*/
+.mce-pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+.mce-pagination li {
+    display: inline;
+}
+.mce-pagination li a{
+    z-index: 2;
+    background-color: #ffffff;
+    color: #CCA300;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.mce-pagination li a:hover{
+    color:#000000;
+    text-decoration: none;
+}
+.mce-pagination .active a{
+    background-color: #000000;
+    border-color:#CCA300;
+}
+.mce-pagination .active a:hover { 
+    background-color: #CCA300;
+    border-color: #ffffff;
+}
+
+/*Footer*/
+.mce-footer { 
+	background-color: #000000;
+	min-height: 200px;
+	padding: 15px 0px;
+	
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}

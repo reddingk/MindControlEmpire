@@ -1,0 +1,32 @@
+<div class="row empire-row back-color-grey">
+    <div class="container empire-title-container">
+        <div class="empire-title">Mind Control Empire</div>
+        <div class="empire-title-img">
+            <%#= image_tag( "MCE-metro.png", class: 'empire-img', alt: 'newspaper-picture' ) %>
+        </div>
+    </div>
+</div>
+
+<% @empiremembers.each do |member| %>
+    <div class="row empire-row">
+        <div class="container member-container back-color-gold">
+            <div class="col-sm-6">
+                <div class="empire-member">
+                    <div class="empire-member-name pull-left"><i class="fa <%= member["icon"]%>"></i> <span><%= member["name"] %></span></div>
+                    <div class="empire-social pull-right">
+                        <% member["social"].each do |site|%>
+                            <% if site["site"] == "twitter" %>
+                                <a href="https://twitter.com/<%= site["handle"] %>" target="_blank" class=""><i class="fa fa-twitter"></i></a>
+                            <% elsif site["site"] == "instagram" %>
+                                <a href="https://instagram.com/<%= site["handle"] %>" target="_blank" class=""><i class="fa fa-instagram"></i></a>
+                            <% end %>
+                        <% end %>
+                    </div>
+                    
+                    <div style="clear:both;"></div>
+                </div>
+                <div class="empire-position"><%= member["position"] %></div>
+            </div>
+        </div>
+    </div>
+<% end %>

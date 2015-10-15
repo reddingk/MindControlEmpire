@@ -1,0 +1,149 @@
+.artists-container {
+    margin-top: 20px;
+}
+.artist-block {
+    overflow:hidden;
+   
+    cursor: pointer;
+    float: left;
+    position: relative;
+    
+    width: 100%;
+    height: 250px;
+    border: 5px solid rgba(0,0,0,0.8);
+}
+
+.block-img {
+    width: 100%;
+}
+/*http://www.hongkiat.com/blog/css3-image-captions/*/
+
+.artist-block img {
+    position: absolute;
+    left: 0;
+    
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+.artist-block .caption {
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    color: #fff;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    -ms-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+    
+}
+
+.artist-block .scale-caption h3, .artist-block .scale-caption p {
+    position: relative;
+    left: -210px;
+    width: 200px;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+ 
+.artist-block .scale-caption h3 {
+    -webkit-transition-delay: .3s;
+    -moz-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    -ms-transition-delay: .3s;
+    transition-delay: .3s;
+}
+ 
+.artist-block .scale-caption p {
+    -webkit-transition-delay: .5s;
+    -moz-transition-delay: .5s;
+    -o-transition-delay: .5s;
+    -ms-transition-delay: .5s;
+    transition-delay: .5s;
+}
+
+.artist-block:hover .caption {
+    background-color: rgba(0,0,0,0.8);
+}
+.artist-block:hover .block-img {
+    -moz-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+}
+
+.artist-block:hover .scale-caption h3,
+.artist-block:hover .scale-caption p {
+    -moz-transform: translateX(200px);
+    -o-transform: translateX(200px);
+    -webkit-transform: translateX(200px);
+    transform: translateX(200px);
+}
+/*Individual Page*/
+.social-list {
+    padding: 20px 0px;
+    
+    border-top: 3px solid #000000;
+    border-bottom: 3px solid #000000;
+}
+.social-links { 
+    color: #000000 ;
+}
+.social-links:hover, .social-links:focus {
+    color: #ffffff;
+}
+.social-links + .social-links { 
+    margin-left: 20px;
+}
+
+.artists-page-image {
+    width: 100%;
+    border: 5px solid #ffffff;
+}
+
+.artist-about-row p {
+    font-size: 16px;
+}
+
+.artist-quote {
+    font-weight: bold;
+}
+
+/*Releases*/
+.artist-release-row {
+    padding: 10px !important;
+}
+.artist-releases {
+    padding: 20px 0px;
+}
+
+.artist-release-title {
+    text-align: center;
+    font-weight: bold;
+}
+.artist-release-video object {
+    width: 100%;
+}
+
+.artist-releases, .release-pages {
+    display: block;
+}
+.release-pages {
+    text-align: center;
+}
+
+/*Events*/
+.event-time {
+    font-size: 12px;
+}

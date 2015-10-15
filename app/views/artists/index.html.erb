@@ -1,0 +1,18 @@
+<div class="row page-row ">
+    <div class="container page-container">
+        <div class="home-subtitle">Artists</div>
+        <div class="artists-container">
+            
+            <% @artists.each do |artist| %>
+                <a href="/Artists/Empire?artist=<%= artist["name"] %>" class="artist-block col-sm-4">
+                    <img src="../artists/<%= artist["image"] %>" class="block-img">
+                    <span class="caption scale-caption">
+                        <h3><%= artist["name"] %></h3>
+                        <p><%= artist["bio"] %></p>
+                    </span>
+                </a>
+            <% end %>
+        </div>
+        
+    </div>
+</div>

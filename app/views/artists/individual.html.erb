@@ -1,0 +1,60 @@
+<div class="row page-row ">
+    <div class="container page-container">
+        <div class="home-subtitle"><span><a href="/Artists">Artists</a> ></span> <%= @talent["name"] %></div>
+        <div class="mce-row artist-about-row">
+            <div class="mce-col col-md-6">
+                <div class="social-list">
+                    <% @talent["social"].each do |social| %>
+                        <% if social["site"] == "twitter" %>
+                            <a href="https://twitter.com/<%= social["handle"] %>" target="_blank" class="social-links"><i class="fa fa-twitter fa-3x"></i></a>
+                        <% elsif social["site"] == "instagram"%>
+                            <a href="https://instagram.com/<%= social["handle"] %>" target="_blank" class="social-links"><i class="fa fa-instagram fa-3x"></i></a>
+                        <% end %>
+                    <% end %>
+                </div>    
+                <p class="artist-quote"><%= @talent["quote"] %></p>
+                <p class="artist-bio"><%= @talent["bio"] %></p>
+                
+            </div>
+                
+            <div class="mce-col col-sm-5 col-sm-offset-1"><img src="../artists/<%= @talent["image"] %>" class="artists-page-image" ></div>
+            <div style="clear:both;"></div>
+        </div>
+        <!--Artist Releases -->
+        <% if @talent["releases"].count > 0 %>
+            <div class="mce-row artist-release-row">
+                <div class="page-subtitles">Releases</div>
+                <div class="artist-releases">
+                    <%= render 'artistReleases', a_name: @talent["name"] , page: 1 %>
+                </div>
+                <div style="clear:both;"></div>
+                <div class="release-pages">
+                    <ul class="mce-pagination">
+                        <% for i in 1..@releasecount %>
+                            <li id="pagination<%= i %>"><a data-id=<%= i %> data-artist="<%= @talent["name"] %>"><%= i %></a></li>
+                        <% end %>
+                    </ul>
+                </div>
+                
+                <div style="clear:both;"></div>
+            </div>
+        <% end %>
+        
+        <!-- Artist Event -->
+        <% if @talent["events"].count > 0 %>
+            <div class="mce-row artist-events-row">
+                <div class="page-subtitles">Events</div>
+                <table class="event-list">
+                    <% @talent["events"].each do |event| %>
+                        <tr>
+                            <td class="event-date"><span><%= event["date"].to_date.strftime('%m/%d/%Y') %></span> <span class="event-time"><%= event["time"].to_time.strftime('%l:%M %P') %></span></td>
+                            <td class="event-name"><%= event["eventname"] %></td>
+                            <td class="event-location"><%= event["location"] %></td>
+                        </tr>
+                    <% end %>
+                </table>
+            </div>
+        <% end %>
+    </div>
+</div>
+

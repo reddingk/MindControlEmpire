@@ -1,0 +1,17 @@
+
+<div class="row home-row">
+    <div class="container page-container">
+        <div class="home-subtitle">News</div>
+        
+        <div class="news-pages">
+            <ul class="mce-pagination">
+                <% for i in 1..@articlecount %>
+                    <li id="pagination<%= i %>"><a data-id=<%= i %> ><%= i %></a></li>
+                <% end %>
+            </ul>
+        </div>
+        <div class="news-artitles">
+            <%= render 'newsArticles', page: 1 %>
+        </div>
+    </div>
+</div>

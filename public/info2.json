@@ -1,0 +1,29 @@
+{
+    "artists":[
+        {"name":"GANDHI ALI", "quote":"Real Live", "bio":"Mind Control Empire's first solo artist","image":"GandhiAli-1.JPG",
+        "social":[
+            {"site":"twitter","handle":"GandhiGandhiAli"}, 
+            {"site":"instagram","handle":"Gandhi_Ali"}], 
+        "releases":[
+            {"title":"Real Live", "type":"youtube","date":"2015-08-01","url":"https://www.youtube.com/watch?v=UwYWQNkdF1Y","text":"The first track on Mind Control Empire"},
+            {"title":"Poetic Justice Freestyle", "type":"youtube","date":"2015-02-13","url":"https://www.youtube.com/watch?v=-JYqJd3irRw","text":"A freestyle to the classic poetic justice track"}
+        ]},
+        {"name":"Usher", "quote":"Yeah", "bio":"Test ARTIST","image":"",
+        "social":[
+            {"site":"twitter","handle":"Usher"}, 
+            {"site":"instagram","handle":"TheRealUsher"}], 
+        "releases":[
+            {"title":"You Make Me Wanna", "type":"youtube","date":"1997-12-13","url":"https://www.youtube.com/watch?v=bQRzrnH6_HY","text":"Throw back usher"},
+            {"title":"U Remind Me", "type":"youtube","date":"2001-06-21","url":"https://www.youtube.com/watch?v=Bxau9B3jOHM","text":"You Remind Me"},
+            {"title":"My Way", "type":"youtube","date":"2002-05-13","url":"https://www.youtube.com/watch?v=dthjojjVhDo","text":"My Way"},
+            {"title":"Caught Up", "type":"youtube","date":"2010-07-13","url":"https://www.youtube.com/watch?v=cFkZDhwqoHg", "text":"Caught Up"}
+        ]} 
+    ],
+    "events":[
+        { "eventname":"Fan Meetup", "location":"DTLR Lakeforest Mall", "date":"2015-12-07", "artistname":"GANDHI ALI", "time":"13:00:00", "tags":[]},
+        { "eventname":"Live Show 1", "location":"Gaithersburg", "date":"2016-03-22", "artistname":"GANDHI ALI", "time":"22:00:00", "tags":[]},
+        { "eventname":"Live Show 2", "location":"Washington, DC", "date":"2016-04-05", "artistname":"GANDHI ALI", "time":"22:00:00", "tags":[]},
+        { "eventname":"Press Launch", "location":"93.9 WKYS", "date":"2015-11-28", "artistname":"", "time":"15:00:00", "tags":[]}
+        ],
+    "news":[]
+}
