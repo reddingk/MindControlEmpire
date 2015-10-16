@@ -67,3 +67,20 @@
     
     padding-left: 15px;
 }
+
+/*Tablet*/
+@media (max-width: 767px) { 
+    
+}
+/*Mobile*/
+@media (max-width: 480px) {
+    
+    .empire-title-container {
+        background-position: -220px -200px;
+        background-size: 200% 300%;
+    }
+    .empire-title {
+        background-color: rgba(255,255,255,0.8);
+        padding-left: 5px;
+    }
+}

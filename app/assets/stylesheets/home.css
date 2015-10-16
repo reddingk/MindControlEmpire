@@ -174,11 +174,17 @@
 .event-list {
     width: 100%;
 }
+.home-row .container .event-list {
+    margin-top: 20px;
+}
 .event-list tr {
     border-bottom: 2px solid #ffffff;
      background-color: rgba(0,0,0,0.7);
     
     transition: all 0.5s;
+}
+.event-list tr:last-child {
+    border-bottom:none;
 }
 
 .event-list tr:hover {
@@ -209,4 +215,70 @@
     width: 60px;
     height: 60px;
     border-radius: 30px;
+}
+
+/* Tablet */
+@media (max-width: 767px) { 
+	.main-title {
+	    font-size: 20px;
+	    top: 5px;
+	    left: 5px;
+	}
+	.carousel-caption h3 {
+	    font-size: 14px;
+	}
+	
+	.carousel-caption h3 .icon-container {
+	    font-size: 16px;
+	    
+	    line-height: 16px;
+    	padding: 8px 10px;
+    	text-align: center;
+    	border-radius: 50%;
+	}
+	
+	.main-carousel-caption p {
+	    display: none;
+	}
+	.home-row{
+        margin: 0px !important;
+    }
+	/*Release Video*/
+	.mce-release-container {
+	   padding-right: 0px;
+	   padding-left: 0px;
+	}
+	.release-caption {
+	    padding-left: 10px;
+	    padding-right: 10px;
+	}
+	.release-caption div {
+	    padding: 0px;
+	}
+
+	
+}
+/*Mobile*/
+@media (max-width: 480px) {
+    .r-container div .carousel-inner {
+           
+    }
+    .release-video-card {
+	    height: 500px;
+	}
+    .release-video {
+        padding: 10px 0px;
+    }
+	.release-video object {
+	    width: 340px;
+	}
+	/*Events*/
+	.home-row .container .event-list tbody tr td {
+	    font-size: 12px !important;
+	}
+	
+	.event-artist {
+	    text-align: center;
+	}
+	
 }

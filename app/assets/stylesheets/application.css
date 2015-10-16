@@ -187,3 +187,30 @@ html, body {
 	padding: 5px 20px 5px 0px;
 	color:  #CCA300;
 }
+.m-nav-link-home {
+    display: none;
+    width: 52px;
+    margin-left: 10px;
+    position: relative;
+    float:left;
+}
+/* Tablet */
+@media (max-width: 767px) { 
+	.m-nav-link-home {
+        display: inline-block;
+    }
+    .nav-link {
+        width: 100%;
+        text-align: left;
+    }
+    .nav-link-home {
+        display: none !important;
+    }
+}
+/*Mobile*/
+@media (max-width: 480px) {
+	.mce-body {
+        padding-bottom: 285px;
+        
+    }
+}
