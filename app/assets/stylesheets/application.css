@@ -103,6 +103,9 @@ html, body {
     padding-top: 10px;
     padding-bottom: 30px;
 }
+.grey-container {
+    background-color: rgba(204,204,204,0.7);
+}
 .mce-row{
     padding: 10px 0px;
 }

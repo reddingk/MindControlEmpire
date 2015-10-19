@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+# Events
+  get 'Events/', to: 'events#index'
+  #get 'events/index'
+
 # News
   get 'News/', to: 'news#index'
   #get 'news/index'

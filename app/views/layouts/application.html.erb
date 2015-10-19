@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">	
   
-  <title>Mind Control Empire</title>
+  <title>Mind Control Empirem LLC.</title>
   <!--font-family: 'Coustard', serif;-->
   <link href='https://fonts.googleapis.com/css?family=Coustard' rel='stylesheet' type='text/css'>
   <!--font-family: 'Montserrat', sans-serif; -->
@@ -41,7 +41,7 @@
 							<li class="nav-link"><%= link_to "News", {controller: "news", action: "index"}, class: "#{cp({controller: "news", action: "index"})}" %></li>
 							<!--<li class="nav-link-home">< %= link_to "Home", {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %></li>	-->
 							<li class="nav-link-home"><%= link_to image_tag('logoW.png', class: 'mce-nav-logo', alt:'Home'), {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %></li>
-							<li class="nav-link"><%= link_to "Events", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+							<li class="nav-link"><%= link_to "Events", {controller: "events", action: "index"}, class: "#{cp({controller: "events", action: "index"})}" %></li>
 							<li class="nav-link"><%= link_to "Releases", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
 							<li class="nav-link"><%= link_to "Contact", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
 						</ul>
@@ -67,7 +67,7 @@
 					<%= link_to "About Us", {controller: "empire", action: "index"}, class: "#{cp({controller: "news", action: "index"})}" %>
 					<%= link_to "Artists", {controller: "artists", action: "index"}, class: "#{cp({controller: "artists", action: "index"})}" %>
 					<%= link_to "News", {controller: "news", action: "index"}, class: "#{cp({controller: "news", action: "index"})}" %>
-					<%= link_to "Events", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %>
+					<%= link_to "Events", {controller: "events", action: "index"}, class: "#{cp({controller: "events", action: "index"})}" %>
 					<%= link_to "Releases", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %>
 					<%= link_to "Contact", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %>
 				</div>
