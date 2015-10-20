@@ -140,6 +140,11 @@
     background-color: #ffffff;
     min-height: 400px;
 }
+.release-sound-card {  
+    background-color: #ffffff;
+    min-height: 500px;
+}
+
 .release-caption { 
     color: #000000;
     padding: 30px 20px;

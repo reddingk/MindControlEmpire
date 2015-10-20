@@ -24,8 +24,14 @@
 %>
 
 <% for i in @lastrelease..@firstrelease %>
-    <div class="col-sm-4">
-        <div class="artist-release-video"><object data="https://www.youtube.com/embed/<%= a_releases[i]["url"].split("v=")[1] %>"></object></div>
-        <div class="artist-release-title"><%= a_releases[i]["title"] %></div>
-    </div>
+    <% if a_releases[i]["type"] == "youtube" %>
+        <div class="col-sm-4">
+            <div class="artist-release-video"><object data="https://www.youtube.com/embed/<%= a_releases[i]["url"].split("v=")[1] %>"></object></div>
+            <div class="artist-release-title"><%= a_releases[i]["title"] %></div>
+        </div>
+    <% elsif a_releases[i]["type"] == "soundcloud-playlist" %>
+        <div class="col-sm-4">
+            <%= raw(a_releases[i]["content"]) %>
+        </div>
+    <% end %>
 <% end %>

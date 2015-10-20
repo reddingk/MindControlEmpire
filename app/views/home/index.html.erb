@@ -99,23 +99,21 @@
                                     <p><%= release["title"] %></p>
                                 </div>
                             </div>
+                        <% elsif release["type"] == "soundcloud-playlist"%>
+                            <div class="release-sound-card"></div>
+                            <div class="carousel-caption release-caption">
+                                <div class="col-sm-5 release-video"><%= raw(release["content"]) %></object></div>
+                                <div class="col-sm-4">
+                                    <h3><%= release["artist"] %></h3>
+                                    <p><%= release["date"].to_date.strftime('%m/%d/%Y') %></p>
+                                    <p><%= release["title"] %></p>
+                                </div>
+                            </div>
                         <% end %>
                     </div>    
                 
                     <% @itemnum = @itemnum + 1 %>
                 <% end %>
-                <!--<div class="item active">
-                    <div class="release-video-card"></div>
-                    <div class="carousel-caption release-caption">
-                        <div class="col-sm-5 release-video"><object data="https://www.youtube.com/embed/UwYWQNkdF1Y"></object></div>
-                        <div class="col-sm-4">
-                            <h3>GANDHI ALI</h3>
-                            <p>08/20/2015</p>
-                            <p>Real Live</p>
-                        </div>
-                    </div>
-                </div>-->
-                <!-- End Item -->
             </div>
             <!-- End Carousel Inner -->
             <ul class="nav nav-pills nav-justified">
