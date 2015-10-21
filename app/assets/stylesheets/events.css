@@ -10,3 +10,79 @@
 .event-page .event-list tr td {
     color: #000000;
 }
+
+/*Event Cards*/
+.mce-event-cards {
+    margin-top: 10px;
+}
+.event-card {
+    width: 100%;
+    background-color: #ffffff;
+    height:210px;
+    
+    font-weight: bold;
+    overflow: hidden;
+	position: relative;
+}
+.event-card .card-back {
+    padding: 5px;
+    transition-delay: 0.1s;
+    position:relative;
+    z-index: 2;
+    background-color: transparent;
+}
+.e-card-when {
+    font-size: 12px;
+}
+
+/*Card Back Hover Animations*/
+.event-card:hover .card-back .e-card-location, .card-back:hover .e-card-location, .event-card:hover .card-back .e-card-time, .card-back:hover .e-card-time { 
+    color: #000000;
+}
+.event-card:hover .card-back div, .card-back:hover div{ 
+    border-color: #ffffff;
+}
+
+.event-card .card-back div{ 
+    padding: 5px 4px 3px 4px;
+    border-bottom: 2px solid #000000;
+    
+}
+.e-card-title span, .e-card-when span{
+    display: block;
+}
+.e-card-name {
+    font-size: 16px;
+}
+.e-card-location,.e-card-time {
+    margin-left: 5px;
+    color: #CCA300;
+}
+
+.event-card .card-front { 
+    background-color: rgba(255,204,0,0.7);
+    padding: 10px 5px 5px 5px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 170px;
+    color:#000000;
+    
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+.event-card:hover .card-front, .card-front:hover, .card-back:hover + .card-front {
+	top: 0px;
+}
+.e-card-artist {
+    float: right;
+}
+.e-card-artist-photo {
+    position: absolute;
+    bottom: 10px;
+    
+    padding-left: 5px;
+}
+.e-card-photo {
+    height: 90px;
+}

@@ -2,16 +2,33 @@
     <div class="container page-container grey-container event-page">
         <div class="home-subtitle">Upcoming Events</div>
         <% if @comingevents.size > 0 %>
-            <table class="event-list">
+            <div class="mce-event-cards">
                 <% @comingevents.each do |event| %>
-                    <tr>
-                        <td class="event-date"><%= event["date"].to_date.strftime('%b %d %Y') %></td>
-                        <td class="event-artist"><div><img src='../artists/<%= event["photo"] %>' alt='<%= event["artistname"] %> photo' class="event-photo"></div><div><%= event["artistname"] %></div></td>
-                        <td class="event-name"><%= event["eventname"] %></td>
-                        <td class="event-location"><%= event["location"] %></td>
-                    </tr>
+                    <div class="col-sm-3 mce-event-card">
+                        <div class="event-card">
+                            <div class="card-back">
+                                <div class="e-card-when"><span class="e-card-date"><%= event["date"].to_date.strftime('%b %d %Y') %></span><span class="e-card-time"><%= event["time"].to_time.strftime('%l:%M %P') %></span></div>
+                                <div class="e-card-title"><span class="e-card-name"><%= event["eventname"] %></span><span class="e-card-location"><%= event["location"] %></span></div>
+                            </div>
+                            <div class="card-front">
+                                <div class="e-card-artist"><%= event["artistname"] %></div>
+                                <div class="e-card-artist-photo"><img src='../artists/<%= event["photo"] %>' alt='<%= event["artistname"] %> photo' class="e-card-photo"> </div>
+                                <div style="clear: both;"></div>
+                            </div>
+                        </div>
+                    </div>
                 <% end %>
-            </table>
+            </div>
+            <!--<table class="event-list">
+                < % @comingevents.each do |event| %>
+                    <tr>
+                        <td class="event-date">< %= event["date"].to_date.strftime('%b %d %Y') %></td>
+                        <td class="event-artist"><div><img src='../artists/< %= event["photo"] %>' alt='< %= event["artistname"] %> photo' class="event-photo"></div><div>< %= event["artistname"] %></div></td>
+                        <td class="event-name">< %= event["eventname"] %></td>
+                        <td class="event-location">< %= event["location"] %></td>
+                    </tr>
+                < % end %>
+            </table>-->
         <% else %>
             <h1><i class="fa fa-calendar-times-o"></i> More Event Coming Soon...</h1>
         <% end %>
