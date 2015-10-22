@@ -11,6 +11,6 @@ $(document).on('click','.news-pages .mce-pagination li a', function() {
 
 $( document ).ready(function() {
     
-    $('#pagination1').addClass("active");
+    //$('#pagination1').addClass("active");
 
 });
