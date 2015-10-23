@@ -99,9 +99,26 @@
 }
 .social-links { 
     color: #000000 ;
+    
+    text-shadow:1px 1px 0 #fff,
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    0px 1px 0 #fff,
+    1px 0px 0 #fff,
+    0px -1px 0 #fff,
+    -1px 0px 0 #fff;
 }
 .social-links:hover, .social-links:focus {
-    color: #ffffff;
+    color: #000000;
+    text-shadow:1px 1px 0 #ff3030,
+    -1px -1px 0 #ff3030,
+    1px -1px 0 #ff3030,
+    -1px 1px 0 #ff3030,
+    0px 1px 0 #ff3030,
+    1px 0px 0 #ff3030,
+    0px -1px 0 #ff3030,
+    -1px 0px 0 #ff3030;
 }
 .social-links + .social-links { 
     margin-left: 20px;

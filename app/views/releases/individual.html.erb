@@ -1,0 +1,21 @@
+<div class="row page-row">
+    <div class="container page-container grey-container event-page">
+        <div class="home-subtitle"><span><a href="/Releases"><i class="fa fa-chevron-circle-left"></i> All Releases</a></span></div>
+        <div class="ind-release-section">
+            <div class="ind-release-info">
+                <div class="artist-release-title"><%= @individualrelease["title"] %></div>
+                <div class="artist-release-artist"><%= @individualrelease["artist"] %></div>
+                <div class="artist-release-date">Release Date: <span><%= @individualrelease["date"].to_date.strftime('%b %d %Y') %><span></div>
+            </div>
+            <% if @individualrelease["type"] == "youtube" %>
+                <div class="col-sm-6">
+                    <div class="artist-release-video"><object data="https://www.youtube.com/embed/<%= @individualrelease["url"].split("v=")[1] %>"></object></div>
+                </div>
+            <% elsif @individualrelease["type"] == "soundcloud-playlist" %>
+                <div class="col-sm-8">
+                    <%= raw(@individualrelease["content"]) %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,78 @@
+.mce-release-card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.release-card-img {
+    background-color: #000000;
+    border: 2px solid #000000;
+}
+.a-card-art, .no-art-img {
+    width: 100%;
+    max-height: 170px;
+}
+
+.release-card-bottom { 
+    overflow: hidden;
+    position: relative;
+    padding: 5px 5px 10px 5px;
+}
+.release-card-info div + div, .release-card-button {
+    margin-top: 10px;
+}
+.release-card-bottom-txt{
+    z-index: 2;
+    position: relative;
+}
+.release-card-bottom-slide {
+    z-index: 1;
+    background-color: rgba(255,204,0,0.7);
+    
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 100% ;
+    left: 0;
+    transition: all 0.5s ease;
+}
+.release-card-info, .release-card-button {
+    text-align: center;
+}
+.release-info-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mce-btn {
+    color: #ffffff;
+    background-color: #000000;
+}
+/*Hover animation*/
+.mce-btn:hover {
+    color:#FFCC00;
+    background-color: #000000;
+}
+.mce-release-card:hover .release-card-bottom .release-card-bottom-slide {
+    top: 0;
+}
+
+/*Individual Track*/
+.ind-release-section {
+    margin-top: 20px;
+}
+.ind-release-info {
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgba(51,51,51, 0.7);
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+.ind-release-section .artist-release-video object{
+    min-height: 400px;
+}
+
+.ind-release-section .artist-release-title {
+    font-size: 30px;
+}

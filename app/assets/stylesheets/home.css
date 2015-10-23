@@ -117,7 +117,26 @@
 }
 
 .home-subtitle span, .home-subtitle span a {
-    color: #ffffff;
+    color: #000;
+    text-shadow:1px 1px 0 #fff,
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    0px 1px 0 #fff,
+    1px 0px 0 #fff,
+    0px -1px 0 #fff,
+    -1px 0px 0 #fff;
+}
+.home-subtitle span a:hover {
+    text-decoration: none;
+    text-shadow:1px 1px 0 #ff3030,
+    -1px -1px 0 #ff3030,
+    1px -1px 0 #ff3030,
+    -1px 1px 0 #ff3030,
+    0px 1px 0 #ff3030,
+    1px 0px 0 #ff3030,
+    0px -1px 0 #ff3030,
+    -1px 0px 0 #ff3030;
 }
 
 /*Release*/

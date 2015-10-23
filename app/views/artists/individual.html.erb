@@ -1,6 +1,6 @@
 <div class="row page-row ">
     <div class="container page-container">
-        <div class="home-subtitle"><span><a href="/Artists">Artists</a> ></span> <%= @talent["name"] %></div>
+        <div class="home-subtitle"><span><a href="/Artists">Artists <i class="fa fa-chevron-right"></i></a></span> <%= @talent["name"] %></div>
         <div class="mce-row artist-about-row">
             <div class="mce-col col-md-6">
                 <div class="social-list">
@@ -47,7 +47,7 @@
                 <table class="event-list">
                     <% @talent["events"].each do |event| %>
                         <tr>
-                            <td class="event-date"><span><%= event["date"].to_date.strftime('%m/%d/%Y') %></span> <span class="event-time"><%= event["time"].to_time.strftime('%l:%M %P') %></span></td>
+                            <td class="event-date"><span><%= event["date"].to_date.strftime('%b %d %Y') %></span> <span class="event-time"><%= event["time"].to_time.strftime('%l:%M %P') %></span></td>
                             <td class="event-name"><%= event["eventname"] %></td>
                             <td class="event-location"><%= event["location"] %></td>
                         </tr>

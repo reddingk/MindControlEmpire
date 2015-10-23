@@ -95,7 +95,7 @@
                                 <div class="col-sm-5 release-video"><object data="https://www.youtube.com/embed/<%= release["url"].split("v=")[1] %>"></object></div>
                                 <div class="col-sm-4">
                                     <h3><%= release["artist"] %></h3>
-                                    <p><%= release["date"].to_date.strftime('%m/%d/%Y') %></p>
+                                    <p><%= release["date"].to_date.strftime('%b %d %Y') %></p>
                                     <p><%= release["title"] %></p>
                                 </div>
                             </div>
@@ -105,7 +105,7 @@
                                 <div class="col-sm-5 release-video"><%= raw(release["content"]) %></object></div>
                                 <div class="col-sm-4">
                                     <h3><%= release["artist"] %></h3>
-                                    <p><%= release["date"].to_date.strftime('%m/%d/%Y') %></p>
+                                    <p><%= release["date"].to_date.strftime('%b %d %Y') %></p>
                                     <p><%= release["title"] %></p>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@
         <table class="event-list">
             <% @newevents.each do |event| %>
                 <tr>
-                    <td class="event-date"><%= event["date"].to_date.strftime('%m/%d/%Y') %></td>
+                    <td class="event-date"><%= event["date"].to_date.strftime('%b %d %Y') %></td>
                     <td class="event-artist"><div><img src='../artists/<%= event["photo"] %>' alt='<%= event["artistname"] %> photo' class="event-photo"></div><div><%= event["artistname"] %></div></td>
                     <td class="event-name"><%= event["eventname"] %></td>
                     <td class="event-location"><%= event["location"] %></td>

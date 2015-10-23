@@ -14,7 +14,15 @@
 .empire-title {
     font-size: 30px;
     font-weight:bold;
-    color: #000000;
+    color: #ffcc00;
+    text-shadow:1px 1px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    0px 1px 0 #000,
+    1px 0px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000;
 }
 .empire-title-img {
     height: 200px;
@@ -55,14 +63,30 @@
 .empire-social a i {
     font-size: 20px;
     color: #000000;
+    text-shadow:1px 1px 0 #fff,
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    0px 1px 0 #fff,
+    1px 0px 0 #fff,
+    0px -1px 0 #fff,
+    -1px 0px 0 #fff;
 }
 
 .empire-social a:hover i {
-    color: #ffffff;
+    color: #000000;
+    text-shadow:1px 1px 0 #ff3030,
+    -1px -1px 0 #ff3030,
+    1px -1px 0 #ff3030,
+    -1px 1px 0 #ff3030,
+    0px 1px 0 #ff3030,
+    1px 0px 0 #ff3030,
+    0px -1px 0 #ff3030,
+    -1px 0px 0 #ff3030;
 }
 
 .empire-position {
-    color: #ffffff;
+    color: #000000;
     font-weight: bold;
     
     padding-left: 15px;

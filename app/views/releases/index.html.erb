@@ -1,0 +1,39 @@
+<div class="row page-row">
+    <div class="container page-container grey-container event-page">
+        <div class="home-subtitle">Releases</div>
+        <% if @allreleases.size > 0 %>
+            <div class="mce-release-cards">
+                <% @trackitem = 0 %>
+                <% @allreleases.each do |release| %>
+                    <div class="col-sm-3 mce-release-card">
+                        <div class="release-card-img">
+                            <% if release["art"] == "N/A" %>
+                                <%= image_tag( "logoR_text.png", class: 'no-art-img', alt: 'nocoverart-img' ) %>
+                            <% else %>
+                                <img src='../<%= release["art"] %>' alt='<%= release["title"] %> photo' class="a-card-art">
+                            <% end %>
+                        </div>
+                        <div class="release-card-bottom">
+                            <div class="release-card-bottom-txt">
+                                <div class="release-card-info">
+                                    <div class="release-info-title"><%= release["title"] %></div>
+                                    <div class="release-info-artist"><%= release["artist"] %></div>
+                                    <div class="release-info-date">Release Date: <span><%= release["date"].to_date.strftime('%b %d %Y') %></span></div>
+                                </div>
+                                <div class="release-card-button">
+                                    <a href="Releases/Music?track=<%= @trackitem %>" class="btn btn-default mce-btn"><i class="fa fa-headphones"></i> Listen</a>
+                                </div>
+                            </div>
+                            
+                            <div class="release-card-bottom-slide"></div>
+                        </div>
+                    </div>
+                    <% @trackitem = @trackitem + 1 %>
+                <% end %>
+            </div>
+        <% else %>
+            <h1><i class="fa fa-calendar-times-o"></i> More Releases Coming Soon...</h1>
+        <% end %>
+    </div>
+</div>
+

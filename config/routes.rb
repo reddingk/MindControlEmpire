@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+# Releases
+  get 'Releases/', to: 'releases#index'
+  #get 'releases/index'
+  get 'Releases/Music', to: 'releases#individual'
+  #get 'releases/individual'
+
 # Events
   get 'Events/', to: 'events#index'
   #get 'events/index'
