@@ -22,6 +22,10 @@ html, body {
     height: 100%;
     color: #000000;
 }
+.row {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
 .wrapper {
 	min-height: 100%;
 	position: relative;
