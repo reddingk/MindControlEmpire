@@ -1,0 +1,314 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      // Your Client ID can be retrieved from your project in the Google
+      // Developer Console, https://console.developers.google.com
+      var CLIENT_ID = '642273528207-slq2aj74eal4ocipd0t364mvn9ljogm1.apps.googleusercontent.com';
+
+      //var SCOPES = ['https://www.googleapis.com/auth/gmail.readonly'];
+      var SCOPES = ['https://www.googleapis.com/auth/gmail.compose'];
+      /**
+       * Check if current user has authorized this application.
+       */
+      function checkAuth() {
+        gapi.auth.authorize(
+          {
+            'client_id': CLIENT_ID,
+            'scope': SCOPES.join(' '),
+            'immediate': true
+          }, handleAuthResult);
+      }
+
+      /**
+       * Handle response from authorization server.
+       *
+       * @param {Object} authResult Authorization result.
+       */
+      function handleAuthResult(authResult) {
+        var authorizeDiv = document.getElementById('authorize-div');
+        if (authResult && !authResult.error) {
+          // Hide auth UI, then load client library.
+          authorizeDiv.style.display = 'none';
+          loadGmailApi();
+        } else {
+          // Show auth UI, allowing the user to initiate authorization by
+          // clicking authorize button.
+          authorizeDiv.style.display = 'inline';
+        }
+      }
+
+      /**
+       * Initiate auth flow in response to user clicking authorize button.
+       *
+       * @param {Event} event Button click event.
+       */
+      function handleAuthClick(event) {
+        gapi.auth.authorize(
+          {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
+          handleAuthResult);
+        return false;
+      }
+
+      /**
+       * Load Gmail API client library. List labels once client library
+       * is loaded.
+       */
+      function loadGmailApi() {
+        //gapi.client.load('gmail', 'v1', listLabels);
+        //gapi.client.load('gmail', 'v1', listMessages);
+        //gapi.client.load('gmail', 'v1', sendMessage);
+      }
+
+      /**
+       * Print all Labels in the authorized user's inbox. If no labels
+       * are found an appropriate message is printed.
+       */
+      function listLabels() {
+        var request = gapi.client.gmail.users.labels.list({
+          'userId': 'me'
+        });
+
+        request.execute(function(resp) {
+          var labels = resp.labels;
+          appendPre('Labels:');
+
+          if (labels && labels.length > 0) {
+            for (i = 0; i < labels.length; i++) {
+              var label = labels[i];
+              appendPre(label.name)
+            }
+          } else {
+            appendPre('No Labels found.');
+          }
+        });
+      }
+      
+      /*View Mail*/
+      function listMessages() {
+          
+          var getPageOfMessages = function(request, result) {
+            request.execute(function(resp) {
+              result = result.concat(resp.messages);
+              var nextPageToken = resp.nextPageToken;
+              if (nextPageToken) {
+                request = gapi.client.gmail.users.messages.list({
+                //request = gapi.client.gmail.users.threads.list({
+                  'userId': 'me',
+                  'pageToken': nextPageToken,
+                  'q': ''
+                });
+                getPageOfMessages(request, result);
+              } else {
+                //callback(result);
+                console.log("[L]: "+result.length);
+                console.log(result);
+                /*Get Email individual email*/
+                var request = gapi.client.gmail.users.messages.get({
+                  'userId': 'me',
+                  'id': result[0].id
+                });
+                request.execute(
+                    function(resp) {
+                        console.log("[:]");
+                        console.log(resp);
+                    }    
+                );
+              }
+              console.log("-");
+            });
+          };
+          
+          var initialRequest = gapi.client.gmail.users.messages.list({
+          //var initialRequest = gapi.client.gmail.users.threads.list({
+            'userId': 'me',
+            'q': ''
+          });
+          
+          getPageOfMessages(initialRequest, []);
+    }
+    
+    /*Send email*/
+    function sendMessage() {
+      
+      var email = [];
+      email.push("From: \"WebSite\" <"+ $('#mce-email-from').val()+">");
+      email.push("To: " + $('#mce-email-to').val());
+      email.push('Content-type: text/html;charset=iso-8859-1');
+      email.push('MIME-Version: 1.0');
+      email.push("Subject: Website Message| " + $('#mce-email-subject').val() );
+      email.push(" ");
+      email.push("\n\nFrom: " + $('#mce-email-from').val() + "\n\nMessage:\n" + $('#mce-email-body').val() + "\n\n");
+      
+      var emailmessage = email.join("\r\n").trim();
+      var base64EncodedEmail = window.btoa(emailmessage);
+      //emailmessage.toString('base64');   
+      var base64EncodedEmailSafe = base64EncodedEmail.replace(/\+/g, '-').replace(/\//g, '_');
+      //.replace(/\=/g, '');
+      
+      var request = gapi.client.gmail.users.messages.send({
+        'userId': 'me',
+        'resource': {
+          'raw': base64EncodedEmailSafe
+        }
+      });
+      request.execute(function(resp) { 
+          /*console.log("Message Sent:");
+          console.log(resp);*/
+      });
+    }
+      /**
+       * Append a pre element to the body containing the given message
+       * as its text node.
+       *
+       * @param {string} message Text to be placed in pre element.
+       */
+      function appendPre(message) {
+        var pre = document.getElementById('output');
+        var textContent = document.createTextNode(message + '\n');
+        pre.appendChild(textContent);
+      }
+      /*Fire Send email api*/
+      function sendGmailApi() {
+        gapi.client.load('gmail', 'v1', sendMessage);
+      }
+      
+      function checkFields() {
+        var r = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+          
+          var chk_from = ($('#mce-email-from').val().length > 0) && ( ($('#mce-email-from').val().match(r) == null) ? false : true);
+          var chk_to = ($('#mce-email-to').val().length > 0) && ( ($('#mce-email-to').val().match(r) == null) ? false : true);
+          var chk_subject = $('#mce-email-subject').val().length > 0;
+          var chk_body = $('#mce-email-body').val().length > 0;
+          
+          if(chk_from && chk_to && chk_subject && chk_body){
+            //Enable Button
+            if( $('#send-email-btn').hasClass("disabledbtn")) {
+              $('#send-email-btn').removeClass("disabledbtn");
+            }
+            
+            //Remove error on fields
+            if( $('#mce-email-to').hasClass("error-field")) {
+              $('#mce-email-to').removeClass("error-field");
+            }
+            if( $('#mce-email-from').hasClass("error-field")) {
+              $('#mce-email-from').removeClass("error-field");
+            }
+            if( $('#mce-email-subject').hasClass("error-field")) {
+              $('#mce-email-subject').removeClass("error-field");
+            }
+            if( $('#mce-email-body').hasClass("error-field")) {
+              $('#mce-email-body').removeClass("error-field");
+            }
+          }
+          else {
+            //Disable Button
+            if(!($('#send-email-btn').hasClass("disabledbtn")) ){
+              $('#send-email-btn').addClass("disabledbtn");
+            }
+            //Show fields with error 
+            if(!chk_from) {
+              $('#mce-email-from').addClass("error-field");
+            }
+            else {
+              if( $('#mce-email-from').hasClass("error-field")) {
+                $('#mce-email-from').removeClass("error-field");
+              }
+            }
+            if(!chk_to) {
+              $('#mce-email-to').addClass("error-field");
+            }
+            else {
+              if( $('#mce-email-to').hasClass("error-field")) {
+                $('#mce-email-to').removeClass("error-field");
+              }
+            }
+            if(!chk_subject) {
+              $('#mce-email-subject').addClass("error-field");
+            }
+            else {
+              if( $('#mce-email-subject').hasClass("error-field")) {
+                $('#mce-email-subject').removeClass("error-field");
+              }
+            }
+            if(!chk_body) {
+              $('#mce-email-body').addClass("error-field");
+            }
+            else {
+              if( $('#mce-email-body').hasClass("error-field")) {
+                $('#mce-email-body').removeClass("error-field");
+              }
+            }
+          }
+      }
+      
+      //Click Button
+      $(document).on('click','#send-email-btn', function() { 
+          console.log("sending email");
+          //Send Email
+          sendGmailApi();
+      });
+      
+      $( document ).ready(function() {
+        //Add MCE Email Address
+        $("#mce-email-to").val("******@gmail.com");
+        
+        //When text field changes
+        $('.email_textfield').on('input', checkFields);
+        
+        //When text area changes
+        $('.email_textarea').on('input' , checkFields);
+      
+      });
+      
+    </script>
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth">
+    </script>
+  </head>
+  
+  
+  <body>
+    <div class="row page-row">
+      <div class="container page-container back-color-red">
+          <div class="home-subtitle">Contact Us</div>
+          
+          <div class="col-sm-7 email-form-section">
+            <div id="authorize-div" style="display: none">
+              <span>Authorize access to Gmail API</span>
+              <!--Button for the user to click to initiate auth sequence -->
+              <button id="authorize-button" onclick="handleAuthClick(event)">Authorize</button>
+            </div>
+          
+            <table class="mce-email">
+              <!--To-->
+              <tr class="email-field-row">
+                <!--<td class="title-cell"><span class="field-title">To:</span></td>-->
+                <td><%= text_field "email", "to", class: "email_textfield", id: "mce-email-to", :placeholder => "To:", :readonly => true %></td>
+              </tr>
+              <!--From-->
+              <tr class="email-field-row">
+                <!--<td class="title-cell"><span class="field-title">From:</span></td>-->
+                <td><%= text_field "email", "From", class: "email_textfield", id: "mce-email-from", :placeholder => "*From:"%></td>
+              </tr>
+              <!--Subject-->
+              <tr class="email-field-row">
+                <!--<td class="title-cell"><span class="field-title">Subject:</span></td>-->
+                <td><%= text_field "email", "subject", class: "email_textfield", id: "mce-email-subject", :placeholder => "*Subject:"%></td>
+              </tr>
+              <!--Body-->
+              <tr class="email-field-row">
+                <td class="textarea-cell" colspan="2"><%= text_area "email", "body", class: "email_textarea", id: "mce-email-body", :placeholder => "*Your Message Here"%></td>
+              </tr>
+              <!--Submit-->
+              <tr class="email-field-row">
+                <td colspan="2"><a href="" class="btn btn-default mce-btn disabledbtn" id="send-email-btn">Submit Email</a></td>
+              </tr>
+              
+            </table>
+          </div>
+          
+      </div>
+    </div>
+    
+  </body>
+</html>
+

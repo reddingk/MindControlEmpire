@@ -22,6 +22,8 @@ html, body {
     height: 100%;
     color: #000000;
 }
+.hidden { display: none; }
+
 .row {
     margin-right: 0px !important;
     margin-left: 0px !important;

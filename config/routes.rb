@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+# Contact Us
+  get 'Contacts/', to: 'contacts#index', via: 'get'
+  #get 'contact/index'
+
 # Releases
   get 'Releases/', to: 'releases#index'
   #get 'releases/index'

@@ -43,7 +43,7 @@
 							<li class="nav-link-home"><%= link_to image_tag('logoW.png', class: 'mce-nav-logo', alt:'Home'), {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %></li>
 							<li class="nav-link"><%= link_to "Events", {controller: "events", action: "index"}, class: "#{cp({controller: "events", action: "index"})}" %></li>
 							<li class="nav-link"><%= link_to "Releases", {controller: "releases", action: "index"}, class: "#{cp({controller: "releases", action: "index"})}" %></li>
-							<li class="nav-link"><%= link_to "Contact", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+							<li class="nav-link"><%= link_to "Contact", {controller: "contacts", action: "index"}, class: "#{cp({controller: "contacts", action: "index"})}" %></li>
 						</ul>
 					</div>
 				</div>
@@ -69,7 +69,7 @@
 					<%= link_to "News", {controller: "news", action: "index"}, class: "#{cp({controller: "news", action: "index"})}" %>
 					<%= link_to "Events", {controller: "events", action: "index"}, class: "#{cp({controller: "events", action: "index"})}" %>
 					<%= link_to "Releases", {controller: "releases", action: "index"}, class: "#{cp({controller: "releases", action: "index"})}" %>
-					<%= link_to "Contact", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %>
+					<%= link_to "Contact", {controller: "contacts", action: "index"}, class: "#{cp({controller: "contacts", action: "index"})}" %>
 				</div>
 				
 				<div class="col-md-4">
