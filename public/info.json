@@ -8,33 +8,15 @@
             {"title":"Real Live", "type":"youtube","date":"2015-08-01","url":"https://www.youtube.com/watch?v=UwYWQNkdF1Y","text":"The first track on Mind Control Empire"},
             {"title":"Poetic Justice Freestyle", "type":"youtube","date":"2015-02-13","url":"https://www.youtube.com/watch?v=-JYqJd3irRw","text":"A freestyle to the classic poetic justice track"},
             {"title": "''Artist Spotlight''", "type":"soundcloud-playlist", "date":"2015-10-20", "url":"https://soundcloud.com/gandhi-ali-1","text":"Gandhi Ali Soundcloud Artist Spotlight","content":"<iframe width='100%' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/148002376&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>"}
-        ]},
-        {"name":"Usher", "quote":"Yeah", "bio":"Test ARTIST","image":"",
-        "social":[
-            {"site":"twitter","handle":"Usher"}, 
-            {"site":"instagram","handle":"howuseeit"}], 
-        "releases":[
-            {"title":"You Make Me Wanna", "type":"youtube","date":"1997-12-13","url":"https://www.youtube.com/watch?v=bQRzrnH6_HY","text":"Throw back usher"},
-            {"title":"U Remind Me", "type":"youtube","date":"2001-06-21","url":"https://www.youtube.com/watch?v=Bxau9B3jOHM","text":"You Remind Me"},
-            {"title":"My Way", "type":"youtube","date":"1997-05-13","url":"https://www.youtube.com/watch?v=dthjojjVhDo","text":"My Way"},
-            {"title":"Caught Up", "type":"youtube","date":"2004-07-13","url":"https://www.youtube.com/watch?v=cFkZDhwqoHg", "text":"Caught Up"}
-        ]} 
+        ]}
     ],
-    "events":[
-        { "eventname":"Fan Meetup", "location":"DTLR Lakeforest Mall", "date":"2015-12-07", "artistname":"GANDHI ALI", "time":"13:00:00", "tags":[]},
-        { "eventname":"Live Show 1", "location":"Gaithersburg", "date":"2016-03-22", "artistname":"GANDHI ALI", "time":"22:00:00", "tags":[]},
-        { "eventname":"Live Show 2", "location":"Washington, DC", "date":"2016-04-05", "artistname":"GANDHI ALI", "time":"22:00:00", "tags":[]},
-        { "eventname":"Press Launch", "location":"93.9 WKYS", "date":"2015-11-28", "artistname":"", "time":"15:00:00", "tags":[]}
-        ],
+    "events":[ ],
     "mcempire":[
         {"name":"SIR CEO", "position":"CEO", "icon":"fa-building", "bio":"", "social":[{"site":"twitter", "handle":"Sir_CEO"}, {"site":"instagram", "handle":"CEO_KING_FIELDMOB"}]},
         {"name":"Dwayne", "position":"Videographer & Photographer", "icon":"fa-video-camera", "bio":"", "social":[{"site":"twitter", "handle":"DWJproductions"}]},
         {"name":"Fields", "position":"Producer", "icon":"fa-headphones", "bio":"", "social":[{"site":"twitter", "handle":"inspiredmindz"}]}
         ],
     "news":[
-        {"title":"Website Launch", "date":"2015-11-15", "content":"The New Mind Control Empire website has officially been launched.  Welcome to the new Mind Control Empire Website", "tags":["Website","Mind Control Empire"]},
-        {"title":"Test 1", "date":"2016-03-12", "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "tags":["Test","Mind Control Empire"]},
-        {"title":"Test 2", "date":"2015-10-22", "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "tags":["Test","Mind Control Empire"]},
-        {"title":"Test 3", "date":"2015-10-03", "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "tags":["Test","Mind Control Empire"]}
+        {"title":"Website Launch", "date":"2015-11-15", "content":"The New Mind Control Empire website has officially been launched.  Welcome to the new Mind Control Empire Website", "tags":["Website","Mind Control Empire"]}
         ]
 }

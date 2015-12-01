@@ -42,3 +42,16 @@
 .error-field {
     border-color:#FF0000;
 }
+
+.contact-card {
+    background-color: rgba(255,204,0,0.9);
+    height: 200px;
+    display: table; 
+}
+.contact-info {
+    font-size: 20px;
+    color: #000000;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}

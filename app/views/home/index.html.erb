@@ -133,16 +133,20 @@
 <div class="row home-row back-color-grey">
     <div class="container">
         <div class="home-subtitle">Upcoming Events</div>
-        <table class="event-list">
-            <% @newevents.each do |event| %>
-                <tr>
-                    <td class="event-date"><%= event["date"].to_date.strftime('%b %d %Y') %></td>
-                    <td class="event-artist"><div><img src='../artists/<%= event["photo"] %>' alt='<%= event["artistname"] %> photo' class="event-photo"></div><div><%= event["artistname"] %></div></td>
-                    <td class="event-name"><%= event["eventname"] %></td>
-                    <td class="event-location"><%= event["location"] %></td>
-                </tr>
-            <% end %>
-        </table>
+        <% if @newevents.size > 0 %>
+            <table class="event-list">
+                <% @newevents.each do |event| %>
+                    <tr>
+                        <td class="event-date"><%= event["date"].to_date.strftime('%b %d %Y') %></td>
+                        <td class="event-artist"><div><img src='../artists/<%= event["photo"] %>' alt='<%= event["artistname"] %> photo' class="event-photo"></div><div><%= event["artistname"] %></div></td>
+                        <td class="event-name"><%= event["eventname"] %></td>
+                        <td class="event-location"><%= event["location"] %></td>
+                    </tr>
+                <% end %>
+            </table>
+        <% else %>
+            <h3><i class="fa fa-calendar-times-o"></i> More Event Coming Soon...</h3>
+        <% end %>
     </div>
     
 </div>
