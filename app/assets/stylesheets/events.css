@@ -15,6 +15,9 @@
 .mce-event-cards {
     margin-top: 20px;
 }
+.mce-event-card {
+    margin-bottom: 20px;
+}
 .event-card {
     width: 100%;
     background-color: #ffffff;
@@ -70,6 +73,10 @@
     
     transition: all 0.5s ease;
     z-index: 1;
+}
+.past-card
+{
+   background-color: rgba(144,5,5,0.7); 
 }
 .event-card:hover .card-front, .card-front:hover, .card-back:hover + .card-front {
 	top: 0px;

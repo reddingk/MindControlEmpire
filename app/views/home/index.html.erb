@@ -109,6 +109,21 @@
                                     <p><%= release["title"] %></p>
                                 </div>
                             </div>
+                         <% elsif release["type"] == "sitetrack"%>
+                             <div class="release-sound-card"></div>
+                             <div class="carousel-caption release-caption">
+                                <div class="col-sm-5 release-video">
+                                    <audio controls>
+                                        <source src="../sitemusic/<%= release["url"]%>" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h3><%= release["artist"] %></h3>
+                                    <p><%= release["date"].to_date.strftime('%b %d %Y') %></p>
+                                    <p><%= release["title"] %></p>
+                                </div>
+                            </div>
                         <% end %>
                     </div>    
                 

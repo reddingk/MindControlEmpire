@@ -33,5 +33,9 @@
         <div class="col-sm-4">
             <%= raw(a_releases[i]["content"]) %>
         </div>
+    <% elsif a_releases[i]["type"] == "sitetrack"%>
+        <audio controls>
+            <source src="../sitemusic/<%= a_releases[i]["url"]%>" type="audio/mpeg">
+        </audio>
     <% end %>
 <% end %>
