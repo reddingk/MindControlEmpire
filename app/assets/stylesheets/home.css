@@ -155,9 +155,32 @@
 {
     border-radius: 0px;
 }
+
+.audio-img
+{
+    text-align: center;
+    max-height:300px;
+    margin-bottom: 10px;
+}
+.mini-audio-img
+{
+    width: 80%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.audio1
+{
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+.audio2
+{
+ width: 95%;   
+}
+
 .release-video-card {  
     background-color: #ffffff;
-    min-height: 400px;
+    min-height: 500px;
 }
 .release-sound-card {  
     background-color: #ffffff;

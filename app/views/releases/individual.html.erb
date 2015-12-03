@@ -16,9 +16,14 @@
                     <%= raw(@individualrelease["content"]) %>
                 </div>
             <% elsif @individualrelease["type"] == "sitetrack" %>
-                <audio controls>
-                    <source src="../sitemusic/<%= @individualrelease["url"] %>" type="audio/mpeg">
-                </audio>
+                <div class="col-sm-7">
+                    <%= image_tag("MCE-audio2.JPG", class: "mini-audio-img") %>
+                </div>
+                <div class="col-sm-offset-1 col-sm-4">
+                    <audio controls>
+                        <source src="../sitemusic/<%= @individualrelease["url"] %>" type="audio/mpeg">
+                    </audio>
+                </div>
             <% end %>
         </div>
     </div>

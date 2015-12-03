@@ -21,7 +21,7 @@
                     <% end %>
                 </div>
                             <% else %>
-                <h2><i class="fa fa-calendar-times-o"></i> Check Back For Upcoming Events and Releases</h2>
+                <h2><i class="fa fa-calendar-times-o"></i> Check Back For Upcoming Events</h2>
             <% end %>
         </div>
         
@@ -37,8 +37,13 @@
                                     <div class="e-card-title"><span class="e-card-name"><%= event["eventname"] %></span><span class="e-card-location"><%= event["location"] %></span></div>
                                 </div>
                                 <div class="card-front">
+                                    
                                     <div class="e-card-artist"><%= event["artistname"] %></div>
-                                    <div class="e-card-artist-photo"><img src='../artists/<%= event["photo"] %>' alt='<%= event["artistname"] %> photo' class="e-card-photo"> </div>
+                                    <% if event["location"].size < 30 %>
+                                        <div class="e-card-artist-photo"><img src='../artists/<%= event["photo"] %>' alt='<%= event["artistname"] %> photo' class="e-card-photo"> </div>
+                                    <% else %>
+                                        <div class="e-card-artist-photo"><img src='../artists/<%= event["photo"] %>' alt='<%= event["artistname"] %> photo' class="e-card-photo sm-e-card"> </div>
+                                    <% end %>
                                     <div style="clear: both;"></div>
                                 </div>
                             </div>
