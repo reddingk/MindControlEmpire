@@ -41,11 +41,10 @@
                 <%= image_tag("MCE-audio1.JPG", class: "mini-audio-img audio2") %>
             <% end %>
             
-            <!--<audio controls>
-                <source src="/sitemusic/< %= a_releases[i]["url"]%>" type="audio/mpeg">
-            </audio>-->
+            <div class="release-card-button">
+                <a href="../Releases/Music?tracktitle=<%= a_releases[i]["title"] %>&artist=<%= a_name %>" class="btn btn-default mce-btn"><i class="fa fa-headphones"></i> <%= a_releases[i]["title"] %></a>
+            </div>
             
-            <div class="artist-release-title"><%= a_releases[i]["title"] %></div>
         </div>
     <% end %>
 <% end %>

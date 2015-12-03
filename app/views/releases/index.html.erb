@@ -3,7 +3,6 @@
         <div class="home-subtitle">Releases</div>
         <% if @allreleases.size > 0 %>
             <div class="mce-release-cards">
-                <% @trackitem = 0 %>
                 <% @allreleases.each do |release| %>
                     <div class="col-sm-3 mce-release-card">
                         <div class="release-card-img">
@@ -21,14 +20,13 @@
                                     <div class="release-info-date">Release Date: <span><%= release["date"].to_date.strftime('%b %d %Y') %></span></div>
                                 </div>
                                 <div class="release-card-button">
-                                    <a href="Releases/Music?track=<%= @trackitem %>" class="btn btn-default mce-btn"><i class="fa fa-headphones"></i> Listen</a>
+                                    <a href="Releases/Music?tracktitle=<%= release["title"] %>&artist=<%= release["artist"]%>" class="btn btn-default mce-btn"><i class="fa fa-headphones"></i> Listen</a>
                                 </div>
                             </div>
                             
                             <div class="release-card-bottom-slide"></div>
                         </div>
                     </div>
-                    <% @trackitem = @trackitem + 1 %>
                 <% end %>
             </div>
         <% else %>

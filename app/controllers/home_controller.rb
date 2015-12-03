@@ -22,6 +22,9 @@ class HomeController < ApplicationController
   		  end
   		end
   	end
+  	
+  	@newreleases.sort_by!{|e| e["date"].to_date }.reverse!
+  	
   	## Events
   	@newevents = []
   	@jdata["events"].each do |event|
