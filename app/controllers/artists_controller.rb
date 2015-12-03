@@ -45,7 +45,7 @@ class ArtistsController < ApplicationController
   
   def get_artistReleases
     
-   #render :partial => "artistReleases"
-   render :text => "<p>TEST</p>"
+   render :partial => "artistReleases"
+   
   end
 end
