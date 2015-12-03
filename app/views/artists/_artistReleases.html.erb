@@ -23,5 +23,19 @@
 
 %>
 
-<p>Page: <%= page %></p>
-<p>Name: <%= a_name %></p>
+<% for i in @lastrelease..@firstrelease %>
+    <% if a_releases[i]["type"] == "youtube" %>
+        <div class="col-sm-4">
+            <div class="artist-release-video"><object data="https://www.youtube.com/embed/<%= a_releases[i]["url"].split("v=")[1] %>"></object></div>
+            <div class="artist-release-title"><%= a_releases[i]["title"] %></div>
+        </div>
+    <% elsif a_releases[i]["type"] == "soundcloud-playlist" %>
+        <div class="col-sm-4">
+            Sound Cloud
+        </div>
+    <% elsif a_releases[i]["type"] == "sitetrack"%>
+        <div class="col-sm-4">
+            Site Track
+        </div>
+    <% end %>
+<% end %>
