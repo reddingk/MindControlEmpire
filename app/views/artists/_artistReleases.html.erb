@@ -31,11 +31,23 @@
         </div>
     <% elsif a_releases[i]["type"] == "soundcloud-playlist" %>
         <div class="col-sm-4">
-            Sound Cloud
+            <div class="col-sm-4">
+                <%= raw(a_releases[i]["content"]) %>
+            </div>
         </div>
     <% elsif a_releases[i]["type"] == "sitetrack"%>
         <div class="col-sm-4">
-            Site Track
+             <% if i%2 == 0 %>
+                <%= image_tag("MCE-audio2.JPG", class: "mini-audio-img audio1") %>
+            <% else %>
+                <%= image_tag("MCE-audio1.JPG", class: "mini-audio-img audio2") %>
+            <% end %>
+            
+            <!--<audio controls>
+                <source src="../../sitemusic/< %= a_releases[i]["url"]%>" type="audio/mpeg">
+            </audio>-->
+            
+            <div class="artist-release-title"><%= a_releases[i]["title"] %></div>
         </div>
     <% end %>
 <% end %>
