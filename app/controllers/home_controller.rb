@@ -5,25 +5,9 @@ class HomeController < ApplicationController
   	@jdata = JSON.parse(@jfile)
   	
   	## New Releases
-	  @newreleases = []
-  	@jdata["artists"].each do |artist|
-  	  artist["releases"].each do |release|
-  	    if @newreleases.size < 4
-  		    
-  		    release["artist"] = artist["name"]
-  		    @newreleases << release
-  		    @newreleases.sort_by!{|e| e["date"].to_date }.reverse!
-  		  else
-  		    if release["date"].to_date > @newreleases[3]["date"].to_date
-  		      release["artist"] = artist["name"]
-  		      @newreleases[3] = release
-  		      @newreleases.sort_by!{|e| e["date"].to_date }.reverse!
-  		    end
-  		  end
-  		end
-  	end
-  	
-  	@newreleases.sort_by!{|e| e["date"].to_date }.reverse!
+	  ##@newreleases = []
+	  @newreleases = @jdata["spotlights"]
+	  @newreleases.sort_by!{|s| s["order"]}
   	
   	## Events
   	@newevents = []

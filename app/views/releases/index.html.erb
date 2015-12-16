@@ -16,7 +16,14 @@
                             <div class="release-card-bottom-txt">
                                 <div class="release-card-info">
                                     <div class="release-info-title"><%= release["title"] %></div>
-                                    <div class="release-info-artist"><%= release["artist"] %></div>
+                                    <div class="release-info-artist">
+                                        <%= release["artist"] %>
+                                        <% if release["ftartist"] != nil %>
+                                            <% release["ftartist"].each do |ftartist| %>
+                                                <span><i class="fa fa-chevron-circle-right"></i> <%= ftartist %></span>
+                                            <% end %>
+                                        <% end %>
+                                    </div>
                                     <div class="release-info-date">Release Date: <span><%= release["date"].to_date.strftime('%b %d %Y') %></span></div>
                                 </div>
                                 <div class="release-card-button">
@@ -34,4 +41,3 @@
         <% end %>
     </div>
 </div>
-

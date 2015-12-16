@@ -15,13 +15,20 @@ class ReleasesController < ApplicationController
   		        release["art"] = "N/A"
   		      end
   		    end
-  		    @allreleases << release
+  		    if !(@allreleases.map{|a| a["title"]}.include? release["title"])
+  		      @allreleases << release
+  		    else
+  		      @tmp = @allreleases.find_index{|a| a["title"] == release["title"]}
+  		      @allreleases[@tmp]["ftartist"] = []
+  		      @allreleases[@tmp]["ftartist"].push(artist["name"])
+  		    end
   		end
   	end
   	
     @allreleases.sort_by!{|e| e["date"].to_date }.reverse!
     ## End index
   end
+
 
   def individual
     @jfile = File.read(Rails.public_path+"info.json")	
