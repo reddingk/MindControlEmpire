@@ -15,6 +15,11 @@ $(document).ready(function() {
     $(".transition-timer-carousel-progress-bar", "#transition-timer-carousel")
         .css("width", "100%");
 
+    $('.carousel-animate').carousel({
+          interval: 8000,
+          pause: "hover"
+    });
+    
     /*Animation*/
     (function( $ ) {
     
@@ -42,10 +47,11 @@ $(document).ready(function() {
     	//Animate captions in first slide on page load 
     	doAnimations($firstAnimatingElems);
     	
+    	//Timer for carousel
+    	
     	//Pause carousel  
-    	$myCarousel.carousel('pause');
-    	
-    	
+    	//$myCarousel.carousel('pause');
+	
     	//Other slides to be animated on carousel slide event 
     	$myCarousel.on('slide.bs.carousel', function (e) {
     		var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
