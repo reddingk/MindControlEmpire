@@ -12,7 +12,8 @@
             {"title":"Flavors", "type":"sitetrack","date":"2015-12-01","url":"GandhiAli-flavors.mp3","text":"Flavors track"},
             {"title":"Jumpman Remix", "type":"sitetrack","date":"2015-12-01","url":"GandhiAli-jumpman.mp3","text":"Jumpman remixed by Gandhi Ali"},
             {"title":"Real Live", "type":"youtube","date":"2015-08-20","url":"https://www.youtube.com/watch?v=UwYWQNkdF1Y","text":"The first track on Mind Control Empire"},
-            {"title":"Poetic Justice Freestyle", "type":"youtube","date":"2015-02-13","url":"https://www.youtube.com/watch?v=-JYqJd3irRw","text":"A freestyle to the classic poetic justice track"}
+            {"title":"Poetic Justice Freestyle", "type":"youtube","date":"2015-02-13","url":"https://www.youtube.com/watch?v=-JYqJd3irRw","text":"A freestyle to the classic poetic justice track"},
+            {"title":"Call Em In", "type":"youtube","date":"2016-02-04","url":"https://www.youtube.com/watch?v=OUaHK84TkBY","text":"Call Em In video produced by DWJproductions", "art":"art/Call_em_in.PNG"}
         ]},
         {"name":"J.A.", "quote":"", "bio":"Emerging artist on the MCE roster","image":"JR.JPG",
         "social":[{"site":"instagram","handle":"_j.a.__"}], 
@@ -47,9 +48,9 @@
         {"title":"'The City' on the way", "date":"2015-12-02", "content":"The Video for 'The City' will be released this December.", "tags":["Video","Mind Control Empire"]}
         ],
     "spotlights":[
-        {"order":2, "artist":"GANDHI ALI", "title":"Real Live", "type":"youtube","date":"2015-08-20","url":"https://www.youtube.com/watch?v=UwYWQNkdF1Y","text":"The first track on Mind Control Empire"},
-        {"order":1, "artist":"GANDHI ALI", "title":"New Ballin feat. J.A.", "type":"youtube","date":"2015-11-13","url":"https://www.youtube.com/watch?v=WCuePpLdgdc","text":"New Ballin feat. J.A."},
-        {"order":3, "artist":"GANDHI ALI", "title":"Jumpman Remix", "type":"sitetrack","date":"2015-12-01","url":"GandhiAli-jumpman.mp3","text":"Jumpman remixed by Gandhi Ali"},
-        {"order":4, "artist":"GANDHI ALI", "title":"100 Remix", "type":"sitetrack","date":"2015-12-01","url":"GandhiAli-100Remix.mp3","text":"100 remixed by Gandhi Ali"}
+        {"order":1, "artist":"GANDHI ALI", "title":"Call Em In", "type":"youtube","date":"2016-02-04","url":"https://www.youtube.com/watch?v=OUaHK84TkBY","text":"Call Em In video produced by DWJproductions"},
+        {"order":3, "artist":"GANDHI ALI", "title":"Real Live", "type":"youtube","date":"2015-08-20","url":"https://www.youtube.com/watch?v=UwYWQNkdF1Y","text":"The first track on Mind Control Empire"},
+        {"order":2, "artist":"GANDHI ALI", "title":"New Ballin feat. J.A.", "type":"youtube","date":"2015-11-13","url":"https://www.youtube.com/watch?v=WCuePpLdgdc","text":"New Ballin feat. J.A."},
+        {"order":4, "artist":"GANDHI ALI", "title":"Jumpman Remix", "type":"sitetrack","date":"2015-12-01","url":"GandhiAli-jumpman.mp3","text":"Jumpman remixed by Gandhi Ali"}
         ]
 }
