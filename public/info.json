@@ -14,12 +14,7 @@
             {"title":"Real Live", "type":"youtube","date":"2015-08-20","url":"https://www.youtube.com/watch?v=UwYWQNkdF1Y","text":"The first track on Mind Control Empire"},
             {"title":"Poetic Justice Freestyle", "type":"youtube","date":"2015-02-13","url":"https://www.youtube.com/watch?v=-JYqJd3irRw","text":"A freestyle to the classic poetic justice track"},
             {"title":"Call Em In", "type":"youtube","date":"2016-02-04","url":"https://www.youtube.com/watch?v=OUaHK84TkBY","text":"Call Em In video produced by DWJproductions", "art":"art/Call_em_in.PNG"}
-        ]},
-        {"name":"J.A.", "quote":"", "bio":"Emerging artist on the MCE roster","image":"JR.JPG",
-        "social":[{"site":"instagram","handle":"_j.a.__"}], 
-        "releases":[
-            {"title":"New Ballin feat. J.A.", "type":"youtube","date":"2015-11-13","url":"https://www.youtube.com/watch?v=WCuePpLdgdc","text":"New Ballin feat. J.A.", "art":"art/new_ballin.PNG"}
-            ]}
+        ]}
     ],
     "events":[
         { "eventname":"SXSW Performance", "location":"South by Southwest Festival: Austin, Tx", "date":"2016-03-17", "artistname":"GANDHI ALI", "time":"10:00:00", "tags":[]},
