@@ -46,5 +46,9 @@
             </div>
             
         </div>
+    <% elsif a_releases[i]["type"] == "spinrilla-playlist"%>
+        <div class="col-sm-4">
+            <%= raw(a_releases[i]["content"]) %>
+        </div>
     <% end %>
 <% end %>
