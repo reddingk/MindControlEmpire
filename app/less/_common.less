@@ -1,0 +1,147 @@
+@font-size: 16px;
+@color-yellow: rgba(255,204,0,0.9);
+@color-white: rgba(255,255,255,0.9);
+
+@color-theme: rgba(255,204,0,0.9);
+
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Josefin+Sans|Montserrat|Open+Sans|Oswald|Rock+Salt');
+
+/*.makeRandom(@int: 0) {
+  .checkInt() {
+    @getNum: `Math.random() * (5 - 1 + @{int})`;
+    @base: unit(`@{int} == 1 ? Math.floor(@{getNum}) : @{getNum}`);
+  }
+  .checkInt();
+  @randNum: @base + 1;
+  // select colors
+  .theme (@val) when (@val = 1){ @color-theme: rgba(255,204,0,0.9); } //yellow
+  .theme (@val) when (@val = 2){ @color-theme: rgba(160,1,160,0.9); } //purple
+  .theme (@val) when (@val = 3){ @color-theme: rgba(3,1,160,0.9); } //blue
+  .theme (@val) when (@val = 4){ @color-theme: rgba(191,24,22,0.9); } //red
+  .theme (@val) when (@val = 5){ @color-theme: rgba(1,167,18,0.9); } //green
+
+  .theme(@randNum);
+}
+.makeRandom(1);
+*/
+/*.makeTheme(@min: 0, @max: @min+1, @int: 0) {
+  .checkInt() {
+    @getNum-r: `Math.random() * (@{max} - @{min} + @{int})`;
+    @base-r: unit(`@{int} == 1 ? Math.floor(@{getNum-r}) : @{getNum-r}`);
+
+    @getNum-g: `Math.random() * (@{max} - @{min} + @{int})`;
+    @base-g: unit(`@{int} == 1 ? Math.floor(@{getNum-g}) : @{getNum-g}`);
+
+    @getNum-b: `Math.random() * (@{max} - @{min} + @{int})`;
+    @base-b: unit(`@{int} == 1 ? Math.floor(@{getNum-b}) : @{getNum-b}`);
+  }
+  .checkInt();
+  @red-c: @base-r + @min;
+  @green-c: @base-g + @min;
+  @blue-c: @base-b + @min;
+}
+.makeTheme(0,255,1);
+@color-theme: rgba(@red-c, @green-c, @blue-c, 0.9);*/
+
+
+html, body {
+  height: 100%;
+  color: #000;
+  background-color: #E9E9E9;
+  font-size: @font-size;
+
+  font-family: 'Oswald', sans-serif;
+  //font-family: 'Josefin Sans', sans-serif;
+  //font-family: 'Rock Salt', cursive;
+}
+
+/*Navigation*/
+.nav-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+  height: 125px;
+
+  .navbar {
+    border-radius: 0px;
+    margin-bottom: 0px;
+    background: rgba(255,255,255,1);
+    border-color: rgba(250,250,250,1);
+    .container-fluid {
+      .navbar-header {
+        .navbar-brand {
+          padding: 0 10px;
+          height: 100px;
+          .logo { height: 100%; }
+        }
+      }
+      #mceNavbar {
+        .nav {
+          li {
+            a {
+              line-height: 70px;
+              font-size: 1.1rem;
+              color: rgba(100,100,100,1);
+              span { font-weight: bold; font-size: 1.7rem; }
+
+              &:hover { color: rgba(0,0,0,1); }
+            }
+          }
+        }
+      }
+    }
+  }
+  .nav-bottom {
+    position: relative;
+  	width: 100%;
+  	padding: 10px 0px;
+  	background-color: @color-theme;
+  }
+}
+/*Main*/
+.mainBody {
+  padding-top: 125px;
+
+  .back-1 { background-color: #e9e9e9; transition: all 0.7s ease;}
+  .back-2 { background-color: #ededed; transition: all 0.7s ease;}
+  .back-3 { background-color: #f1f1f1; transition: all 0.7s ease;}
+  .screenSelect { background-color: @color-theme !important; }
+  .page-container { padding: 10px 0px; margin: 0 auto; width: 95%;}
+
+  .view-all {
+    float: right;
+    .view {
+      display: inline-block;
+      transition: all 0.7s ease;
+      &.view-icon { background-color: rgba(0,0,0,.9); height: 20px; width: 20px; margin-right: 10px;}
+      &.view-text { font-weight: bold; vertical-align: top; }
+    }
+    &:hover {
+      .view-icon { background-color: @color-theme; border-radius: 25px; margin-right: 20px;}
+      .view-text { text-decoration: underline;}
+    }
+  }
+
+  .swap-animation {
+    position: absolute;
+    &.ng-enter, &.ng-leave { transition:1.0s linear all; }
+    /*
+    //Enter
+    &.ng-enter { opacity: 0;}
+    &.ng-enter-active { opacity: 1;}
+    //Leave
+    &.ng-leave { opacity: 1;}
+    &.ng-leave-active { opacity: 0; }*/
+
+    /*Enter*/
+    &.ng-enter { top: -550px; background-color: rgba(230,230,230,1);}
+    &.ng-enter-active { top: 0px; background-color: rgba(230,230,230,0);}
+    /*Leave*/
+    &.ng-leave { top:0; background-color: rgba(230,230,230,0);}
+    &.ng-leave-active { top:550px; background-color: rgba(230,230,230,1);}
+  }
+}
+
+/*Footer*/

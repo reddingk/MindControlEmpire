@@ -1,0 +1,73 @@
+<div class="home-page">
+  <div class="mce-carousel">
+    <div uib-carousel active="hc.active" interval="hc.interval" no-wrap="false">
+      <div uib-slide ng-repeat="slide in hc.slider track by slide.id" index="slide.id">
+        <img ng-src="{{slide.image}}">
+        <div class="carousel-caption">
+          <h4>{{slide.title}}</h4>
+          <p>{{slide.text}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="recent-news back-1">
+    <div class="gravityTemplate" ng-include="hc.newsBackSVG"></div>
+    <div class="page-container recent-news-container">
+      <div class="header-container">
+        <h1>Word On The Street</h1>
+        <div class="view-all"><div class="view view-icon"></div> <div class="view view-text">View All News</div></div>
+        <div style="clear:both;"></div>
+      </div>
+      <div class="news-container" ng-repeat="news in hc.recentNews">
+        <div class="news-item">
+          <div class="card-back">
+            <div class="news-img-container">
+              <img src="imgs/logos/logoB_text.png" ng-if="news.img == null">
+              <img ng-src="{{news.img}}" ng-if="news.img != null">
+            </div>
+            <div class="home-subtitle">News</div>
+            <div class="news-title">{{news.title}}</div>
+            <div class="news-content">{{news.content | limitTo: 50}}...</div>
+            <div class="read-more">Read More...</div>
+          </div>
+          <div class="card-front">
+            <div class="angle-cover"></div>
+            <div class="bottom-cover"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="spotlight-music back-2" section-select>
+    <div class="page-container">
+      <div class="header-container">
+        <h1>Spotlight Music</h1>
+        <div class="view-all"><div class="view view-icon"></div> <div class="view view-text">View All Releases</div></div>
+        <div style="clear:both;"></div>
+      </div>
+      <div class="spotlight-container">
+        <div class="spotlight-selected swap-animation" ng-animate-swap="hc.spotSelected">
+          <div class="spotlight-video"><iframe ng-src="{{hc.youtubeURL(hc.spotSelected.urlcode, 'video')}}" frameborder="0" allowfullscreen></iframe></div>
+          <div class="spotlight-info">
+            <div class="spotlight-title">{{hc.spotSelected.title}}</div>
+            <div class="spotlight-artist">{{hc.spotSelected.artist}}</div>
+            <div class="spotlight-text">{{hc.spotSelected.text}}</div>
+          </div>
+        </div>
+        <div class="spotlight-list" ng-scrollbars ng-scrollbars-config="hc.configScroll">
+          <div class="spotlight-list-item" ng-repeat="item in hc.spotlights" ng-click="hc.swapSelected(item)" ng-class="{'selected': item == hc.spotSelected}">
+            <div class="item-img"><img ng-src="{{hc.youtubeURL(item.urlcode, 'img')}}" /></div>
+            <div class="item-title">{{item.title}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="artists-look back-1">
+
+  </div>
+
+</div>

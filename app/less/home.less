@@ -1,0 +1,140 @@
+@carousel-height: 600px;
+
+.home-page {
+  .mce-carousel {
+    height: @carousel-height;
+    .carousel{
+      .carousel-inner {
+        min-height: @carousel-height;
+
+        .item {
+            height: @carousel-height;
+            overflow-y: hidden;
+            img {
+              height: @carousel-height;
+              margin: 0 auto;
+              min-width: 100%;
+            }
+            .carousel-caption {
+              width: 100%;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: rgba(0,0,0,0.5);
+              padding-bottom: 50px;
+            }
+          }
+      }
+    }
+  }
+
+  .recent-news {
+    position: relative;
+    .gravityTemplate { z-index: 0; position: absolute; width: 100%; padding-top: 200px; opacity: 0.3;  overflow: hidden;}
+    .recent-news-container {
+      padding-top: 30px;
+      z-index: 1;
+      .news-container {
+        display: inline-block;
+        width: 50%;
+        padding: 40px;
+        .news-item {
+          height: 550px;
+          overflow: hidden;
+          position: relative;
+          background-color: rgba(0,0,0,0);
+
+          &:hover { .card-front { top: -10px; z-index: 1;} }
+          .card-front {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+
+            top: 300px;
+            transition: all 0.7s ease;
+            z-index: 1;
+            .angle-cover {
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-width: 0 0 200px 710px;
+              border-color: transparent transparent @color-theme transparent;
+            }
+            .bottom-cover { background-color: @color-theme; width: 100%; height: 75%; }
+          }
+
+          .card-back {
+            display: block;
+            z-index:2;
+            position: relative;
+            padding: 10px;
+            height: 100%;
+            .news-img-container {
+              height: 300px;
+              text-align: center;
+              background-color: rgba(0,0,0,0);
+              margin-bottom: 10px;
+              img { height: 100%;}
+            }
+            .home-subtitle { font-weight: bold; text-decoration: underline; text-align: left; padding-bottom: 5px;}
+            .news-title { font-size: 3rem; font-weight: bold; }
+            .news-content { text-align: left;}
+            .read-more { font-size: .889rem; font-weight: bold; text-align: right;}
+          }
+        }
+      }
+    }
+  }
+  .spotlight-music {
+    .spotlight-container {
+      position: relative;
+      background-color: rgba(255,255,255,1);
+      height: 550px;
+      overflow: hidden;
+      margin: 30px 0px;
+      .spotlight-selected {
+        display: inline-block;
+        width: 80%;
+        height: 550px;
+        border: 2px solid rgba(230,230,230,1);
+        padding: 30px;
+        float: left;
+        .spotlight-video { width: 70%; display: inline-block; float: left; iframe { width: 100%; height: 450px;}}
+        .spotlight-info {
+          width: 29%;
+          display: inline-block;
+          padding: 30px 10px;
+          float: left;
+          text-align: center;
+          .spotlight-title { font-weight: bold; font-size: 2rem; }
+          .spotlight-artist { }
+          .spotlight-text { }
+        }
+      }
+      .spotlight-list {
+        display: inline-block;
+        width: 20%;
+        height: 100%;
+        float: right;
+        border: 2px solid rgba(230,230,230,1);
+        overflow-y: auto;
+        .spotlight-list-item {
+          width:100%;
+          height: 150px;
+          padding: 25px 10px;
+          border-bottom: 2px solid rgba(230,230,230,0.8);
+
+          &.selected { background: rgba(0,0,0,1); color: #fff; opacity: 0.3;}
+          .item-img { height: 100%; display: inline-block; padding-right: 10px;}
+          .item-title { display: inline-block; }
+        }
+      }
+    }
+  }
+}
+
+.header-container {
+  padding: 0px 40px;
+  display: block;
+  h1 { margin-bottom: 20px; font-weight: bold; font-size: 3.5rem; font-family: 'Rock Salt', cursive; }
+}
