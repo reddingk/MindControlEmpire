@@ -16,6 +16,9 @@
         artists: {
           all: function(){
             return artists;
+          },
+          top: function() {
+            return artists.slice(0, 3);
           }
         },
         events: {

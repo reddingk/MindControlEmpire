@@ -7,7 +7,7 @@
 
       vm.recentNews = mceInfo.news.latests();
       vm.newsBackSVG = "views/templates/_gravity.html";
-      vm.artists = mceInfo.artists.all();
+      vm.topArtists = mceInfo.artists.top();
       vm.slider = mceInfo.slider.all();
       vm.spotlights = mceInfo.spotlights.all();
       vm.spotSelected = vm.spotlights[0];
