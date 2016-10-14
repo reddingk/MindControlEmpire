@@ -7,16 +7,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href=""><img src="/imgs/logos/logoB_text.png" class="logo" alt="Mind Control Empire Logo"></a>
+        <a class="navbar-brand" ui-sref="app"><img src="/imgs/logos/logoB_text.png" class="logo" alt="Mind Control Empire Logo"></a>
       </div>
       <div class="collapse navbar-collapse" id="mceNavbar">
         <ul class="nav navbar-nav pull-right">
-          <li><a href=""><span>A</span>rtists</a></li>
-          <li><a href=""><span>T</span>he Empire</a></li>
-          <li><a href=""><span>N</span>ews</a></li>
-          <li><a href=""><span>E</span>vents</a></li>
-          <li><a href=""><span>R</span>eleases</a></li>
-          <li><a href=""><span>C</span>ontact</a></li>
+          <li><a ui-sref="app.artists" ng-class="{'active':hdc.checkActivePage('artists')}"><span>A</span>rtists</a></li>
+          <li><a ui-sref="app.construction" ng-class="{'active':hdc.checkActivePage('construction')}"><span>T</span>he Empire</a></li>
+          <li><a ui-sref="app.construction" ng-class="{'active':hdc.checkActivePage('construction')}"><span>N</span>ews</a></li>
+          <li><a ui-sref="app.construction" ng-class="{'active':hdc.checkActivePage('construction')}"><span>E</span>vents</a></li>
+          <li><a ui-sref="app.construction" ng-class="{'active':hdc.checkActivePage('construction')}"><span>R</span>eleases</a></li>
+          <li><a ui-sref="app.construction" ng-class="{'active':hdc.checkActivePage('construction')}"><span>C</span>ontact</a></li>
         </ul>
       </div>
     </div>

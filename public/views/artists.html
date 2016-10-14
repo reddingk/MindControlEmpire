@@ -1,0 +1,30 @@
+<div class="artists-page">
+
+  <div class="artists-meet back-1">
+    <div class="page-container">
+      <div class="header-container">
+        <h1>Artists</h1>
+        <div style="clear:both;"></div>
+      </div>
+
+      <div class="artists-container" ng-repeat="artist in ac.allArtists" ui-sref="app.artists.details({artistId: artist.name})">
+        <div class="artist-item">
+          <div class="card-back">
+            <div class="artist-img-container">
+              <img src="imgs/logos/logoW_text.png" ng-if="artist.image == null">
+              <img ng-src="imgs/artists/{{artist.image}}" ng-if="artist.image != null">
+            </div>
+          </div>
+          <div class="card-front">
+            <div class="angle-cover"></div>
+            <div class="bottom-cover"></div>
+          </div>
+        </div>
+        <div class="artist-info-container">
+          <div class="artist-name">{{artist.name}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

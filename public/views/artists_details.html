@@ -1,0 +1,47 @@
+<div class="artists-details-page">
+  <div class="header-container">
+    <h1>Artists Details</h1>
+    <div style="clear:both;"></div>
+  </div>
+
+  <div class="artists-details">
+    <div class="page-container">
+      <div class="artist-profile" ng-if="ac.artistProfile != null">
+        <div class="profile-container">
+          <div class="detail-section info-section">
+            <div class="info-bio">
+              <div class="profile-row"><div class="artist-name">{{ac.artistProfile.name}}</div></div>
+              <div class="profile-row">
+                <div class="artist-media {{social.site}}" ng-repeat="social in ac.artistProfile.social"><i class="fa fa-{{social.site}}" ng-class=""></i></div>
+              </div>
+              <div class="profile-row"><div class="artist-bio">{{ac.artistProfile.bio}}</div></div>
+            </div>
+            <div class="info-img">
+              <img src="imgs/logos/logoW_text.png" ng-if="ac.artistProfile.image == null">
+              <img ng-src="imgs/artists/{{ac.artistProfile.image}}" ng-if="ac.artistProfile.image != null">
+            </div>
+          </div>
+          <div class="detail-section release-section">
+            <div class="title">Releases</div>
+            <div class="item-container" ng-animate-swap="ac.displayedReleases">
+              <div class="release-item" ng-repeat="item in ac.displayedReleases.releases">
+                <div class="item-youtube" ng-if="item.type == 'youtube'">
+                  <iframe ng-src="{{ac.URLClean(item.url)}}" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="item-title">{{item.title}}</div>
+              </div>
+            </div>
+            <div class="release-paging"><i class="fa fa-caret-left" ng-click="ac.releasePaging('down')" ng-if="ac.checkButton('down')"></i><i class="fa fa-caret-right" ng-click="ac.releasePaging('up')" ng-if="ac.checkButton('up')"></i></div>
+          </div>
+          <div class="detail-section events-section">
+            <div class="title">Events</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="no-artist-profile" ng-if="ac.artistProfile == null"><h1>Sorry We Don't Have That Artists Information</h1></div>
+    </div>
+  </div>
+
+</div>

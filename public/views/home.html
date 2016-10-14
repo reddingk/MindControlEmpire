@@ -3,6 +3,7 @@
     <div uib-carousel active="hc.active" interval="hc.interval" no-wrap="false">
       <div uib-slide ng-repeat="slide in hc.slider track by slide.id" index="slide.id">
         <img ng-src="{{slide.image}}">
+        <img class="special-slider-img" ng-src="{{slide.image}}">
         <div class="carousel-caption">
           <h4>{{slide.title}}</h4>
           <p>{{slide.text}}</p>
@@ -48,7 +49,7 @@
         <div style="clear:both;"></div>
       </div>
       <div class="spotlight-container">
-        <div class="spotlight-selected swap-animation" ng-animate-swap="hc.spotSelected">
+        <div class="spotlight-selected swap-animation top-down" ng-animate-swap="hc.spotSelected">
           <div class="spotlight-video"><iframe ng-src="{{hc.youtubeURL(hc.spotSelected.urlcode, 'video')}}" frameborder="0" allowfullscreen></iframe></div>
           <div class="spotlight-info">
             <div class="spotlight-title">{{hc.spotSelected.title}}</div>

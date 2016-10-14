@@ -1,0 +1,93 @@
+.artists-details-page {
+  .artists-details {
+    width: 95%;
+    margin: 0px auto;
+    padding: 30px 0px;
+    .page-container {
+      background-color: @color-theme-background;
+      padding: 20px 0px;
+      border-radius: 10px;
+      .artist-profile {
+        .profile-container {
+          .detail-section {
+            display: block;
+            padding: 20px 20px;
+            .info-bio {
+              padding: 20px;
+              width: 49%;
+              display: inline-block;
+              float: left;
+              .profile-row {
+                display: block;
+                padding: 10px 5px;
+                &+.profile-row { border-top: 1px solid #000000;}
+                .artist-name { font-size: 2.5rem; font-family: 'Rock Salt', cursive;}
+                .artist-media {
+                  display: inline-block;
+                  padding: 10px;
+                  border-radius: 50px;
+                  background-color: rgba(255,255,255,1);
+                  margin: 0 10px;
+                  transition: all 0.3s ease;
+                  i {
+                    color: rgba(0,0,0,1);
+                    font-size: 40px;
+                    width: 40px;
+                    text-align: center;
+                    transition: all 0.3s ease;
+                  }
+                  &:hover, &:focus {
+                    &.twitter { box-shadow: 0 0 24px 0 #00ACED; i {  color: #00ACED; }}
+                    &.instagram { box-shadow: 0 0 24px 0 #5851db; i { color: #5851db; }}
+                  }
+                }
+                .artist-bio { }
+              }
+            }
+            .info-img {
+              padding: 20px;
+              width: 49%;
+              display: inline-block;
+              height: 500px;
+              overflow: hidden;
+              img {
+                height: 100%;
+                float: right;
+                padding: 20px 20px 70px;
+                background-color: rgba(255,255,255,0.9);
+                -ms-transform: rotate(5deg);
+                -webkit-transform: rotate(5deg);
+                transform: rotate(5deg);
+              }
+            }
+
+            &.release-section {
+              background-color: rgba(255,255,255,0.4);
+              .title { display: block; width: 100%; font-size: 3rem; padding:0px 40px;}
+              .item-container {
+                position: relative;
+                .release-item {
+                  display: inline-block;
+                  width: 33%;
+                  padding: 30px;
+                  .item-youtube {
+                    text-align: center;
+                    iframe { height: 200px;}
+                  }
+                  .item-title { text-align: center;}
+                }
+              }
+              .release-paging {
+                display: block;
+                width: 100%;
+                text-align: center;
+                i { padding: 10px; font-size: 4rem; }
+              }
+            }
+          }
+        }
+      }
+      .no-artist-profile { }
+    }
+  }
+}

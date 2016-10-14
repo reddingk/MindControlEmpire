@@ -10,18 +10,30 @@
         .item {
             height: @carousel-height;
             overflow-y: hidden;
+            background-color: rgba(255,255,255,1);
             img {
               height: @carousel-height;
               margin: 0 auto;
-              min-width: 100%;
+              //min-width: 100%;
+            }
+            .special-slider-img {
+              z-index: -1;
+              height: 400%;
+              width: 400%;
+              position: absolute;
+              top: -200%;
+              -webkit-filter: blur(20px);
+              filter: blur(20px);
             }
             .carousel-caption {
               width: 100%;
               left: 0;
               right: 0;
               bottom: 0;
-              background-color: rgba(0,0,0,0.5);
+              background-color: rgba(0,0,0,0.4);
               padding-bottom: 50px;
+
+              h4 { font-size: 2.5rem; }
             }
           }
       }

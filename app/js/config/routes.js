@@ -20,14 +20,32 @@
           }
         }
       })
+      .state('app.artists', {
+        url: "artists",
+        views: {
+          'content@': {
+            templateUrl: 'views/artists.html',
+            controller: 'ArtistsController as ac'
+          }
+        }
+      })
+      .state('app.artists.details', {
+        url: "artists/:artistId",
+        views: {
+          'content@': {
+            templateUrl: 'views/artists_details.html',
+            controller: 'ArtistsController as ac'
+          }
+        }
+      })
       .state('app.construction', {
         url: "underconstruction",
         views: {
           'content@': {
-            templateUrl: 'views/construction.html'
+            templateUrl: 'views/underconstruction.html'
           }
         }
-      })
+      });
 
 
 
