@@ -11,11 +11,11 @@
       var spotlights = MCEData.siteData.spotlights;
       var slider = MCEData.siteData.slider;
 
-      function eventsByname(name) {
+      function eventsByname(name, max) {
         var returnedEvents=[];
 
         for(var i =0; i < events.length; i++){
-          if(events[i].artistname == name){
+          if(events[i].artistname == name && returnedEvents.length <= max){
             returnedEvents.push(events[i]);
           }
         }
@@ -37,7 +37,7 @@
               if(artists[i].name == artistName){
                 returnArtist = artists[i];
                 // Add Events
-                returnArtist.events = eventsByname(artistName);
+                returnArtist.events = eventsByname(artistName, 5);
                 break;
               }
             }
@@ -85,40 +85,40 @@
 
        vm.siteData = {
           "artists":[
-              {"name":"GANDHI ALI", "quote":"Real Live", "bio":"Mind Control Empire's first solo artist","image":"GandhiAli.png",
+              {"name":"GANDHI ALI", "quote":"Real Live", "bio":"Mind Control Empire's first solo artist","image":"GandhiAli/GandhiAli.png",
+                "addimages":["GandhiAli/GandhiAli1.jpg","GandhiAli/GandhiAli2.jpg","GandhiAli/GandhiAli3.jpg","GandhiAli/GandhiAli4.jpg","GandhiAli/GandhiAli5.jpg","GandhiAli/GandhiAli6.jpg","GandhiAli/GandhiAli7.jpg"],
               "social":[
-                  {"site":"twitter","handle":"GandhiGandhiAli"},
-                  {"site":"instagram","handle":"Gandhi_Ali"}],
+                  {"site":"twitter","handle":"gandhi3x"},
+                  {"site":"instagram","handle":"gandhi3x"},
+                  {"site":"soundcloud","handle":"gandhi3x"}],
               "releases":[
-                  {"title":"What I Need", "type":"soundcloud-playlist", "date":"2016-01-06", "url":"https://soundcloud.com/the-real-gandhi-ali","text":"What I Need by Gandhi Ali","content":"<iframe width='100%' height='166' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/240896276&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>"},
-                  {"title":"New Ballin feat. J.A.", "type":"youtube","date":"2015-11-13","url":"https://www.youtube.com/embed/WCuePpLdgdc","text":"New Ballin feat. J.A.", "art":"art/new_ballin.PNG"},
-                  {"title":"100 Remix", "type":"sitetrack","date":"2015-12-01","url":"GandhiAli-100Remix.mp3","text":"100 remixed by Gandhi Ali"},
-                  {"title":"Flavors", "type":"sitetrack","date":"2015-12-01","url":"GandhiAli-flavors.mp3","text":"Flavors track"},
-                  {"title":"Jumpman Remix", "type":"sitetrack","date":"2015-12-01","url":"GandhiAli-jumpman.mp3","text":"Jumpman remixed by Gandhi Ali"},
-                  {"title":"Real Live", "type":"youtube","date":"2015-08-20","url":"https://www.youtube.com/embed/UwYWQNkdF1Y","text":"The first track on Mind Control Empire"},
-                  {"title":"Poetic Justice Freestyle", "type":"youtube","date":"2015-02-13","url":"https://www.youtube.com/embed/-JYqJd3irRw","text":"A freestyle to the classic poetic justice track"},
-                  {"title":"Call Em In", "type":"youtube","date":"2016-02-04","url":"https://www.youtube.com/embed/OUaHK84TkBY","text":"'Call Em In' video produced by DWJproductions", "art":"art/Call_em_in.PNG"},
-                  {"title":"Loyal", "type":"youtube","date":"2016-02-25","url":"https://www.youtube.com/embed/j5kak2e0S-8","text":"'Loyal' video produced by DWJproductions"},
-                  {"title":"Whole Time", "type":"youtube","date":"2016-02-11","url":"https://www.youtube.com/embed/aM2K9vl5Z2Y","text":"'Whole Time' video produced by DWJproductions"},
-                  {"title":"Legal", "type":"soundcloud-playlist", "date":"2016-02-25", "url":"https://soundcloud.com/the-real-gandhi-ali/gandhi-ali-legal","text":"Legal by Gandhi Ali","content":"<iframe width='100%' height='166' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/248818061&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>", "art":"art/Gandhi-Legal.PNG"},
-                  {"title":"Thru (Rambo Remix)", "type":"soundcloud-playlist", "date":"2016-01-25", "url":"https://soundcloud.com/the-real-gandhi-ali/gandhi-ali-thru-rambo-remix","text":"Thru (Rambo Remix) by Gandhi Ali","content":"<iframe width='100%' height='166' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245357082&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>"},
-                  {"title":"Deal (Freestyle)", "type":"soundcloud-playlist", "date":"2016-02-17", "url":"https://soundcloud.com/the-real-gandhi-ali/gandhi-ali-deal-freestyle","text":"Deal (Freestyle) by Gandhi Ali","content":"<iframe width='100%' height='166' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/247481088&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>", "art":"art/Gandhi-Deal.PNG"},
-                  {"title":"Radio Remix Vol 1: Jackin Beats", "type":"spinrilla-playlist", "date":"2016-04-13", "url":"https://spinrilla.com/mixtapes/gandhi-ali_dmv-radio-remix-vol-1-jackin-beats-by-gandhi-ali","text":"Radio Remix Vol 1. by Gandhi Ali","content":"<iframe width='100%' height='450px' style='border: 0' src='https://spinrilla.com/mixtapes/gandhi-ali_dmv-radio-remix-vol-1-jackin-beats-by-gandhi-ali/embed' allowtransparency='true'></iframe>", "art":"art/RadioRemix.PNG"}
+                  {"title":"Dirty Work", "type":"spinrilla-mixtape", "date":new Date("2016-07-12"), "url":"https://spinrilla.com/mixtapes/gandhi-ali-dirty-work/embed","text":"Drty Work by Gandhi Ali"},
+                  {"title":"SoundCloudProfile", "type":"soundcloud-profile","date":"","url":"https://soundcloud.com/gandhi3x","text":"Gandhi Ali Sound Cloud Profile"},
+                  {"title":"New Ballin feat. J.A.", "type":"youtube","date":new Date("2015-11-13"),"url":"https://www.youtube.com/embed/WCuePpLdgdc","text":"New Ballin feat. J.A.", "art":"art/new_ballin.PNG"},
+                  {"title":"100 Remix", "type":"sitetrack","date":new Date("2015-12-01"),"url":"GandhiAli-100Remix.mp3","text":"100 remixed by Gandhi Ali"},
+                  {"title":"Flavors", "type":"sitetrack","date":new Date("2015-12-01"),"url":"GandhiAli-flavors.mp3","text":"Flavors track"},
+                  {"title":"Jumpman Remix", "type":"sitetrack","date":new Date("2015-12-01"),"url":"GandhiAli-jumpman.mp3","text":"Jumpman remixed by Gandhi Ali"},
+                  {"title":"Real Live", "type":"youtube","date":new Date("2015-08-20"),"url":"https://www.youtube.com/embed/UwYWQNkdF1Y","text":"The first track on Mind Control Empire"},
+                  {"title":"Poetic Justice Freestyle", "type":"youtube","date":new Date("2015-02-13"),"url":"https://www.youtube.com/embed/-JYqJd3irRw","text":"A freestyle to the classic poetic justice track"},
+                  {"title":"Call Em In", "type":"youtube","date":new Date("2016-02-04"),"url":"https://www.youtube.com/embed/OUaHK84TkBY","text":"'Call Em In' video produced by DWJproductions", "art":"art/Call_em_in.PNG"},
+                  {"title":"Loyal", "type":"youtube","date":new Date("2016-02-25"),"url":"https://www.youtube.com/embed/j5kak2e0S-8","text":"'Loyal' video produced by DWJproductions"},
+                  {"title":"Whole Time", "type":"youtube","date":new Date("2016-02-11"),"url":"https://www.youtube.com/embed/aM2K9vl5Z2Y","text":"'Whole Time' video produced by DWJproductions"},
+                  {"title":"Radio Remix Vol 1: Jackin Beats", "type":"spinrilla-mixtape", "date":new Date("2016-04-13"), "url":"https://spinrilla.com/mixtapes/gandhi-ali_dmv-radio-remix-vol-1-jackin-beats-by-gandhi-ali/embed","text":"Radio Remix Vol 1. by Gandhi Ali","content":"<iframe width='100%' height='450px' style='border: 0' src='https://spinrilla.com/mixtapes/gandhi-ali_dmv-radio-remix-vol-1-jackin-beats-by-gandhi-ali/embed' allowtransparency='true'></iframe>"}
               ]}
           ],
           "events":[
-              { "eventname":"SXSW Performance", "location":"South by Southwest Festival: Austin, Tx", "date":"2016-03-17", "artistname":"GANDHI ALI", "time":"10:00:00", "tags":[]},
-              { "eventname":"Hiphopyogalive performance", "location":"Washington Dc-Amsterdam Lounge", "date":"2015-12-02", "artistname":"GANDHI ALI", "time":"22:00:00", "tags":[]},
-              { "eventname":"Performance", "location":"Washington Dc:Zeba Bar", "date":"2015-09-18", "artistname":"MIND CONTROL EMPIRE", "time":"21:00:00", "tags":[]},
-              { "eventname":"Video Shoot", "location":"Hyattsville, Md: Hoodroach Tv", "date":"2015-08-01", "artistname":"MIND CONTROL EMPIRE", "time":"00:00:00", "tags":[]},
-              { "eventname":"Performance", "location":"Silver Spring, MD FestAfrica", "date":"2015-08-08", "artistname":"GANDHI ALI", "time":"00:00:00", "tags":[]},
-              { "eventname":"Video Shoot", "location":"Hyattsville, Md: DWJ Productions", "date":"2015-08-15", "artistname":"MIND CONTROL EMPIRE", "time":"00:00:00", "tags":[]},
-              { "eventname":"Radio Interview", "location":"Temple Hills, MD: WinDC Radio", "date":"2015-09-21", "artistname":"MIND CONTROL EMPIRE", "time":"00:00:00", "tags":[]},
-              { "eventname":"Photo Shoot", "location":"National Harbor", "date":"2015-08-21", "artistname":"MIND CONTROL EMPIRE", "time":"00:00:00", "tags":[]},
-              { "eventname":"Performance", "location":"Washington, DC: Pure Lounge", "date":"2015-09-29", "artistname":"MIND CONTROL EMPIRE", "time":"00:00:00", "tags":[]},
-              { "eventname":"Photo/Video Shoot", "location":"Germantown, MD: DWJ Productions", "date":"2015-10-08", "artistname":"MIND CONTROL EMPIRE", "time":"00:00:00", "tags":[]},
-              { "eventname":"Video Shoot", "location":"Washington, DC: ClipstarTV", "date":"2015-11-05", "artistname":"MIND CONTROL EMPIRE", "time":"00:00:00", "tags":[]},
-              { "eventname":"Radio Interview", "location":"Washington, DC: Eddie Kayne Show", "date":"2015-11-21", "artistname":"MIND CONTROL EMPIRE", "time":"00:00:00", "tags":[]}
+              { "eventname":"SXSW Performance", "location":"South by Southwest Festival: Austin, Tx", "date":new Date( "2016-03-17 10:00:00"), "artistname":"GANDHI ALI", "tags":[]},
+              { "eventname":"Hiphopyogalive performance", "location":"Washington Dc-Amsterdam Lounge", "date":new Date("2015-12-02 22:00:00"), "artistname":"GANDHI ALI",  "tags":[]},
+              { "eventname":"Performance", "location":"Washington Dc:Zeba Bar", "date":new Date("2015-09-18 21:00:00"), "artistname":"MIND CONTROL EMPIRE",  "tags":[]},
+              { "eventname":"Video Shoot", "location":"Hyattsville, Md: Hoodroach Tv", "date":new Date("2015-08-01 00:00:00"), "artistname":"MIND CONTROL EMPIRE",  "tags":[]},
+              { "eventname":"Performance", "location":"Silver Spring, MD FestAfrica", "date":new Date("2015-08-08 00:00:00"), "artistname":"GANDHI ALI", "time":"00:00:00", "tags":[]},
+              { "eventname":"Video Shoot", "location":"Hyattsville, Md: DWJ Productions", "date":new Date("2015-08-15 00:00:00"), "artistname":"MIND CONTROL EMPIRE",  "tags":[]},
+              { "eventname":"Radio Interview", "location":"Temple Hills, MD: WinDC Radio", "date":new Date("2015-09-21 00:00:00"), "artistname":"MIND CONTROL EMPIRE",  "tags":[]},
+              { "eventname":"Photo Shoot", "location":"National Harbor", "date":new Date("2015-08-21  00:00:00"), "artistname":"MIND CONTROL EMPIRE", "tags":[]},
+              { "eventname":"Performance", "location":"Washington, DC: Pure Lounge", "date":new Date("2015-09-29 00:00:00"), "artistname":"MIND CONTROL EMPIRE",  "tags":[]},
+              { "eventname":"Photo/Video Shoot", "location":"Germantown, MD: DWJ Productions", "date":new Date("2015-10-08 00:00:00"), "artistname":"MIND CONTROL EMPIRE",  "tags":[]},
+              { "eventname":"Video Shoot", "location":"Washington, DC: ClipstarTV", "date":new Date("2015-11-05 00:00:00"), "artistname":"MIND CONTROL EMPIRE", "tags":[]},
+              { "eventname":"Radio Interview", "location":"Washington, DC: Eddie Kayne Show", "date":new Date("2015-11-21 00:00:00"), "artistname":"MIND CONTROL EMPIRE", "tags":[]}
               ],
           "mcempire":[
               {"name":"'G'", "position":"CEO", "icon":"fa-building", "bio":"", "social":[{"site":"twitter", "handle":"Sir_CEO"}, {"site":"instagram", "handle":"CEO_KING_FIELDMOB"}]},

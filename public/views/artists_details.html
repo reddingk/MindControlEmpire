@@ -12,29 +12,71 @@
             <div class="info-bio">
               <div class="profile-row"><div class="artist-name">{{ac.artistProfile.name}}</div></div>
               <div class="profile-row">
-                <div class="artist-media {{social.site}}" ng-repeat="social in ac.artistProfile.social"><i class="fa fa-{{social.site}}" ng-class=""></i></div>
+                <a class="artist-media {{social.site}}" ng-repeat="social in ac.artistProfile.social" ng-href="{{ac.goToSocial(social)}}" target="_blank"><i class="fa fa-{{social.site}}" ng-class=""></i></a>
               </div>
               <div class="profile-row"><div class="artist-bio">{{ac.artistProfile.bio}}</div></div>
+              <div class="profile-row">
+                <div class="profile-additional-imgs">
+                  <div class="additional-nav"><i class="fa fa-caret-left" ng-click="ac.imagePaging('down')" ng-if="ac.checkImgButton('down')"></i></div>
+                  <div class="img-container">
+                    <div class="additional-images" ng-repeat="addimg in ac.displayedReleases.imgs.display" ng-click="ac.imgChange(addimg)"><img ng-src="imgs/artists/{{addimg}}"></div>
+                  </div>
+                  <div class="additional-nav"><i class="fa fa-caret-right" ng-click="ac.imagePaging('up')" ng-if="ac.checkImgButton('up')"></i></div>
+                </div>
+              </div>
+
             </div>
             <div class="info-img">
               <img src="imgs/logos/logoW_text.png" ng-if="ac.artistProfile.image == null">
-              <img ng-src="imgs/artists/{{ac.artistProfile.image}}" ng-if="ac.artistProfile.image != null">
+              <img ng-src="imgs/artists/{{ac.displayedImg}}" ng-if="ac.artistProfile.image != null">
             </div>
           </div>
+
+          <!-- Releases -->
           <div class="detail-section release-section">
             <div class="title">Releases</div>
+
             <div class="item-container" ng-animate-swap="ac.displayedReleases">
-              <div class="release-item" ng-repeat="item in ac.displayedReleases.releases">
-                <div class="item-youtube" ng-if="item.type == 'youtube'">
+              <div class="sub-title">Mixtapes</div>
+              <div class="release-paging"><i class="fa fa-caret-left" ng-click="ac.releasePaging('down', 'mixtapes')" ng-if="ac.checkButton('down', 'mixtapes')"></i><div class="page-number">{{ac.displayedReleases.mixtapes.page}} / {{ac.displayedReleases.mixtapes.totalpages}}</div><i class="fa fa-caret-right" ng-click="ac.releasePaging('up', 'mixtapes')" ng-if="ac.checkButton('up', 'mixtapes')"></i></div>
+              <div class="release-item lrg">
+                <div class="item item-mixtape" ng-if="ac.displayedReleases.mixtapes.releases.type == 'spinrilla-mixtape'">
+                  <iframe ng-src="{{ac.URLClean(ac.displayedReleases.mixtapes.releases.url)}}" frameborder="0" height="450px" allowtransparency='true'></iframe>
+                  <div class="item-text">
+                    <div class="item-title">{{ac.displayedReleases.mixtapes.releases.title}}</div>
+                    <div class="item-date">{{ac.displayedReleases.mixtapes.releases.date | date:"MMM-dd-yyyy"}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item-container item-video" ng-animate-swap="ac.displayedReleases">
+              <div class="sub-title">Videos</div>
+              <div class="release-paging"><i class="fa fa-caret-left" ng-click="ac.releasePaging('down', 'videos')" ng-if="ac.checkButton('down', 'videos')"></i><div class="page-number">{{ac.displayedReleases.videos.page}} / {{ac.displayedReleases.videos.totalpages}}</div><i class="fa fa-caret-right" ng-click="ac.releasePaging('up', 'videos')" ng-if="ac.checkButton('up', 'videos')"></i></div>
+              <div class="release-item" ng-repeat="item in ac.displayedReleases.videos.releases">
+                <div class="item item-youtube">
                   <iframe ng-src="{{ac.URLClean(item.url)}}" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="item-title">{{item.title}}</div>
               </div>
             </div>
-            <div class="release-paging"><i class="fa fa-caret-left" ng-click="ac.releasePaging('down')" ng-if="ac.checkButton('down')"></i><div class="page-number">{{ac.displayedReleases.page}} / {{ac.displayedReleases.totalpages}}</div><i class="fa fa-caret-right" ng-click="ac.releasePaging('up')" ng-if="ac.checkButton('up')"></i></div>
           </div>
+
+          <!-- Events -->
           <div class="detail-section events-section">
             <div class="title">Events</div>
+            <div class="item-container">
+              <div class="event-item" ng-repeat="event in ac.artistProfile.events" ng-class-even="'alternate'" ng-class="ac.isPassed(event.date)">
+                <div class="event-date">
+                  <div class="event-day">{{event.date | date:"MMM dd yyyy"}}</div>
+                  <div class="event-time">{{ event.date | date: "h:mm a" }}</div>
+                </div>
+                <div class="event-info">
+                  <div class="event-title">{{ event.eventname }}</div>
+                  <div class="event-location">{{ event.location }}</div>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>

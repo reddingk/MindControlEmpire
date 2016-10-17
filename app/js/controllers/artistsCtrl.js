@@ -11,44 +11,96 @@
     vm.artistId = $stateParams.artistId;
     vm.artistProfile = null;
     vm.displayedReleases = null;
-     
-    if(vm.artistId != undefined){
+    vm.displayedImg = null;
+    var itemDisplayMax = 3;
+
+    if(vm.artistId != undefined)
+    {
       vm.artistProfile = mceInfo.artists.byName(vm.artistId);
-      vm.displayedReleases = {"page":1, "totalpages":Math.ceil(vm.artistProfile.releases.length / 6) , "releases":vm.artistProfile.releases.slice(0,6)};
+      vm.displayedImg = vm.artistProfile.image;
+      vm.allReleases = {"videos":[], "mixtapes":[], "profiles":[]};
+
+      for(var i =0; i < vm.artistProfile.releases.length; i++)
+      {
+        var tmpRelease = vm.artistProfile.releases[i];
+        if(tmpRelease.type == "youtube"){
+          vm.allReleases.videos.push(tmpRelease);
+        }
+        else if(tmpRelease.type.includes("mixtape")){
+          vm.allReleases.mixtapes.push(tmpRelease);
+        }
+        else if(tmpRelease.type.includes("profile")){
+          vm.allReleases.profiles.push(tmpRelease);
+        }
+      }
+
+      vm.displayedReleases = {
+        "imgs":{"page":1, "totalpages":Math.ceil(vm.artistProfile.addimages.length / 4), "display": vm.artistProfile.addimages.slice(0,4)},
+        "videos":{"page":1, "totalpages":Math.ceil(vm.allReleases.videos.length / itemDisplayMax), "releases":vm.allReleases.videos.slice(0,3)},
+        "mixtapes":{"page":1, "totalpages":vm.allReleases.mixtapes.length , "releases":vm.allReleases.mixtapes[0]},
+        "profiles":vm.allReleases.profiles
+      };
     }
 
     /*Functions*/
+    vm.imgChange = imgChange;
+    vm.imagePaging = imagePaging;
+    vm.checkImgButton = checkImgButton;
+
     vm.replaceSpace = replaceSpace;
     vm.URLClean = URLClean;
     vm.releasePaging = releasePaging;
     vm.checkButton = checkButton;
+    vm.isPassed = isPassed;
+    vm.goToSocial = goToSocial;
 
-    function checkButton(direction) {
+    function goToSocial(social){
+      var newUrl = "";
+      switch(social.site){
+        case "twitter":
+          newUrl = "https://twitter.com/" + social.handle;
+          break;
+        case "instagram":
+          newUrl = "https://www.instagram.com/"+social.handle;
+          break;
+        case "soundcloud":
+          newUrl = "https://soundcloud.com/"+social.handle;
+          break;
+      }
+      return newUrl;
+    }
+
+    function isPassed(date){
+      var today = new Date();
+      return (date < today ? "passed" : "");
+    }
+    function checkButton(direction, type) {
       var bool = false;
+
       if(direction == "up"){
-        if((vm.displayedReleases.page + 1) <= vm.displayedReleases.totalpages) {bool = true;}
+        if((vm.displayedReleases[type].page + 1) <= vm.displayedReleases[type].totalpages) {bool = true;}
       }
       else{
-        if((vm.displayedReleases.page - 1) > 0) { bool = true;}
+        if((vm.displayedReleases[type].page - 1) > 0) { bool = true;}
       }
       return bool;
     }
 
-    function releasePaging(direction){
+    function releasePaging(direction, type){
       if(direction == "up"){
-        if((vm.displayedReleases.page + 1) <= vm.displayedReleases.totalpages)
+        if((vm.displayedReleases[type].page + 1) <= vm.displayedReleases[type].totalpages)
         {
-          vm.displayedReleases.page +=1;
+          vm.displayedReleases[type].page +=1;
         }
       }
       else{
-        if((vm.displayedReleases.page - 1) > 0)
+        if((vm.displayedReleases[type].page - 1) > 0)
         {
-          vm.displayedReleases.page -=1;
+          vm.displayedReleases[type].page -=1;
         }
       }
-      var first = 6 * (vm.displayedReleases.page  - 1);
-      vm.displayedReleases.releases = vm.artistProfile.releases.slice(first,first+6);
+      var first = itemDisplayMax * (vm.displayedReleases[type].page  - 1);
+      vm.displayedReleases[type].releases = (type != "mixtapes" ? vm.allReleases[type].slice(first,first+ itemDisplayMax) : vm.allReleases[type][(vm.displayedReleases[type].page  - 1)]);
     }
 
     function URLClean(url) {
@@ -58,6 +110,40 @@
     function replaceSpace(string){
       return string.split(' ').join('_');
     }
+
+    function checkImgButton(direction){
+      var bool = false;
+
+      if(direction == "up"){
+        if((vm.displayedReleases.imgs.page + 1) <= vm.displayedReleases.imgs.totalpages) {bool = true;}
+      }
+      else{
+        if((vm.displayedReleases.imgs.page - 1) > 0) { bool = true;}
+      }
+      return bool;
+    }
+
+    function imagePaging(direction) {
+      if(direction == "up"){
+        if((vm.displayedReleases.imgs.page + 1) <= vm.displayedReleases.imgs.totalpages)
+        {
+          vm.displayedReleases.imgs.page +=1;
+        }
+      }
+      else{
+        if((vm.displayedReleases.imgs.page - 1) > 0)
+        {
+          vm.displayedReleases.imgs.page -=1;
+        }
+      }
+      var first = 4 * (vm.displayedReleases.imgs.page  - 1);
+      vm.displayedReleases.imgs.display = vm.artistProfile.addimages.slice(first,first+ 4);
+    }
+    function imgChange(img) {
+      vm.displayedImg = img;
+    }
+
+
 
   }]);
 

@@ -32,16 +32,42 @@
                   i {
                     color: rgba(0,0,0,1);
                     font-size: 40px;
-                    width: 40px;
+                    min-width: 40px;
                     text-align: center;
                     transition: all 0.3s ease;
                   }
                   &:hover, &:focus {
                     &.twitter { box-shadow: 0 0 24px 0 #00ACED; i {  color: #00ACED; }}
                     &.instagram { box-shadow: 0 0 24px 0 #5851db; i { color: #5851db; }}
+                    &.soundcloud { box-shadow: 0 0 24px 0 #ff3a00; i { color: #ff3a00; }}
                   }
                 }
                 .artist-bio { }
+                .profile-additional-imgs {
+                  height: 100px;
+                  .additional-nav {
+                    width: 19%;
+                    display: inline-block;
+                    height: 100%;
+                    overflow: hidden;
+                    text-align: center;
+                    i { font-size: 5rem; }
+                  }
+                  .img-container {
+                    width: 60%;
+                    display: inline-block;
+                    height: 100%;
+                    overflow: hidden;
+                    .additional-images {
+                      width: 23%;
+                      position: relative;
+                      display: inline-block;
+                      height: 100px;
+                      padding: 5px;
+                      img { width: 100%; height: 100%; padding: 5px 5px 20px 5px; background-color: rgba(255,255,255,1);}
+                    }
+                  }
+                }
               }
             }
             .info-img {
@@ -66,23 +92,69 @@
               .title { display: block; width: 100%; font-size: 3rem; padding:0px 40px;}
               .item-container {
                 position: relative;
+                .sub-title { font-family: 'Rock Salt', cursive; text-decoration: underline; font-size: 1.5rem; display: block; padding: 20px 40px; }
                 .release-item {
                   display: inline-block;
                   width: 33%;
                   padding: 30px;
-                  .item-youtube {
+                  &.lrg { width: 100%; display: block;}
+                  .item {
                     text-align: center;
-                    iframe { height: 200px;}
+
+                    &.item-youtube { iframe { height: 200px;} &+.item-title { text-align: center;}}
+                    &.item-mixtape {
+                      height: 500px;
+                      iframe { float: left; width: 50%; display: inline-block; &:after { clear: both;} }
+                      .item-text {
+                        float: left;
+                        padding: 10px;
+                        text-align: left;
+                        width: 49%;
+                        display: inline-block;
+                        .item-title { font-size: 2.5rem; }
+                        &:after { clear: both;}
+                      }
+                    }
                   }
-                  .item-title { text-align: center;}
                 }
               }
               .release-paging {
                 display: block;
                 width: 100%;
-                text-align: center;
-                i { padding: 10px; font-size: 4rem; display: inline-block;}
-                .page-number { display: inline-block; font-size: 3rem;}
+                text-align: left;
+                padding: 0 50px;
+                height: 2rem;
+                i { padding: 0px 10px; font-size: 1.7rem; display: inline-block; float: left; }
+                .page-number { display: inline-block; font-size: 1rem; float: left;}
+
+              }
+            }
+
+            &.events-section {
+              .title { display: block; width: 100%; font-size: 3rem; padding:0px 40px;}
+              .item-container {
+                padding: 0px 50px;
+                .event-item {
+                  display: block;
+                  border-bottom: 1px solid  rgba(0,0,0,0.9);
+
+                  &.alternate { background-color: rgba(230,230,230,0.2);}
+                  &.passed { .event-date, .event-info { .event-title,.event-location, .event-day, .event-time { text-decoration: line-through; } } }
+                  .event-date {
+                    padding: 20px;
+                    width: 30%;
+                    display: inline-block;
+                    .event-day { display: block; font-size: 1.5rem; font-weight: bold; }
+                    .event-time { }
+                  }
+                  .event-info {
+                    padding: 20px;
+                    width: 30%;
+                    display: inline-block;
+                    .event-title { display: block; font-size: 1.5rem; font-weight: bold;}
+                    .event-location { }
+                  }
+                }
               }
             }
           }
