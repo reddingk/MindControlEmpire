@@ -31,7 +31,7 @@
                 <div class="item-title">{{item.title}}</div>
               </div>
             </div>
-            <div class="release-paging"><i class="fa fa-caret-left" ng-click="ac.releasePaging('down')" ng-if="ac.checkButton('down')"></i><i class="fa fa-caret-right" ng-click="ac.releasePaging('up')" ng-if="ac.checkButton('up')"></i></div>
+            <div class="release-paging"><i class="fa fa-caret-left" ng-click="ac.releasePaging('down')" ng-if="ac.checkButton('down')"></i><div class="page-number">{{ac.displayedReleases.page}} / {{ac.displayedReleases.totalpages}}</div><i class="fa fa-caret-right" ng-click="ac.releasePaging('up')" ng-if="ac.checkButton('up')"></i></div>
           </div>
           <div class="detail-section events-section">
             <div class="title">Events</div>
