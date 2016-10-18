@@ -51,7 +51,8 @@
         url: "contactus",
         views: {
           'content@': {
-            templateUrl: 'views/contactus.html'
+            templateUrl: 'views/contactus.html',
+            controller: 'ContactUsController as cc'
           }
         }
       })
