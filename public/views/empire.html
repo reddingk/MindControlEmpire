@@ -1,0 +1,28 @@
+<div class="empire-page">
+  <div class="the-empire">
+    <div class="page-container">
+      <div class="header-container">
+        <h1>The Empire</h1>
+        <div style="clear:both;"></div>
+      </div>
+    </div>
+
+    <div class="empire-containers">
+      <div class="empire-member" ng-repeat="member in ec.mcEmpire">
+        <div class="back-content" back-img="imgs/{{member.img}}"></div>
+        <div class="front-content">
+          <div class="empire-row">
+            <div class="section-left name">{{member.name}}</div>
+            <div class="section-right social">
+              <a class="empire-media {{social.site}}" ng-repeat="social in member.social" ng-href="{{ec.goToSocial(social)}}" target="_blank"><i class="fa fa-{{social.site}}"></i></a>
+            </div>
+          </div>
+          <div class="empire-row">
+            <div class="section-left position">{{member.position}}</div>
+            <div class="section-right"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

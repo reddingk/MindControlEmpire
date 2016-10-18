@@ -38,6 +38,23 @@
           }
         }
       })
+      .state('app.empire', {
+        url: "empire",
+        views: {
+          'content@': {
+            templateUrl: 'views/empire.html',
+            controller: 'EmpireController as ec'
+          }
+        }
+      })
+      .state('app.contactus', {
+        url: "contactus",
+        views: {
+          'content@': {
+            templateUrl: 'views/contactus.html'
+          }
+        }
+      })
       .state('app.construction', {
         url: "underconstruction",
         views: {

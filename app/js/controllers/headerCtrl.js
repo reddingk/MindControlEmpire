@@ -10,8 +10,6 @@
          if (currentPage != null && currentPage.current.name.indexOf(current) > -1) { return true; }
          else { return false; }
     }
-    
-
   }]);
 
 })();

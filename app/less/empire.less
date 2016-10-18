@@ -1,0 +1,67 @@
+.empire-page {
+  .the-empire {
+    .page-container {
+    }
+
+    .empire-containers {
+      padding: 30px 50px;
+      .empire-member {
+        position: relative;
+        .back-content {
+          opacity: 0.8;
+          margin: 20px 0px;
+          padding: 20px;
+          height: 400px;
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 100%;
+          -webkit-filter: grayscale(75%);
+          filter: grayscale(75%);
+          z-index: 1;
+        }
+        .front-content {
+          position: absolute;
+          top:0;
+          left:0;
+          width: 100%;
+          z-index: 2;
+          .empire-row {
+            padding: 15px 25px;
+            background-color: rgba(0,0,0,0.5);
+            color: rgba(255,255,255,1);
+
+            .section-left { display: inline-block; width: 49%; text-align: left;}
+            .section-right { display: inline-block; width: 49%; text-align: right; }
+            .name { font-size: 2.5rem;}
+            .position { font-size: 1.5rem; }
+            .social {
+              .empire-media {
+                display: inline-block;
+                padding: 10px;
+                border-radius: 50px;
+                background-color: rgba(255,255,255,1);
+                margin: 0 10px;
+                transition: all 0.3s ease;
+                i {
+                  color: rgba(0,0,0,1);
+                  font-size: 40px;
+                  min-width: 40px;
+                  text-align: center;
+                  transition: all 0.3s ease;
+                }
+                &:hover, &:focus {
+                  &.twitter { box-shadow: 0 0 24px 0 #00ACED; i {  color: #00ACED; }}
+                  &.instagram { box-shadow: 0 0 24px 0 #5851db; i { color: #5851db; }}
+                  &.soundcloud { box-shadow: 0 0 24px 0 #ff3a00; i { color: #ff3a00; }}
+                }
+              }
+            }
+            &+.empire-row { border-top: 2px solid rgba(0,0,0,1);}
+          }
+        }
+      }
+    }
+  }
+}

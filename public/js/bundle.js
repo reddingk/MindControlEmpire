@@ -5,10 +5,12 @@
 		angular.module('headerCtrl', ['ui.bootstrap']);
 		angular.module('homeCtrl', ['ui.bootstrap', 'ngAnimate']);
 		angular.module('artistsCtrl', ['ui.bootstrap', 'ngAnimate']);
+		angular.module('empireCtrl', ['ui.bootstrap', 'ngAnimate']);
+
 		angular.module('directives', []);
 
 		/**/
-    angular.module('MCEApp', ['ngMaterial','ngAnimate', 'ngScrollbars','ui.router', 'dataconfig', 'config','directives','headerCtrl','homeCtrl','artistsCtrl']);
+    angular.module('MCEApp', ['ngMaterial','ngAnimate', 'ngScrollbars','ui.router', 'dataconfig', 'config','directives','headerCtrl','homeCtrl','artistsCtrl','empireCtrl']);
 
 })();
 
@@ -135,9 +137,9 @@
               { "eventname":"Radio Interview", "location":"Washington, DC: Eddie Kayne Show", "date":new Date("2015-11-21 00:00:00"), "artistname":"MIND CONTROL EMPIRE", "tags":[]}
               ],
           "mcempire":[
-              {"name":"'G'", "position":"CEO", "icon":"fa-building", "bio":"", "social":[{"site":"twitter", "handle":"Sir_CEO"}, {"site":"instagram", "handle":"CEO_KING_FIELDMOB"}]},
-              {"name":"Dwayne", "position":"Videographer & Photographer", "icon":"fa-video-camera", "bio":"", "social":[{"site":"twitter", "handle":"DWJproductions"}]},
-              {"name":"Drty Warhaul", "position":"Producer", "icon":"fa-headphones", "bio":"", "social":[{"site":"twitter", "handle":"inspiredmindz"}]}
+              {"name":"'G'", "position":"CEO", "img":"site-images/GField.jpg","icon":"fa-building", "bio":"", "social":[{"site":"twitter", "handle":"Sir_CEO"}, {"site":"instagram", "handle":"CEO_KING_FIELDMOB"}]},
+              {"name":"Dwayne", "position":"Videographer & Photographer", "img":"site-images/Dwayne.png","icon":"fa-video-camera", "bio":"", "social":[{"site":"twitter", "handle":"DWJproduction"}, {"site":"instagram", "handle":"DWJproduction"}]},
+              {"name":"Drty Warhaul", "position":"Producer", "img":"site-images/Fields.jpg", "icon":"fa-headphones", "bio":"", "social":[{"site":"twitter", "handle":"inspiredmindz"},{"site":"soundcloud", "handle":"inspiredmindz"}]}
               ],
           "news":[
               {"title":"SXSW Performance", "date":new Date("2016-03-18 00:00:00"), "img":"imgs/site-images/Gandhi-sxsw.png", "content":"GANDHI Ali will be performing at this years SXSW (South By Southwest) music festival in Austin, TX. Visit http://www.sxsw.com/music for event and ticket information.", "tags":["GANDHI ALI","SXSW"]},
@@ -199,6 +201,15 @@
           'content@': {
             templateUrl: 'views/artists_details.html',
             controller: 'ArtistsController as ac'
+          }
+        }
+      })
+      .state('app.empire', {
+        url: "empire",
+        views: {
+          'content@': {
+            templateUrl: 'views/empire.html',
+            controller: 'EmpireController as ec'
           }
         }
       })
@@ -374,6 +385,35 @@
 (function(){
  "use strict";
 
+  angular.module('empireCtrl').controller('EmpireController', ['$state','mceInfo', function($state,mceInfo){
+    var vm = this;
+    vm.mcEmpire = mceInfo.mcempire.all();
+
+    /*Function*/
+    vm.goToSocial = goToSocial;
+
+    function goToSocial(social){
+      var newUrl = "";
+      switch(social.site){
+        case "twitter":
+          newUrl = "https://twitter.com/" + social.handle;
+          break;
+        case "instagram":
+          newUrl = "https://www.instagram.com/"+social.handle;
+          break;
+        case "soundcloud":
+          newUrl = "https://soundcloud.com/"+social.handle;
+          break;
+      }
+      return newUrl;
+    }
+    
+  }]);
+})();
+
+(function(){
+ "use strict";
+
   angular.module('headerCtrl').controller('HeaderController', ['$state', function($state){
     var vm = this;
     vm.checkActivePage = checkActivePage;
@@ -383,8 +423,6 @@
          if (currentPage != null && currentPage.current.name.indexOf(current) > -1) { return true; }
          else { return false; }
     }
-    
-
   }]);
 
 })();
@@ -421,6 +459,22 @@
       }
       function swapSelected(item) {
         vm.spotSelected = item;
+      }
+
+    }]);
+
+})();
+
+(function(){
+   "use strict";
+
+    angular.module('directives').directive('backImg', ['$window', function($window) {
+      return {
+        restrict: 'EA',
+        link: function ($scope, element, attrs) {
+          var url = attrs.backImg;
+          element.css({'background-image': 'url(' + url +')'});
+        }
       }
 
     }]);
