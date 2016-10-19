@@ -46,7 +46,8 @@
         },
         events: {
           all: function(){
-            return events;
+            var sortedEvents = events.sort(function(a,b){return a.date - b.date;});
+            return sortedEvents;
           }
         },
         news: {

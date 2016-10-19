@@ -47,6 +47,15 @@
           }
         }
       })
+      .state('app.events', {
+        url: "contactus",
+        views: {
+          'content@': {
+            templateUrl: 'views/events.html',
+            controller: 'EventsController as ec'
+          }
+        }
+      })
       .state('app.contactus', {
         url: "contactus",
         views: {
