@@ -53,6 +53,11 @@
     vm.checkButton = checkButton;
     vm.isPassed = isPassed;
     vm.goToSocial = goToSocial;
+    vm.buildArray = buildArray;
+
+    function buildArray(num) {
+      return new Array(num);
+    }
 
     function goToSocial(social){
       var newUrl = "";

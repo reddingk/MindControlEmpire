@@ -6,6 +6,7 @@
 
   <div class="artists-details">
     <div class="page-container">
+      <div class="bouncing-logo" ng-repeat="n in ac.buildArray(3) track by $index" random-motion><img src="imgs/logos/logoW.png"></div>
       <div class="artist-profile" ng-if="ac.artistProfile != null">
         <div class="profile-container">
           <div class="detail-section info-section">
@@ -18,8 +19,8 @@
               <div class="profile-row">
                 <div class="profile-additional-imgs">
                   <div class="additional-nav"><i class="fa fa-caret-left" ng-click="ac.imagePaging('down')" ng-if="ac.checkImgButton('down')"></i></div>
-                  <div class="img-container">
-                    <div class="additional-images" ng-repeat="addimg in ac.displayedReleases.imgs.display" ng-click="ac.imgChange(addimg)"><img ng-src="imgs/artists/{{addimg}}"></div>
+                  <div class="img-container" >
+                    <div class="additional-images slide-animation disappear" ng-animate-swap="ac.displayedReleases.imgs.display" ng-repeat="addimg in ac.displayedReleases.imgs.display" ng-click="ac.imgChange(addimg)"><img ng-src="imgs/artists/{{addimg}}"></div>
                   </div>
                   <div class="additional-nav"><i class="fa fa-caret-right" ng-click="ac.imagePaging('up')" ng-if="ac.checkImgButton('up')"></i></div>
                 </div>

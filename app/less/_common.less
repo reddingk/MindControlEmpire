@@ -8,43 +8,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Josefin+Sans|Montserrat|Open+Sans|Oswald|Rock+Salt');
 
-/*.makeRandom(@int: 0) {
-  .checkInt() {
-    @getNum: `Math.random() * (5 - 1 + @{int})`;
-    @base: unit(`@{int} == 1 ? Math.floor(@{getNum}) : @{getNum}`);
-  }
-  .checkInt();
-  @randNum: @base + 1;
-  // select colors
-  .theme (@val) when (@val = 1){ @color-theme: rgba(255,204,0,0.9); } //yellow
-  .theme (@val) when (@val = 2){ @color-theme: rgba(160,1,160,0.9); } //purple
-  .theme (@val) when (@val = 3){ @color-theme: rgba(3,1,160,0.9); } //blue
-  .theme (@val) when (@val = 4){ @color-theme: rgba(191,24,22,0.9); } //red
-  .theme (@val) when (@val = 5){ @color-theme: rgba(1,167,18,0.9); } //green
-
-  .theme(@randNum);
-}
-.makeRandom(1);
-*/
-/*.makeTheme(@min: 0, @max: @min+1, @int: 0) {
-  .checkInt() {
-    @getNum-r: `Math.random() * (@{max} - @{min} + @{int})`;
-    @base-r: unit(`@{int} == 1 ? Math.floor(@{getNum-r}) : @{getNum-r}`);
-
-    @getNum-g: `Math.random() * (@{max} - @{min} + @{int})`;
-    @base-g: unit(`@{int} == 1 ? Math.floor(@{getNum-g}) : @{getNum-g}`);
-
-    @getNum-b: `Math.random() * (@{max} - @{min} + @{int})`;
-    @base-b: unit(`@{int} == 1 ? Math.floor(@{getNum-b}) : @{getNum-b}`);
-  }
-  .checkInt();
-  @red-c: @base-r + @min;
-  @green-c: @base-g + @min;
-  @blue-c: @base-b + @min;
-}
-.makeTheme(0,255,1);
-@color-theme: rgba(@red-c, @green-c, @blue-c, 0.9);*/
-
 
 html, body {
   height: 100%;

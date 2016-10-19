@@ -1,13 +1,33 @@
 .contactus-page {
   .page-container {
+    width: 100% !important;
     .contactUsCard {
-      width: 75%;
-      margin: 0 auto;
+      margin-top: 100px;
+      width: 100%;
       height: 300px;
-      background-color: @color-theme;
+      //background-color: @color-theme;
+      background: linear-gradient(to bottom, @color-theme , rgba(233,233,233,1));
       overflow: hidden;
       position: relative;
-      .contact-text { }
+      .contact-text {
+        font-size: 3rem;
+        text-align: center;
+        width: 100%;
+        z-index: 3;
+        position: absolute;
+        top: 25%;        
+        a { color: rgba(255,255,255,1); display: block;}
+      }
+      .bouncing-logo {
+        width: 300px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        opacity: 0.3;
+        img { width: 100%; }
+      }
       .raining-logo {
         width: 50px;
         overflow: hidden;

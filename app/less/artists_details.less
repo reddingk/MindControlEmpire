@@ -1,4 +1,5 @@
 .artists-details-page {
+  .header-container { padding: 30px 40px 0; width: 95%; margin: 0 auto; }
   .artists-details {
     width: 95%;
     margin: 0px auto;
@@ -7,7 +8,11 @@
       background-color: @color-theme-background;
       padding: 20px 0px;
       border-radius: 10px;
+      position: relative;
+      overflow: hidden;
       .artist-profile {
+        position: relative;
+        z-index: 2;
         .profile-container {
           .detail-section {
             display: block;
@@ -46,20 +51,21 @@
                 .profile-additional-imgs {
                   height: 100px;
                   .additional-nav {
-                    width: 19%;
+                    width: 10%;
                     display: inline-block;
                     height: 100%;
                     overflow: hidden;
                     text-align: center;
-                    i { font-size: 5rem; }
+                    i { font-size: 7rem; }
                   }
                   .img-container {
                     width: 60%;
                     display: inline-block;
                     height: 100%;
                     overflow: hidden;
+                    background: rgba(0,0,0,0.5);
                     .additional-images {
-                      width: 23%;
+                      width: 25%;
                       position: relative;
                       display: inline-block;
                       height: 100px;
@@ -163,5 +169,38 @@
       }
       .no-artist-profile { }
     }
+  }
+
+  /*Animation*/
+  .slide-animation {
+    position: absolute;
+    &.ng-enter, &.ng-leave { transition:1.0s linear all; }
+    &.top-down {
+      /*Enter*/
+      &.ng-enter { top: -100px; background-color: rgba(230,230,230,1);}
+      &.ng-enter-active { top: 0px; background-color: rgba(230,230,230,0);}
+      /*Leave*/
+      &.ng-leave { top:0; background-color: rgba(230,230,230,0);}
+      &.ng-leave-active { top:100px; background-color: rgba(230,230,230,1);}
+    }
+    &.disappear {
+      /*Enter*/
+      &.ng-enter { opacity:0; background-color: rgba(230,230,230,1);}
+      &.ng-enter-active { opacity:1; background-color: rgba(230,230,230,0);}
+      /*Leave*/
+      &.ng-leave { opacity:1; background-color: rgba(230,230,230,0);}
+      &.ng-leave-active { opacity:0; background-color: rgba(230,230,230,1);}
+    }
+  }
+
+  .bouncing-logo {
+    width: 300px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.3;
+    img { width: 100%; }
   }
 }
