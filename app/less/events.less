@@ -1,0 +1,58 @@
+.events-page {
+  .page-container {
+    .events-containers {
+      padding: 40px;
+      .calender-section { width: 40%; display: inline-block; position: relative; float: left;padding: 10px; height: 500px;}
+      .list-section {
+        width: 60%;
+        display: inline-block;
+        position: relative;
+        padding: 10px;
+        height: 500px;
+        overflow-y: auto;
+        border: 10px solid @color-theme;
+        .list-item {
+          display: block;
+          height: 150px;
+          &.alternate { background-color: rgba(0,0,0,0.2);}
+          &.passed { .event-item { .event-title,.event-location, .event-day, .event-time { text-decoration: line-through; } } }
+          .event-item {
+            display: inline-block;
+            float: left;
+            height: 150px;
+            overflow: hidden;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.5rem;
+
+            &::after{ clear: both;}
+            &.event-img {
+              position: relative;
+              width: 20%;
+              &.artist-img {
+                cursor: pointer;
+                padding: 3% 0px;
+                &:hover { .event-artist-name{ color: @color-theme; }}
+                img { border-radius: 100px; height: 70px;  width: 70px; }
+                .event-artist-name { display: block; transition: all 0.7s ease;}
+              }
+              &.no-img { padding: 3% 0px; img { height: 120px;  width: 120px; }}
+            }
+            &.event-date {
+              width: 20%;
+              padding: 5% 0px;
+              .event-day { width: 100%; display: block; }
+              .event-time { width: 100%; display: block; }
+            }
+            &.event-info {
+              width: 58%;
+              padding: 5% 0px;
+              .event-title { width: 100%; display: block;}
+              .event-location { width: 100%; display: block; }
+            }
+          }
+        }
+      }
+    }
+  }
+}

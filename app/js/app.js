@@ -6,7 +6,7 @@
 		angular.module('homeCtrl', ['ui.bootstrap', 'ngAnimate']);
 		angular.module('artistsCtrl', ['ui.bootstrap', 'ngAnimate']);
 		angular.module('empireCtrl', ['ui.bootstrap', 'ngAnimate']);
-		angular.module('eventsCtrl', ['ui.bootstrap', 'ngAnimate']);
+		angular.module('eventsCtrl', ['ui.bootstrap', 'ngAnimate', 'ui.calendar']);
 		angular.module('contactUsCtrl', ['ui.bootstrap', 'ngAnimate']);
 
 		angular.module('directives', []);

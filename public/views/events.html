@@ -1,0 +1,33 @@
+<div class="events-page">
+  <div class="page-container">
+    <div class="header-container">
+      <h1>Events</h1>
+      <div style="clear:both;"></div>
+    </div>
+
+    <div class="events-containers">
+      <div class="calender-section">
+        <div ui-calendar="ec.uiConfig.calendar" class="span8 calendar" ng-model="ec.eventSources"></div>
+      </div>
+      <div class="list-section">
+        <div class="list-item" ng-repeat="event in ec.allEvents" ng-class-even="'alternate'" ng-class="ec.isPassed(event.date)">
+          <div class="event-item event-img artist-img" ui-sref="app.artists.details({artistId: event.artistname})" ng-if="event.artistimg != null">
+            <img ng-src="imgs/artists/{{event.artistimg}}" >
+            <div class="event-artist-name">{{event.artistname}}</div>
+          </div>
+          <div class="event-item event-img no-img" ng-if="event.artistimg == null">
+            <img src="imgs/logos/logoB.png" class="no-img">
+          </div>
+          <div class="event-item event-date">
+            <div class="event-day">{{event.date | date:"MMM dd yyyy"}}</div>
+            <div class="event-time">{{ event.date | date: "h:mm a" }}</div>
+          </div>
+          <div class="event-item event-info">
+            <div class="event-title">{{ event.eventname }}</div>
+            <div class="event-location">{{ event.location }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

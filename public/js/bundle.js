@@ -6,12 +6,13 @@
 		angular.module('homeCtrl', ['ui.bootstrap', 'ngAnimate']);
 		angular.module('artistsCtrl', ['ui.bootstrap', 'ngAnimate']);
 		angular.module('empireCtrl', ['ui.bootstrap', 'ngAnimate']);
+		angular.module('eventsCtrl', ['ui.bootstrap', 'ngAnimate', 'ui.calendar']);
 		angular.module('contactUsCtrl', ['ui.bootstrap', 'ngAnimate']);
 
 		angular.module('directives', []);
 
 		/**/
-    angular.module('MCEApp', ['ngMaterial','ngAnimate', 'ngScrollbars','ui.router', 'dataconfig', 'config','directives','headerCtrl','homeCtrl','artistsCtrl','empireCtrl','contactUsCtrl']);
+    angular.module('MCEApp', ['ngMaterial','ngAnimate', 'ngScrollbars','ui.router', 'dataconfig', 'config','directives','headerCtrl','homeCtrl','artistsCtrl','empireCtrl','eventsCtrl','contactUsCtrl']);
 
 })();
 
@@ -36,7 +37,6 @@
             returnedEvents.push(events[i]);
           }
         }
-
         return returnedEvents;
       }
 
@@ -63,7 +63,18 @@
         },
         events: {
           all: function(){
-            return events;
+            var sortedEvents = events.sort(function(a,b){return b.date - a.date;});
+
+            // Get artist image
+            for(var i =0; i < sortedEvents.length; i++){
+              for(var j =0; j < artists.length; j++){
+                if(sortedEvents[i].artistname == artists[j].name ){
+                  sortedEvents[i].artistimg = artists[j].image;
+                }
+              }
+            }
+
+            return sortedEvents;
           }
         },
         news: {
@@ -197,7 +208,7 @@
         }
       })
       .state('app.artists.details', {
-        url: "artists/:artistId",
+        url: "/details/:artistId",
         views: {
           'content@': {
             templateUrl: 'views/artists_details.html',
@@ -211,6 +222,15 @@
           'content@': {
             templateUrl: 'views/empire.html',
             controller: 'EmpireController as ec'
+          }
+        }
+      })
+      .state('app.events', {
+        url: "events",
+        views: {
+          'content@': {
+            templateUrl: 'views/events.html',
+            controller: 'EventsController as ec'
           }
         }
       })
@@ -450,6 +470,56 @@
     }
     
   }]);
+})();
+
+(function(){
+ "use strict";
+
+  angular.module('eventsCtrl').controller('EventsController', ['$state', 'mceInfo', function($state, mceInfo){
+    var vm = this;
+    vm.allEvents = mceInfo.events.all();
+
+    /*Functions*/
+    vm.isPassed = isPassed;    
+
+    function isPassed(date){
+      var today = new Date();
+      return (date < today ? "passed" : "");
+    }
+
+    /*Configurations*/
+      vm.uiConfig = {
+        "calendar":{
+          "editable": false,
+          "header":{
+            "left": "title", "center": '', "right": 'today prev, next'
+          },
+          eventClick: vm.alertOnEventClick
+        }
+      };
+
+      vm.eventSource = { url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic", className: 'gcal-event', currentTimezone: 'America/Washington DC'  };
+      vm.eventsF = function (start, end, timezone, callback) {
+        var s = new Date(start).getTime() / 1000;
+        var e = new Date(end).getTime() / 1000;
+        var m = new Date(start).getMonth();
+        var events = [{title: 'Default ' + m,start: s + (50000),end: s + (100000),allDay: false, className: ['customFeed']}];
+        callback(events);
+      };
+
+      function buildCalender(){
+        var cEvents=[];
+        for(var i=0; i < vm.allEvents.length; i++){
+          //vm.calenderEvents
+          cEvents.push({title: vm.allEvents[i].eventname, start:vm.allEvents[i].date, allDay: false});
+        }
+        return cEvents;
+      }
+
+      vm.calenderEvents = buildCalender();
+      vm.eventSources = [vm.calenderEvents, vm.eventSource, vm.eventsF];
+  }]);
+
 })();
 
 (function(){

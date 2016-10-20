@@ -30,7 +30,7 @@
         }
       })
       .state('app.artists.details', {
-        url: "artists/:artistId",
+        url: "/details/:artistId",
         views: {
           'content@': {
             templateUrl: 'views/artists_details.html',
@@ -48,7 +48,7 @@
         }
       })
       .state('app.events', {
-        url: "contactus",
+        url: "events",
         views: {
           'content@': {
             templateUrl: 'views/events.html',

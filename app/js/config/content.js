@@ -19,7 +19,6 @@
             returnedEvents.push(events[i]);
           }
         }
-
         return returnedEvents;
       }
 
@@ -46,7 +45,17 @@
         },
         events: {
           all: function(){
-            var sortedEvents = events.sort(function(a,b){return a.date - b.date;});
+            var sortedEvents = events.sort(function(a,b){return b.date - a.date;});
+
+            // Get artist image
+            for(var i =0; i < sortedEvents.length; i++){
+              for(var j =0; j < artists.length; j++){
+                if(sortedEvents[i].artistname == artists[j].name ){
+                  sortedEvents[i].artistimg = artists[j].image;
+                }
+              }
+            }
+
             return sortedEvents;
           }
         },
