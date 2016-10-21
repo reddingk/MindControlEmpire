@@ -28,6 +28,7 @@ var config = {
       'app/libs/angular-bootstrap/ui-bootstrap.min.js',
       'app/libs/angular-bootstrap/ui-bootstrap-tpls.min.js',
       'app/libs/randomcolor/randomColor.js',
+      'app/libs/angular-sanitize/angular-sanitize.min.js',
       'app/libs/moment/min/moment.min.js',
       'app/libs/angular-ui-calendar/src/calendar.js',
       'app/libs/fullcalendar/dist/fullcalendar.min.js',

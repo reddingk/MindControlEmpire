@@ -6,13 +6,15 @@
 		angular.module('homeCtrl', ['ui.bootstrap', 'ngAnimate']);
 		angular.module('artistsCtrl', ['ui.bootstrap', 'ngAnimate']);
 		angular.module('empireCtrl', ['ui.bootstrap', 'ngAnimate']);
+		angular.module('newsCtrl', ['ui.bootstrap', 'ngAnimate', 'ngSanitize']);
 		angular.module('eventsCtrl', ['ui.bootstrap', 'ngAnimate', 'ui.calendar']);
+		angular.module('releaseCtrl', ['ui.bootstrap', 'ngAnimate']);
 		angular.module('contactUsCtrl', ['ui.bootstrap', 'ngAnimate']);
 
 		angular.module('directives', []);
 
 		/**/
-    angular.module('MCEApp', ['ngMaterial','ngAnimate', 'ngScrollbars','ui.router', 'dataconfig', 'config','directives','headerCtrl','homeCtrl','artistsCtrl','empireCtrl','eventsCtrl','contactUsCtrl']);
+    angular.module('MCEApp', ['ngMaterial','ngAnimate', 'ngScrollbars','ui.router', 'dataconfig', 'config','directives','headerCtrl','homeCtrl','artistsCtrl','empireCtrl','newsCtrl','eventsCtrl','releaseCtrl','contactUsCtrl']);
 
 })();
 
@@ -79,7 +81,18 @@
         },
         news: {
           all: function(){
+            $filter('orderBy')(news, "-date");
             return news;
+          },
+          byName: function(articleName){
+            var article = null;
+            for(var i =0; i < news.length; i++){
+              if(news[i].title == articleName){
+                article = news[i];
+                break;
+              }
+            }
+            return article;
           },
           latests: function(){
             $filter('orderBy')(news, "-date");
@@ -120,6 +133,9 @@
                   {"site":"instagram","handle":"gandhi3x"},
                   {"site":"soundcloud","handle":"gandhi3x"}],
               "releases":[
+                  {"title":"Kill Em All", "type":"soundcloud-track","date":new Date("2016-10-09"),"url":"https://soundcloud.com/gandhi3x/gandhi-ali-kill-em-all-prod-by-trackanometry-drty-warhol-rough","text":"Gandhi Ali - Kill Em All"},
+                  {"title":"100% ft. Yung Sonic", "type":"soundcloud-track","date":new Date("2016-08-20"),"url":"https://soundcloud.com/gandhi3x/100-ft-yung-sonic","text":"Gandhi Ali ft. Yung Sonic - 100%"},
+                  {"title":"Sorry", "type":"soundcloud-track","date":new Date("2016-08-20"),"url":"https://soundcloud.com/gandhi3x/gandhi-ali-sorry","text":"Gandhi Ali - Sorry"},
                   {"title":"Dirty Work", "type":"spinrilla-mixtape", "date":new Date("2016-07-12"), "url":"https://spinrilla.com/mixtapes/gandhi-ali-dirty-work/embed","text":"Drty Work by Gandhi Ali"},
                   {"title":"SoundCloudProfile", "type":"soundcloud-profile","date":"","url":"https://soundcloud.com/gandhi3x","text":"Gandhi Ali Sound Cloud Profile"},
                   {"title":"New Ballin feat. J.A.", "type":"youtube","date":new Date("2015-11-13"),"url":"https://www.youtube.com/embed/WCuePpLdgdc","text":"New Ballin feat. J.A.", "art":"art/new_ballin.PNG"},
@@ -222,12 +238,39 @@
           }
         }
       })
+      .state('app.news', {
+        url: "news",
+        views: {
+          'content@': {
+            templateUrl: 'views/news.html',
+            controller: 'NewsController as nc'
+          }
+        }
+      })
+      .state('app.news.article', {
+        url: "/article/:newsid",
+        views: {
+          'content@': {
+            templateUrl: 'views/news_article.html',
+            controller: 'NewsController as nc'
+          }
+        }
+      })
       .state('app.events', {
         url: "events",
         views: {
           'content@': {
             templateUrl: 'views/events.html',
             controller: 'EventsController as ec'
+          }
+        }
+      })
+      .state('app.releases', {
+        url: "releases",
+        views: {
+          'content@': {
+            templateUrl: 'views/releases.html',
+            controller: 'ReleasesController as rc'
           }
         }
       })
@@ -570,6 +613,92 @@
       }
 
     }]);
+
+})();
+
+(function(){
+ "use strict";
+
+  angular.module('newsCtrl').controller('NewsController', ['$state','$stateParams','mceInfo', '$sce', function($state, $stateParams, mceInfo, $sce){
+    var vm = this;
+
+    vm.allNews = mceInfo.news.all();
+    vm.displayedNews = {"page":1, "totalpages":Math.ceil(vm.allNews.length / 4), "display": vm.allNews.slice(0,4)};
+
+    /*News Article*/
+    var articleID = $stateParams.newsid;
+    if(articleID != null){
+        vm.articleNews = mceInfo.news.byName(articleID);
+        vm.articleContent = "";
+        vm.articleContent = specialTextChecks(vm.articleNews.content);
+    }
+
+    /*Functions*/
+    vm.checkButton = checkButton;
+    vm.newsPaging = newsPaging;
+    vm.buildArray = buildArray;
+
+    function checkButton(direction){
+      var bool = false;
+      if(direction == "up"){
+        if((vm.displayedNews.page + 1) <= vm.displayedNews.totalpages) {bool = true;}
+      }
+      else{
+        if((vm.displayedNews.page - 1) > 0) { bool = true;}
+      }
+      return bool;
+    }
+
+    function newsPaging(direction) {
+      if(direction == "up"){
+        if((vm.displayedNews.page + 1) <= vm.displayedNews.totalpages)
+        {
+          vm.displayedNews.page +=1;
+        }
+      }
+      else{
+        if((vm.displayedNews.page - 1) > 0)
+        {
+          vm.displayedNews.page -=1;
+        }
+      }
+      var first = 4 * (vm.displayedNews.page  - 1);
+      vm.displayedNews.display = vm.allNews.slice(first,first+ 4);
+    }
+
+    function buildArray(num) {
+      return new Array(num);
+    }
+
+    function specialTextChecks(phrase){
+      var returnPhrase = phrase;
+      if(phrase.includes(".com")){
+        var tmpPhrase = "";
+        var phraseArray = phrase.split(" ");
+
+        for(var i=0; i < phraseArray.length; i++){
+          if(phraseArray[i].includes(".com")){
+            var linkText = phraseArray[i].split(0,phraseArray[i].indexOf(".com")+4);
+            phraseArray[i] = phraseArray[i].replace(linkText, '<a href="'+linkText+'" target="_blank">'+linkText+'</a>');
+          }
+        }
+
+        returnPhrase = phraseArray.join(" ");
+      }
+      return returnPhrase;
+    }
+
+  }]);
+
+})();
+
+(function(){
+ "use strict";
+
+  angular.module('releasesCtrl').controller('ReleasesController', ['$state', function($state){
+    var vm = this;
+    
+  }]);
 
 })();
 

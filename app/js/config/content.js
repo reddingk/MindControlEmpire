@@ -61,7 +61,18 @@
         },
         news: {
           all: function(){
+            $filter('orderBy')(news, "-date");
             return news;
+          },
+          byName: function(articleName){
+            var article = null;
+            for(var i =0; i < news.length; i++){
+              if(news[i].title == articleName){
+                article = news[i];
+                break;
+              }
+            }
+            return article;
           },
           latests: function(){
             $filter('orderBy')(news, "-date");

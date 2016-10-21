@@ -47,12 +47,39 @@
           }
         }
       })
+      .state('app.news', {
+        url: "news",
+        views: {
+          'content@': {
+            templateUrl: 'views/news.html',
+            controller: 'NewsController as nc'
+          }
+        }
+      })
+      .state('app.news.article', {
+        url: "/article/:newsid",
+        views: {
+          'content@': {
+            templateUrl: 'views/news_article.html',
+            controller: 'NewsController as nc'
+          }
+        }
+      })
       .state('app.events', {
         url: "events",
         views: {
           'content@': {
             templateUrl: 'views/events.html',
             controller: 'EventsController as ec'
+          }
+        }
+      })
+      .state('app.releases', {
+        url: "releases",
+        views: {
+          'content@': {
+            templateUrl: 'views/releases.html',
+            controller: 'ReleasesController as rc'
           }
         }
       })

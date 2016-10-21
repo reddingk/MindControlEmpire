@@ -1,0 +1,31 @@
+<div class="news-page">
+  <div class="page-container">
+    <div class="header-container">
+      <h1>News</h1>
+      <div style="clear:both;"></div>
+    </div>
+
+    <div class="news-container">
+      <div class="bouncing-logo" ng-repeat="n in nc.buildArray(3) track by $index" random-motion><img src="imgs/logos/logoR.png"></div>
+      <div class="news-item-container ui-pointer" ng-repeat="news in nc.displayedNews.display" ui-sref="app.news.article({newsid: news.title})">
+        <div class="news-item">
+          <div class="card-back">
+            <div class="news-img-container">
+              <img src="imgs/logos/logoB_text.png" ng-if="news.img == null">
+              <img ng-src="{{news.img}}" ng-if="news.img != null">
+            </div>
+            <div class="news-title">{{news.title}}</div>
+            <div class="news-content">{{news.content | limitTo: 50}}...</div>
+            <div class="read-more">Read More...</div>
+          </div>
+          <div class="card-front">
+            <div class="angle-cover"></div>
+            <div class="bottom-cover"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="news-paging"><div class="paging-ctrls"><i class="fa fa-caret-left" ng-click="nc.newsPaging('down')" ng-if="nc.checkButton('down')"></i><div class="page-number">{{nc.displayedNews.page}} / {{nc.displayedNews.totalpages}}</div><i class="fa fa-caret-right" ng-click="nc.newsPaging('up')" ng-if="nc.checkButton('up')"></i> <div style="clear:both;"></div> </div></div>
+    </div>
+  </div>
+</div>

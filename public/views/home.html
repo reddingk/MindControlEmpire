@@ -20,7 +20,7 @@
         <div class="view-all"><div class="view view-icon"></div> <div class="view view-text">View All News</div></div>
         <div style="clear:both;"></div>
       </div>
-      <div class="news-container" ng-repeat="news in hc.recentNews">
+      <div class="news-container ui-pointer" ng-repeat="news in hc.recentNews" ui-sref="app.news.article({newsid: news.title})">
         <div class="news-item">
           <div class="card-back">
             <div class="news-img-container">
