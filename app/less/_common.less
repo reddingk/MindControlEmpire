@@ -119,7 +119,7 @@ html, body {
 
 /*Footer*/
 .footer {
-  height: 100px;
+  //height: 115px;
   background-color: rgba(0,0,0,1);
   color: rgba(255,255,255,1);
   width: 100%;
@@ -140,7 +140,29 @@ html, body {
         }
         .email { }
         .copyright { }
-        .social-media { }
+        .social-media {
+          .footer-social {
+            display: inline-block;
+            padding: 7px;
+            border-radius: 50px;
+            background-color: rgba(255,255,255,1);
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            i {
+              color: rgba(0,0,0,1);
+              font-size: 20px;
+              min-width: 20px;
+              text-align: center;
+              transition: all 0.3s ease;
+            }
+            &:hover, &:focus {
+              &.twitter { box-shadow: 0 0 24px 0 #00ACED; i {  color: #00ACED; }}
+              &.instagram { box-shadow: 0 0 24px 0 #5851db; i { color: #5851db; }}
+              &.soundcloud { box-shadow: 0 0 24px 0 #ff3a00; i { color: #ff3a00; }}
+              &.youtube { box-shadow: 0 0 24px 0 #bb0000; i { color: #bb0000; }}
+            }
+          }
+        }
       }
     }
   }

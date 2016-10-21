@@ -8,13 +8,13 @@
 		angular.module('empireCtrl', ['ui.bootstrap', 'ngAnimate']);
 		angular.module('newsCtrl', ['ui.bootstrap', 'ngAnimate', 'ngSanitize']);
 		angular.module('eventsCtrl', ['ui.bootstrap', 'ngAnimate', 'ui.calendar']);
-		angular.module('releaseCtrl', ['ui.bootstrap', 'ngAnimate']);
+		angular.module('releasesCtrl', ['ui.bootstrap', 'ngAnimate']);
 		angular.module('contactUsCtrl', ['ui.bootstrap', 'ngAnimate']);
 
 		angular.module('directives', []);
 
 		/**/
-    angular.module('MCEApp', ['ngMaterial','ngAnimate', 'ngScrollbars','ui.router', 'dataconfig', 'config','directives','headerCtrl','homeCtrl','artistsCtrl','empireCtrl','newsCtrl','eventsCtrl','releaseCtrl','contactUsCtrl']);
+    angular.module('MCEApp', ['ngMaterial','ngAnimate', 'ngScrollbars','ui.router', 'dataconfig', 'config','directives','headerCtrl','homeCtrl','artistsCtrl','empireCtrl','newsCtrl','eventsCtrl','releasesCtrl','contactUsCtrl']);
 
 })();
 
@@ -60,6 +60,7 @@
                 break;
               }
             }
+            returnArtist.releases = returnArtist.releases.sort(function(a,b){return b.date - a.date;});
             return returnArtist;
           }
         },
@@ -109,6 +110,21 @@
             return spotlights;
           }
         },
+        releases: {
+          all: function(){
+            var returnReleases = [];
+
+            for(var i =0; i < artists.length; i++) {
+              var tmpList = artists[i].releases;
+              for(var j=0; j < tmpList.length; j++){
+                tmpList[j].artists = artists[i].name;
+              }
+              returnReleases = returnReleases.concat(tmpList);
+            }
+            $filter('orderBy')(returnReleases, "-date");
+            return returnReleases;
+          }
+        },
         slider: {
           all: function(){
             for(var i=0; i < slider.length; i++){
@@ -138,7 +154,12 @@
                   {"title":"Sorry", "type":"soundcloud-track","date":new Date("2016-08-20"),"url":"https://soundcloud.com/gandhi3x/gandhi-ali-sorry","text":"Gandhi Ali - Sorry"},
                   {"title":"Dirty Work", "type":"spinrilla-mixtape", "date":new Date("2016-07-12"), "url":"https://spinrilla.com/mixtapes/gandhi-ali-dirty-work/embed","text":"Drty Work by Gandhi Ali"},
                   {"title":"SoundCloudProfile", "type":"soundcloud-profile","date":"","url":"https://soundcloud.com/gandhi3x","text":"Gandhi Ali Sound Cloud Profile"},
-                  {"title":"New Ballin feat. J.A.", "type":"youtube","date":new Date("2015-11-13"),"url":"https://www.youtube.com/embed/WCuePpLdgdc","text":"New Ballin feat. J.A.", "art":"art/new_ballin.PNG"},
+
+                  {"title":"Dapper", "type":"youtube","date":new Date("2016-08-13"),"url":"https://www.youtube.com/embed/cy4Jhd16VJE", "urlcode":"cy4Jhd16VJE","text":"'Dapper' video shot by TOA$T"},
+                  {"title":"100%", "type":"youtube","date":new Date("2016-06-17"),"url":"https://www.youtube.com/embed/vKIc3P1o798", "urlcode":"vKIc3P1o798","text":"'100%' video produced by DWJproductions"},
+                  {"title":"Tell The People", "type":"youtube","date":new Date("2016-06-09"),"url":"https://www.youtube.com/embed/H0G2iBe0axQ", "urlcode":"H0G2iBe0axQ","text":"'Tell The People' video produced by DWJproductions"},
+
+                  {"title":"New Ballin feat. J.A.", "type":"youtube","date":new Date("2016-10-12"),"url":"https://www.youtube.com/embed/EY_1yEP8PJ8","text":"New Ballin feat. J.A.", "art":"art/new_ballin.PNG"},
                   {"title":"Real Live", "type":"youtube","date":new Date("2015-08-20"),"url":"https://www.youtube.com/embed/UwYWQNkdF1Y","text":"The first track on Mind Control Empire"},
                   {"title":"Poetic Justice Freestyle", "type":"youtube","date":new Date("2015-02-13"),"url":"https://www.youtube.com/embed/-JYqJd3irRw","text":"A freestyle to the classic poetic justice track"},
                   {"title":"Call Em In", "type":"youtube","date":new Date("2016-02-04"),"url":"https://www.youtube.com/embed/OUaHK84TkBY","text":"'Call Em In' video produced by DWJproductions", "art":"art/Call_em_in.PNG"},
@@ -174,12 +195,12 @@
               {"title":"'The City' on the way", "date":new Date("2015-12-02 00:00:00"), "content":"The Video for 'The City' will be released this December.", "tags":["Video","Mind Control Empire"]}
               ],
           "spotlights":[
-              {"order":1, "artist":"GANDHI ALI","title":"Loyal", "type":"youtube","date":"2016-02-25","urlcode":"j5kak2e0S-8","text":"'Loyal' video produced by DWJproductions"},
-              {"order":2, "artist":"GANDHI ALI","title":"Whole Time", "type":"youtube","date":"2016-02-11","urlcode":"aM2K9vl5Z2Y","text":"'Whole Time' video produced by DWJproductions"},
-              {"order":3, "artist":"GANDHI ALI", "title":"Call Em In", "type":"youtube","date":"2016-02-04","urlcode":"OUaHK84TkBY","text":"Call Em In video produced by DWJproductions"},
-              {"order":4, "artist":"GANDHI ALI", "title":"New Ballin feat. J.A.", "type":"youtube","date":"2015-11-13","urlcode":"WCuePpLdgdc","text":"New Ballin feat. J.A."}
+              {"order":1, "artist":"GANDHI ALI","title":"Chocolate City (Teaser)", "type":"youtube","date":"2016-08-25","urlcode":"LUHaEGtSHmc","text":"Walk with Gandhi Ali as he takes his new song through DC aka 'Chocolate City'"},
+              {"order":2, "artist":"GANDHI ALI", "title":"100%", "type":"youtube","date":"2015-06-17","urlcode":"vKIc3P1o798","text":"'100%' video produced by DWJproductions"},
+              {"order":3, "artist":"GANDHI ALI", "title":"Tell The People", "type":"youtube","date":"2015-06-09","urlcode":"H0G2iBe0axQ","text":"'Tell The People' video produced by DWJproductions"},
+              {"order":4, "artist":"GANDHI ALI","title":"Interview & Cypher @ The Eddie Kayne Show", "type":"youtube","date":"2015-11-05","urlcode":"dIi6AySJsI0","text":"Interview and Cypher with Gandhi Ali on the The Eddie Kayne Show"}
             ],
-          "slider": [{"image":"imgs/slider/IMG0.jpg", "title":"Mind Control Empire", "text":""}, {"image":"imgs/art/RadioRemix.jpg", "title":"RADIO REMIX VOL 1 RELEASE", "text":"Download Now on spinrella.com"}, {"image":"imgs/art/DrtyWorkCover.jpg", "title":"DRTY WORKs VOL. 1", "text":"Releasing Soon"}, {"image":"imgs/slider/MCE1.jpg", "title":"Music Production And Management", "text":"Our Management team brings the world to the artist."}]
+          "slider": [{"image":"imgs/slider/IMG0.jpg", "title":"Mind Control Empire", "text":""}, {"image":"imgs/art/DrtyWorkCover.jpg", "title":"New Release: DRTY WORKs VOL. 1", "text":"Download now on Spinrilla or Listen on the Releases Page"}, {"image":"imgs/art/RadioRemix.jpg", "title":"RADIO REMIX VOL. 1", "text":"Download Now on spinrella.com"}, {"image":"imgs/slider/MCE1.jpg", "title":"Music Production And Management", "text":"Our Management team brings the world to the artist."}]
       };
 
      }
@@ -695,9 +716,31 @@
 (function(){
  "use strict";
 
-  angular.module('releasesCtrl').controller('ReleasesController', ['$state', function($state){
+  angular.module('releasesCtrl').controller('ReleasesController', ['$state', 'mceInfo',function($state,mceInfo){
     var vm = this;
-    
+    vm.releasesList = mceInfo.releases.all();
+    vm.allReleases = {"videos":[], "mixtapes":[], "tracks":[]};
+
+    for(var i =0; i < vm.releasesList.length; i++)
+    {
+      var tmpRelease = vm.releasesList[i];
+      if(tmpRelease.type == "youtube"){
+        vm.allReleases.videos.push(tmpRelease);
+      }
+      else if(tmpRelease.type.includes("mixtape")){
+        vm.allReleases.mixtapes.push(tmpRelease);
+      }
+      else if(tmpRelease.type.includes("track")){
+        vm.allReleases.tracks.push(tmpRelease);
+      }
+    }
+
+    vm.displayedReleases = {
+      "videos":{"page":1, "totalpages":Math.ceil(vm.allReleases.videos.length / itemDisplayMax), "releases":vm.allReleases.videos.slice(0,3)},
+      "mixtapes":{"page":1, "totalpages":vm.allReleases.mixtapes.length , "releases":vm.allReleases.mixtapes[0]},
+      "profiles":{"page":1, "totalpages":Math.ceil(vm.allReleases.tracks.length / itemDisplayMax), "releases":vm.allReleases.tracks.slice(0,3)},
+    };
+
   }]);
 
 })();

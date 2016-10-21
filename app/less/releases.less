@@ -1,0 +1,41 @@
+.artists-details-page {
+  .header-container { padding: 30px 40px 0; width: 95%; margin: 0 auto; }
+  .artists-details {
+    width: 95%;
+    margin: 0px auto;
+    padding: 30px 0px;
+    .page-container {
+      background-color: @color-theme-background;
+      padding: 20px 0px;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      .artist-profile {
+        position: relative;
+        z-index: 2;
+        .profile-container {
+          .release-section {
+            display: block;
+            padding: 20px 20px;
+
+            &.mixtape-section { }
+            &.video-section { }
+            &.music-section { }
+          }
+        }
+      }
+    }
+  }
+
+
+  .bouncing-logo {
+    width: 300px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.3;
+    img { width: 100%; }
+  }
+}

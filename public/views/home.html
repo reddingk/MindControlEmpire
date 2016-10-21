@@ -17,7 +17,7 @@
     <div class="page-container recent-news-container">
       <div class="header-container">
         <h1>Word On The Street</h1>
-        <div class="view-all"><div class="view view-icon"></div> <div class="view view-text">View All News</div></div>
+        <div class="view-all ui-pointer" ui-sref="app.news"><div class="view view-icon"></div> <div class="view view-text">View All News</div></div>
         <div style="clear:both;"></div>
       </div>
       <div class="news-container ui-pointer" ng-repeat="news in hc.recentNews" ui-sref="app.news.article({newsid: news.title})">
@@ -45,7 +45,7 @@
     <div class="page-container">
       <div class="header-container">
         <h1>Spotlight Music</h1>
-        <div class="view-all"><div class="view view-icon"></div> <div class="view view-text">View All Releases</div></div>
+        <div class="view-all ui-pointer" ui-sref="app.releases"><div class="view view-icon"></div> <div class="view view-text">View All Releases</div></div>
         <div style="clear:both;"></div>
       </div>
       <div class="spotlight-container">
@@ -71,7 +71,7 @@
     <div class="page-container">
       <div class="header-container">
         <h1>Top Artists</h1>
-        <div class="view-all"><div class="view view-icon"></div> <div class="view view-text">View All Artists</div></div>
+        <div class="view-all ui-pointer" ui-sref="app.artists"><div class="view view-icon"></div> <div class="view view-text">View All Artists</div></div>
         <div style="clear:both;"></div>
       </div>
 
