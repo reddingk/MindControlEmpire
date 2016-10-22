@@ -22,6 +22,8 @@
               width: 49%;
               display: inline-block;
               float: left;
+
+              @media @mobile-device { width: 100%; }
               .profile-row {
                 display: block;
                 padding: 10px 5px;
@@ -34,6 +36,7 @@
                   background-color: rgba(255,255,255,1);
                   margin: 0 10px;
                   transition: all 0.3s ease;
+                  @media @mobile-device { margin: 3px;  }
                   i {
                     color: rgba(0,0,0,1);
                     font-size: 40px;
@@ -57,6 +60,7 @@
                     overflow: hidden;
                     text-align: center;
                     i { font-size: 7rem; }
+                    @media @mobile-device { width: 15%; }
                   }
                   .img-container {
                     width: 60%;
@@ -82,6 +86,7 @@
               display: inline-block;
               height: 500px;
               //overflow: hidden;
+              @media @mobile-device { width: 100%; }
               img {
                 height: 100%;
                 max-width: 100%;
@@ -91,6 +96,11 @@
                 -ms-transform: rotate(5deg);
                 -webkit-transform: rotate(5deg);
                 transform: rotate(5deg);
+                @media @mobile-device {
+                  -ms-transform: rotate(0deg);
+                  -webkit-transform: rotate(0deg);
+                  transform: rotate(0deg);
+                }
               }
             }
 
@@ -104,14 +114,24 @@
                   display: inline-block;
                   width: 33%;
                   padding: 30px;
+                  @media @mobile-device { width: 100%; }
+
                   &.lrg { width: 100%; display: block;}
                   .item {
                     text-align: center;
-
-                    &.item-youtube { iframe { height: 200px;} &+.item-title { text-align: center;}}
+                    &.item-youtube {
+                      iframe { height: 200px; @media @mobile-device { width: 100% !important; }}
+                      &+.item-title { text-align: center;}
+                    }
                     &.item-mixtape {
                       height: 500px;
-                      iframe { float: left; width: 50%; display: inline-block; &:after { clear: both;} }
+                      iframe {
+                        float: left;
+                        width: 50%;
+                        display: inline-block;
+                        &:after { clear: both;}
+                        @media @mobile-device { width: 100%; height: 75% !important; display: block;}
+                      }
                       .item-text {
                         float: left;
                         padding: 10px;
@@ -120,6 +140,7 @@
                         display: inline-block;
                         .item-title { font-size: 2.5rem; }
                         &:after { clear: both;}
+                        @media @mobile-device { width: 100%; }
                       }
                     }
                   }
@@ -140,6 +161,7 @@
               .title { display: block; width: 100%; font-size: 3rem; padding:0px 40px;}
               .item-container {
                 padding: 0px 50px;
+                @media @mobile-device { padding: 0px 5px; }
                 .event-item {
                   display: block;
                   border-bottom: 1px solid  rgba(0,0,0,0.9);
@@ -150,14 +172,19 @@
                     padding: 20px;
                     width: 30%;
                     display: inline-block;
-                    .event-day { display: block; font-size: 1.5rem; font-weight: bold; }
+                    .event-day {
+                      display: block;
+                      font-size: 1.5rem;
+                      font-weight: bold;
+                      @media @mobile-device { font-size:1rem; }
+                    }
                     .event-time { }
                   }
                   .event-info {
                     padding: 20px;
                     width: 30%;
                     display: inline-block;
-                    .event-title { display: block; font-size: 1.5rem; font-weight: bold;}
+                    .event-title { display: block; font-size: 1.5rem; font-weight: bold; @media @mobile-device { font-size:1rem; }}
                     .event-location { }
                   }
                 }

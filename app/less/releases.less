@@ -23,14 +23,27 @@
               display: inline-block;
               width: 33%;
               padding: 30px;
+              @media @mobile-device { width: 100%; }
+              
               &.lrg { width: 100%; display: block;}
               .item {
                 text-align: center;
 
-                &.item-youtube { iframe { height: 200px;} &+.item-title { text-align: center; &+.item-artist{text-align: center;}}}
+                &.item-youtube {
+                  iframe { height: 200px; @media @mobile-device { width: 100% !important; }}
+                  &+.item-title { text-align: center;
+                    &+.item-artist{text-align: center;}
+                  }
+                }
                 &.item-mixtape {
                   height: 500px;
-                  iframe { float: left; width: 50%; display: inline-block; &:after { clear: both;} }
+                  iframe {
+                    float: left;
+                    width: 50%;
+                    display: inline-block;
+                    &:after { clear: both;}
+                    @media @mobile-device { width: 100%; height: 75% !important; display: block;}
+                  }
                   .item-text {
                     float: left;
                     padding: 10px;
@@ -39,6 +52,7 @@
                     display: inline-block;
                     .item-title { font-size: 2.5rem; }
                     &:after { clear: both;}
+                    @media @mobile-device { width: 100%; }
                   }
                 }
               }

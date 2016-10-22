@@ -25,6 +25,7 @@
         display: inline-block;
         width: 50%;
         padding: 40px;
+        @media @mobile-device { width: 100%; }
         .news-item {
           height: 550px;
           overflow: hidden;
@@ -67,6 +68,7 @@
             .news-title { font-size: 3rem; font-weight: bold; }
             .news-content { text-align: left;}
             .read-more { font-size: .889rem; font-weight: bold; text-align: right;}
+            @media @mobile-device { .news-title { font-size: 2rem;} }
           }
         }
       }

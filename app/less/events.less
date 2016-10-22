@@ -2,7 +2,15 @@
   .page-container {
     .events-containers {
       padding: 40px;
-      .calender-section { width: 40%; display: inline-block; position: relative; float: left;padding: 10px; height: 500px;}
+      .calender-section {
+        width: 40%;
+        display: inline-block;
+        position: relative;
+        float: left;
+        padding: 10px;
+        height: 500px;
+        @media @mobile-device { width: 100%; }
+      }
       .list-section {
         width: 60%;
         display: inline-block;
@@ -11,6 +19,7 @@
         height: 500px;
         overflow-y: auto;
         border: 10px solid @color-theme;
+        @media @mobile-device { width: 100%; }
         .list-item {
           display: block;
           height: 150px;
