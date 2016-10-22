@@ -6,18 +6,40 @@
 
   <div class="releases-details">
     <div class="page-container">
-      <div class="bouncing-logo" ng-repeat="n in rc.buildArray(3) track by $index" random-motion><img src="imgs/logos/logoW.png"></div>
+      <div class="gravityTemplate" ng-include="rc.backSVG"></div>
       <div class="releases-profile" >
         <div class="profile-container">
 
           <!-- MixTapes -->
           <div class="mixtape-section release-section">
-            <div class="title">Mixtapes</div>            
+            <div class="title">Mixtapes</div>
+            <div class="release-paging"><i class="fa fa-caret-left" ng-click="rc.releasePaging('down', 'mixtapes')" ng-if="rc.checkButton('down', 'mixtapes')"></i><div class="page-number">{{rc.displayedReleases.mixtapes.page}} / {{rc.displayedReleases.mixtapes.totalpages}}</div><i class="fa fa-caret-right" ng-click="rc.releasePaging('up', 'mixtapes')" ng-if="rc.checkButton('up', 'mixtapes')"></i></div>
+
+            <div class="release-item lrg">
+              <div class="item item-mixtape" ng-if="rc.displayedReleases.mixtapes.releases.type == 'spinrilla-mixtape'">
+                <iframe ng-src="{{rc.URLClean(rc.displayedReleases.mixtapes.releases.url)}}" frameborder="0" height="450px" allowtransparency='true'></iframe>
+
+                <div class="item-text">
+                  <div class="item-title">{{rc.displayedReleases.mixtapes.releases.title}}</div>
+                  <div class="item-artist">{{rc.displayedReleases.mixtapes.releases.artists}}</div>
+                  <div class="item-date">{{rc.displayedReleases.mixtapes.releases.date | date:"MMM-dd-yyyy"}}</div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Videos -->
           <div class="videos-section release-section">
             <div class="title">Videos</div>
+
+            <div class="release-paging"><i class="fa fa-caret-left" ng-click="rc.releasePaging('down', 'videos')" ng-if="rc.checkButton('down', 'videos')"></i><div class="page-number">{{rc.displayedReleases.videos.page}} / {{rc.displayedReleases.videos.totalpages}}</div><i class="fa fa-caret-right" ng-click="rc.releasePaging('up', 'videos')" ng-if="rc.checkButton('up', 'videos')"></i></div>
+            <div class="release-item" ng-repeat="item in rc.displayedReleases.videos.releases">
+              <div class="item item-youtube">
+                <iframe ng-src="{{rc.URLClean(item.url)}}" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <div class="item-title">{{item.title}}</div>
+              <div class="item-artist">{{item.artists}}</div>
+            </div>
           </div>
 
           <!-- Music -->

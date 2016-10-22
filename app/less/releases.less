@@ -1,26 +1,62 @@
-.artists-details-page {
+.releases-details-page {
   .header-container { padding: 30px 40px 0; width: 95%; margin: 0 auto; }
-  .artists-details {
+  .releases-details {
     width: 95%;
     margin: 0px auto;
     padding: 30px 0px;
     .page-container {
-      background-color: @color-theme-background;
+      background-color: rgba(0,0,0,0.3);
       padding: 20px 0px;
       border-radius: 10px;
       position: relative;
       overflow: hidden;
-      .artist-profile {
+      .gravityTemplate { z-index: 0; position: absolute; width: 100%; padding-top: 350px; opacity: 0.3;  overflow: hidden;}
+      .releases-profile {
         position: relative;
         z-index: 2;
         .profile-container {
           .release-section {
             display: block;
             padding: 20px 20px;
+            .title { display: block; width: 100%; font-size: 3rem; padding:0px 40px;}
+            .release-item {
+              display: inline-block;
+              width: 33%;
+              padding: 30px;
+              &.lrg { width: 100%; display: block;}
+              .item {
+                text-align: center;
+
+                &.item-youtube { iframe { height: 200px;} &+.item-title { text-align: center; &+.item-artist{text-align: center;}}}
+                &.item-mixtape {
+                  height: 500px;
+                  iframe { float: left; width: 50%; display: inline-block; &:after { clear: both;} }
+                  .item-text {
+                    float: left;
+                    padding: 10px;
+                    text-align: left;
+                    width: 49%;
+                    display: inline-block;
+                    .item-title { font-size: 2.5rem; }
+                    &:after { clear: both;}
+                  }
+                }
+              }
+            }
 
             &.mixtape-section { }
             &.video-section { }
             &.music-section { }
+
+            .release-paging {
+              display: block;
+              width: 100%;
+              text-align: left;
+              padding: 0 50px;
+              height: 2rem;
+              i { padding: 0px 10px; font-size: 1.7rem; display: inline-block; float: left; }
+              .page-number { display: inline-block; font-size: 1rem; float: left;}
+            }
           }
         }
       }

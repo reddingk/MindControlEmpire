@@ -57,10 +57,13 @@
             <div class="spotlight-text">{{hc.spotSelected.text}}</div>
           </div>
         </div>
-        <div class="spotlight-list" ng-scrollbars ng-scrollbars-config="hc.configScroll">
-          <div class="spotlight-list-item" ng-repeat="item in hc.spotlights" ng-click="hc.swapSelected(item)" ng-class="{'selected': item == hc.spotSelected}">
-            <div class="item-img"><img ng-src="{{hc.youtubeURL(item.urlcode, 'img')}}" /></div>
-            <div class="item-title">{{item.title}}</div>
+        <!--ng-scrollbars ng-scrollbars-config="hc.configScroll"-->
+        <div class="spotlight-list">
+          <div class="list-container">
+            <div class="spotlight-list-item" ng-repeat="item in hc.spotlights" ng-click="hc.swapSelected(item)" ng-class="{'selected': item == hc.spotSelected}">
+              <div class="item-img"><img ng-src="{{hc.youtubeURL(item.urlcode, 'img')}}" /></div>
+              <div class="item-title">{{item.title}}</div>
+            </div>
           </div>
         </div>
       </div>

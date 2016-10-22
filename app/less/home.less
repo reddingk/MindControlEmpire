@@ -3,18 +3,20 @@
 .home-page {
   .mce-carousel {
     height: @carousel-height;
+    @media @mobile-device { height: 300px; }
     .carousel{
       .carousel-inner {
         min-height: @carousel-height;
-
+        @media @mobile-device { min-height: 300px; }
         .item {
             height: @carousel-height;
             overflow-y: hidden;
             background-color: rgba(255,255,255,1);
+            @media @mobile-device { height: 300px; }
             img {
               height: @carousel-height;
               margin: 0 auto;
-              //min-width: 100%;
+              @media @mobile-device { height: 300px; }
             }
             .special-slider-img {
               z-index: -1;
@@ -51,6 +53,8 @@
         display: inline-block;
         width: 50%;
         padding: 40px;
+        @media @mobile-device { width: 100%; padding: 10px 0px;}
+
         .news-item {
           height: 550px;
           overflow: hidden;
@@ -87,12 +91,16 @@
               text-align: center;
               background-color: rgba(0,0,0,0);
               margin-bottom: 10px;
-              img { height: 100%;}
+              overflow: hidden;
+              img { height: 100%; max-width: 100%;}
             }
             .home-subtitle { font-weight: bold; text-decoration: underline; text-align: left; padding-bottom: 5px;}
             .news-title { font-size: 3rem; font-weight: bold; }
             .news-content { text-align: left;}
             .read-more { font-size: .889rem; font-weight: bold; text-align: right;}
+              @media @mobile-device {
+                .news-title { font-size: 2rem;}
+              }
           }
         }
       }
@@ -102,17 +110,23 @@
     .spotlight-container {
       position: relative;
       background-color: rgba(255,255,255,1);
-      height: 550px;
+      height: 750px;
       overflow: hidden;
       margin: 30px 0px;
       .spotlight-selected {
-        display: inline-block;
-        width: 80%;
-        height: 550px;
+        display: block;
+        height: 80%;
+        width: 100%;
         border: 2px solid rgba(230,230,230,1);
         padding: 30px;
-        float: left;
-        .spotlight-video { width: 70%; display: inline-block; float: left; iframe { width: 100%; height: 450px;}}
+        overflow: hidden;
+
+        .spotlight-video {
+          width: 70%;
+          display: inline-block;
+          float: left;
+          iframe { width: 100%; height: 450px;}
+        }
         .spotlight-info {
           width: 29%;
           display: inline-block;
@@ -123,23 +137,32 @@
           .spotlight-artist { }
           .spotlight-text { }
         }
+        @media @mobile-device { padding: 2px; .spotlight-video, .spotlight-info { width: 100%; display: block;}}
       }
       .spotlight-list {
-        display: inline-block;
-        width: 20%;
-        height: 100%;
-        float: right;
+        display: block;
+        height: 20%;
+        width: 100%;
         border: 2px solid rgba(230,230,230,1);
-        overflow-y: auto;
-        .spotlight-list-item {
-          width:100%;
-          height: 150px;
-          padding: 25px 10px;
-          border-bottom: 2px solid rgba(230,230,230,0.8);
+        overflow-x: auto;
+        overflow-y: hidden;
+        position: absolute;
+        bottom: 0;
+        .list-container {
+          width: auto;
+          height: 100%;
+          .spotlight-list-item {
+            display: inline-block;
+            height: 100%;
+            width: 25%;
+            padding: 10px;
+            border-right: 2px solid rgba(230,230,230,0.8);
+            float: left;
 
-          &.selected { background: rgba(0,0,0,1); color: #fff; opacity: 0.3;}
-          .item-img { height: 100%; display: inline-block; padding-right: 10px;}
-          .item-title { display: inline-block; }
+            &.selected { background: rgba(0,0,0,1); color: #fff; opacity: 0.3;}
+            .item-img { display:block; text-align: center; overflow: hidden; position: relative; height: 70%; img { height: 100%; }}
+            .item-title { display: block; text-align: center; }
+          }
         }
       }
     }
@@ -152,6 +175,7 @@
         display: inline-block;
         padding: 40px;
         width: 33%;
+        @media @mobile-device { width: 100%; display: block; }
         .artist-item {
           overflow: hidden;
           position: relative;
@@ -216,4 +240,5 @@
   padding: 0px 40px;
   display: block;
   h1 { margin-bottom: 20px; font-weight: bold; font-size: 3.5rem; font-family: 'Rock Salt', cursive; }
+  @media @mobile-device { h1 { font-size: 2rem;} }
 }
