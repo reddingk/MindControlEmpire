@@ -20,6 +20,11 @@
           -webkit-filter: grayscale(75%);
           filter: grayscale(75%);
           z-index: 1;
+
+          @media @mobile-device {
+            background-attachment: inherit;
+            background-position: top;
+          }
         }
         .front-content {
           position: absolute;

@@ -10,6 +10,21 @@
       <div class="releases-profile" >
         <div class="profile-container">
 
+          <!-- Videos -->
+          <div class="videos-section release-section">
+            <div class="title">Videos</div>
+
+            <div class="release-paging"><i class="fa fa-caret-left" ng-click="rc.releasePaging('down', 'videos')" ng-if="rc.checkButton('down', 'videos')"></i><div class="page-number">{{rc.displayedReleases.videos.page}} / {{rc.displayedReleases.videos.totalpages}}</div><i class="fa fa-caret-right" ng-click="rc.releasePaging('up', 'videos')" ng-if="rc.checkButton('up', 'videos')"></i></div>
+            <div class="release-item" ng-repeat="item in rc.displayedReleases.videos.releases" scroll-action=250>
+              <div class="item item-youtube">
+                <!--<iframe ng-src="{{rc.URLClean(item.url)}}" frameborder="0" allowfullscreen></iframe>-->
+                <a ng-href="{{rc.youtubeURL(item.urlcode, 'site')}}" target="_blank"><img ng-src="{{rc.youtubeURL(item.urlcode, 'image')}}"/><i class="fa fa-youtube-play"></i></a>
+              </div>
+              <div class="item-title">{{item.title}}</div>
+              <div class="item-artist">{{item.artists}}</div>
+            </div>
+          </div>
+          
           <!-- MixTapes -->
           <div class="mixtape-section release-section">
             <div class="title">Mixtapes</div>
@@ -28,20 +43,6 @@
             </div>
           </div>
 
-          <!-- Videos -->
-          <div class="videos-section release-section">
-            <div class="title">Videos</div>
-
-            <div class="release-paging"><i class="fa fa-caret-left" ng-click="rc.releasePaging('down', 'videos')" ng-if="rc.checkButton('down', 'videos')"></i><div class="page-number">{{rc.displayedReleases.videos.page}} / {{rc.displayedReleases.videos.totalpages}}</div><i class="fa fa-caret-right" ng-click="rc.releasePaging('up', 'videos')" ng-if="rc.checkButton('up', 'videos')"></i></div>
-            <div class="release-item" ng-repeat="item in rc.displayedReleases.videos.releases" scroll-action=250>
-              <div class="item item-youtube">
-                <!--<iframe ng-src="{{rc.URLClean(item.url)}}" frameborder="0" allowfullscreen></iframe>-->
-                <a ng-href="{{rc.youtubeURL(item.urlcode, 'site')}}" target="_blank"><img ng-src="{{rc.youtubeURL(item.urlcode, 'image')}}"/><i class="fa fa-youtube-play"></i></a>
-              </div>
-              <div class="item-title">{{item.title}}</div>
-              <div class="item-artist">{{item.artists}}</div>
-            </div>
-          </div>
 
           <!-- Music -->
           <div class="music-section release-section">
