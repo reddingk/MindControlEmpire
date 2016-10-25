@@ -24,15 +24,63 @@
               width: 33%;
               padding: 30px;
               @media @mobile-device { width: 100%; }
-              
+
               &.lrg { width: 100%; display: block;}
               .item {
                 text-align: center;
 
                 &.item-youtube {
                   iframe { height: 200px; @media @mobile-device { width: 100% !important; }}
-                  &+.item-title { text-align: center;
+                  a {
+                    position: relative;
+                    img { width: 100%; position: relative; }
+                    .fa { color:rgba(0,0,0,0.7); position: absolute; top: 45%; left: 45%; font-size: 75px; transition: all 0.1s ease; }
+
+                    &:hover, &:focus { .fa { color:rgba(187,0,0,0.7);}}
+                  }
+                  &+.item-title { padding-top: 10px; text-align: center;
                     &+.item-artist{text-align: center;}
+                  }
+                }
+                &.item-soundcloud-track {
+                  a {
+                    height: 100px;
+                    border: 5px solid rgba(255, 58, 0,1);
+                    background: rgba(255,255,255,0.5);
+                    float: left;
+                    width: 100%;
+                    position: relative;
+                    transition: all 0.1s ease;
+                    overflow: hidden;
+
+                    &:hover, &:focus { background: rgba(255,255,255,1); .item-info { color: rgba(255, 58, 0,1); }}
+                    img { height: 100%; display: inline-block; float: left;}
+                    .item-info {
+                      display: inline-block;
+                      text-align: left;
+                      vertical-align: top;
+                      padding: 5px;
+                      float: left;
+                      color: rgba(0,0,0,1);
+                      font-size: 1.5rem;
+                      max-width: 70%;
+
+                      @media @mobile-device { font-size: .9rem;}
+                      .item-title { }
+                      .item-artist { }
+                    }
+                    .soundcloud-logo {
+                      padding: 5px;
+                      display: inline-block;
+                      position: absolute;
+                      right: 0;
+                      bottom: 0;
+                      height: 50%;
+                      width: 40%;
+                      color: rgba(255,255,255,1);
+                      background: linear-gradient(to bottom right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(255, 58, 0,1) 50%, rgba(255, 58, 0,1) 100%);
+                      .text { position: absolute; bottom: 0; right: 0;}
+                    }
                   }
                 }
                 &.item-mixtape {

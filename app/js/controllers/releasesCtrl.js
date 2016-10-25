@@ -7,7 +7,7 @@
     vm.allReleases = {"videos":[], "mixtapes":[], "tracks":[]};
     vm.backSVG = "views/templates/_gravity.html";
 
-    var itemDisplayMax = 3;
+    var itemDisplayMax = 6;    
 
     for(var i =0; i < vm.releasesList.length; i++)
     {
@@ -24,15 +24,35 @@
     }
 
     vm.displayedReleases = {
-      "videos":{"page":1, "totalpages":Math.ceil(vm.allReleases.videos.length / itemDisplayMax), "releases":vm.allReleases.videos.slice(0,3)},
+      "videos":{"page":1, "totalpages":Math.ceil(vm.allReleases.videos.length / itemDisplayMax), "releases":vm.allReleases.videos.slice(0,itemDisplayMax)},
       "mixtapes":{"page":1, "totalpages":vm.allReleases.mixtapes.length , "releases":vm.allReleases.mixtapes[0]},
-      "profiles":{"page":1, "totalpages":Math.ceil(vm.allReleases.tracks.length / itemDisplayMax), "releases":vm.allReleases.tracks.slice(0,3)},
+      "tracks":{"page":1, "totalpages":Math.ceil(vm.allReleases.tracks.length / itemDisplayMax), "releases":vm.allReleases.tracks.slice(0,itemDisplayMax)},
     };
 
     /*Functions*/
     vm.releasePaging = releasePaging;
     vm.checkButton = checkButton;
     vm.URLClean = URLClean;
+    vm.youtubeURL = youtubeURL;
+
+    function youtubeURL(urlcode, type){
+      var returnUrl = "";
+      switch (type) {
+        case "site":
+          returnUrl = "https://www.youtube.com/watch?v="+urlcode;
+          break;
+        case "video":
+          returnUrl = "https://www.youtube.com/embed/"+urlcode;
+          break;
+        case "image":
+          returnUrl = "http://img.youtube.com/vi/"+urlcode+"/hqdefault.jpg";
+          break;
+        default:
+          returnUrl = "";
+          break;
+      }
+      return $sce.trustAsResourceUrl(returnUrl);
+    }
 
     function URLClean(url) {
       return $sce.trustAsResourceUrl(url);

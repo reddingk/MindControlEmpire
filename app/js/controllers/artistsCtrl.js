@@ -54,6 +54,26 @@
     vm.isPassed = isPassed;
     vm.goToSocial = goToSocial;
     vm.buildArray = buildArray;
+    vm.youtubeURL = youtubeURL;
+
+    function youtubeURL(urlcode, type){
+      var returnUrl = "";
+      switch (type) {
+        case "site":
+          returnUrl = "https://www.youtube.com/watch?v="+urlcode;
+          break;
+        case "video":
+          returnUrl = "https://www.youtube.com/embed/"+urlcode;
+          break;
+        case "image":
+          returnUrl = "http://img.youtube.com/vi/"+urlcode+"/hqdefault.jpg";
+          break;
+        default:
+          returnUrl = "";
+          break;
+      }
+      return $sce.trustAsResourceUrl(returnUrl);
+    }
 
     function buildArray(num) {
       return new Array(num);

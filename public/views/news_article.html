@@ -9,7 +9,7 @@
       <div class="bouncing-logo" ng-repeat="n in nc.buildArray(3) track by $index" random-motion><img src="imgs/logos/logoR.png"></div>
       <div class="article-section">
         <div class="back-to ui-pointer" ui-sref="app.news"><i class="fa fa-caret-left"></i> Back to Articles</div>
-        <div class="article-title">{{nc.articleNews.title}}</div>
+        <div class="article-title fadeAmination">{{nc.articleNews.title}}</div>
         <div class="article-date">{{nc.articleNews.date | date:"MMM-dd-yyyy"}}</div>
         <div class="article-content-section">
           <div class="article-img" ng-if="nc.articleNews.img != null"><img ng-src="{{nc.articleNews.img}}"></div>
