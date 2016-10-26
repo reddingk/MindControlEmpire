@@ -101,10 +101,8 @@
         }
       });
 
-
-
+      $locationProvider.html5Mode(true);
       $urlRouterProvider.otherwise('/');
-      //$locationProvider.html5Mode(true);
     }]);
 
 
