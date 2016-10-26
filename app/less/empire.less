@@ -1,50 +1,43 @@
 .empire-page {
   .the-empire {
-    .page-container {
-    }
+    .page-container {  }
 
     .empire-containers {
       padding: 30px 50px;
+      @media @mobile-device { padding: 30px 5px; }
       .empire-member {
         position: relative;
+        display: inline-block;
+        width: 500px;
+        height: 500px;
+        padding: 10px;
+
+        @media @mobile-device { width: 100%; }
         .back-content {
           opacity: 0.8;
-          margin: 20px 0px;
-          padding: 20px;
-          height: 400px;
-          background-attachment: fixed;
-          background-position: center 75px;
+          height: 100%;
+          background-position: center 0px;
           background-repeat: no-repeat;
           background-size: cover;
-          width: 100%;
-          -webkit-filter: grayscale(75%);
-          filter: grayscale(75%);
-          z-index: 1;
-
-          @media @mobile-device {
-            background-attachment: inherit;
-            background-position: top;
-          }
         }
         .front-content {
-          position: absolute;
-          top:0;
-          left:0;
-          width: 100%;
+          position: absolute;;
+          bottom: 10px;
+          width: 480px;
           z-index: 2;
+          @media @mobile-device { width: 94%;}
           .empire-row {
             padding: 15px 25px;
             background-color: rgba(0,0,0,0.5);
             color: rgba(255,255,255,1);
-
-            .section-left { display: inline-block; width: 49%; text-align: left;}
-            .section-right { display: inline-block; width: 49%; text-align: right; }
+            .section-left { display: inline-block; float: left; }
+            .section-right { display: inline-block; float: right; text-align: right;}
             .name { font-size: 2.5rem;}
             .position { font-size: 1.5rem; }
             .social {
               .empire-media {
                 display: inline-block;
-                padding: 10px;
+                padding: 5px;
                 border-radius: 50px;
                 background-color: rgba(255,255,255,1);
                 margin: 0 10px;
@@ -53,8 +46,8 @@
                 @media @mobile-device { padding: 4px; margin:2px; }
                 i {
                   color: rgba(0,0,0,1);
-                  font-size: 40px;
-                  min-width: 40px;
+                  font-size: 30px;
+                  min-width: 30px;
                   text-align: center;
                   transition: all 0.3s ease;
                 }

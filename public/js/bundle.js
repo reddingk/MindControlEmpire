@@ -620,6 +620,12 @@
          if (currentPage != null && currentPage.current.name.indexOf(current) > -1) { return true; }
          else { return false; }
     }
+
+    var navMain = $("#mceNavbar");
+     navMain.on("click", "a", null, function () {
+         navMain.collapse('hide');
+     });
+
   }]);
 
 })();

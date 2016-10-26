@@ -24,7 +24,7 @@
               display: inline-block;
               float: left;
 
-              @media @mobile-device { width: 100%; }
+              @media @mobile-device { width: 100%; padding: 20px 5px;}
               .profile-row {
                 display: block;
                 padding: 10px 5px;
@@ -87,7 +87,7 @@
               display: inline-block;
               height: 500px;
               //overflow: hidden;
-              @media @mobile-device { width: 100%; }
+              @media @mobile-device { width: 100%; padding: 20px 5px;}
               img {
                 height: 100%;
                 max-width: 100%;
@@ -115,7 +115,7 @@
                   display: inline-block;
                   width: 33%;
                   padding: 30px;
-                  @media @mobile-device { width: 100%; }
+                  @media @mobile-device { width: 100%; padding: 30px 5px; }
 
                   &.lrg { width: 100%; display: block;}
                   .item {
@@ -125,7 +125,7 @@
                       a {
                         position: relative;
                         img { width: 100%; position: relative; }
-                        .fa { color:rgba(0,0,0,0.7); position: absolute; top: 45%; left: 45%; font-size: 75px; transition: all 0.1s ease;}
+                        .fa { color:rgba(0,0,0,0.7); position: absolute; top: 45%; left: 45%; font-size: 75px; transition: all 0.1s ease; @media @mobile-device { top: -100%; left: 30%; }}
                         &:hover, &:focus { .fa { color:rgba(187,0,0,0.7);}}
                       }
                       &+.item-title { padding-top: 10px; text-align: center;}
