@@ -22,6 +22,7 @@ var port = process.env.PORT || 1738;
 app.get('/artists', function(req, res) { res.redirect('/#/artists'); });
 app.get('/artists/details/:artistId', function(req, res) { res.redirect('/#/artists/details/'+req.params.artistId); });
 app.get('/empire', function(req, res) { res.redirect('/#/empire'); });
+app.get('/empire/media', function(req, res) { res.redirect('/#/empire/media'); });
 app.get('/media', function(req, res) { res.redirect('/#/media'); });
 app.get('/news', function(req, res) { res.redirect('/#/news'); });
 app.get('/news/article/:newsid', function(req, res) { res.redirect('/#/news/article/'+req.params.newsid); });

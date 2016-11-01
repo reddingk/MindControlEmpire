@@ -1,0 +1,28 @@
+<div class="media-page">
+  <div class="header-container">
+    <h1>Media</h1>
+    <div style="clear:both;"></div>
+  </div>
+
+  <div class="media">
+    <div class="page-container">
+      <div class="gallery-container">
+        <section id="photostack-1" class="photostack">
+          <div class="stack-container">
+            <!-- Repeat -->
+            <figure ng-repeat="item in mc.displayItems" ng-click="mc.changeSelected(item)" ng-class="mc.isSelected(item.id)" ng-attr-id="{{'photo-'+ item.id}}" photo-motion selectedid="{{mc.selectedid}}" itemid="{{item.id}}" itemcount="{{mc.displayItems.length}}">
+              <div class="photostack-img"><img ng-src="{{item.img}}" alt="{{item.img}}"></div>
+              <figcaption>
+                <h2 class="photostack-title">Photo {{item.id}}</h2>
+              </figcaption>
+            </figure>
+            <div class="photo-nav">
+              <div ng-repeat="item in mc.displayItems" class="nav-icon" ng-class="mc.isSelected(item.id)" ng-click="mc.changeSelected(item)" photo-motion selectedid="{{mc.selectedid}}" itemid="{{item.id}}" itemcount="{{mc.displayItems.length}}" isnav="true"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+</div>

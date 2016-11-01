@@ -6,6 +6,7 @@
 		angular.module('homeCtrl', ['ui.bootstrap', 'ngAnimate']);
 		angular.module('artistsCtrl', ['ui.bootstrap', 'ngAnimate']);
 		angular.module('empireCtrl', ['ui.bootstrap', 'ngAnimate']);
+		angular.module('mediaCtrl', ['ui.bootstrap', 'ngAnimate']);
 		angular.module('newsCtrl', ['ui.bootstrap', 'ngAnimate', 'ngSanitize']);
 		angular.module('eventsCtrl', ['ui.bootstrap', 'ngAnimate', 'ui.calendar']);
 		angular.module('releasesCtrl', ['ui.bootstrap', 'ngAnimate']);
@@ -14,7 +15,7 @@
 		angular.module('directives', []);
 
 		/**/
-    angular.module('MCEApp', ['ngMaterial','ngAnimate', 'ngScrollbars','ui.router', 'dataconfig', 'config','directives','headerCtrl','homeCtrl','artistsCtrl','empireCtrl','newsCtrl','eventsCtrl','releasesCtrl','contactUsCtrl']);
+    angular.module('MCEApp', ['ngMaterial','ngAnimate', 'ngScrollbars','ui.router', 'dataconfig', 'config','directives','headerCtrl','homeCtrl','artistsCtrl','empireCtrl','mediaCtrl','newsCtrl','eventsCtrl','releasesCtrl','contactUsCtrl']);
 
 })();
 
@@ -30,6 +31,7 @@
       var mcempire = MCEData.siteData.mcempire;
       var spotlights = MCEData.siteData.spotlights;
       var slider = MCEData.siteData.slider;
+      var media = MCEData.siteData.media;
 
       function eventsByname(name, max) {
         var returnedEvents=[];
@@ -132,6 +134,15 @@
             }
             return slider;
           }
+        },
+        media: {
+          all: function (){
+            var mediaList=[];
+            for(var i=0; i< media.length; i++){
+              mediaList.push({"id":i, "img":media[i]});
+            }
+            return mediaList;
+          }
         }
       }
     }])
@@ -194,11 +205,11 @@
           "mcempire":[
               {"name":"'G'", "position":"CEO", "img":"site-images/GField.jpg","icon":"fa-building", "bio":"", "social":[{"site":"twitter", "handle":"Sir_CEO"}, {"site":"instagram", "handle":"CEO_KING_FIELDMOB"}]},
               {"name":"Dwayne", "position":"Videographer & Photographer", "img":"site-images/Dwayne.jpg","icon":"fa-video-camera", "bio":"", "social":[{"site":"twitter", "handle":"DWJproduction"}, {"site":"instagram", "handle":"DWJproduction"}]},
-              {"name":"Drty Warhaul", "position":"Producer", "img":"site-images/Fields.jpg", "icon":"fa-headphones", "bio":"", "social":[{"site":"twitter", "handle":"inspiredmindz"},{"site":"soundcloud", "handle":"inspiredmindz"}]}
+              {"name":"Drty Warhol", "position":"Producer", "img":"site-images/Fields.jpg", "icon":"fa-headphones", "bio":"", "social":[{"site":"twitter", "handle":"inspiredmindz"},{"site":"soundcloud", "handle":"inspiredmindz"}]}
               ],
           "news":[
               {"title":"SXSW Performance", "date":new Date("2016-03-18 00:00:00"), "img":"imgs/site-images/Gandhi-sxsw.png", "content":"GANDHI Ali will be performing at this years SXSW (South By Southwest) music festival in Austin, TX. Visit http://www.sxsw.com/music for event and ticket information.", "tags":["GANDHI ALI","SXSW"]},
-              {"title":"GANDHI Ali is releasing Drty Work Vol. 1", "date":new Date("2016-02-25 00:00:00"), "img":"imgs/art/DrtyWorkCover.jpg", "content":"GANDHI Ali is releasing Drty Work Vol. 1 produced by Drty Warhol in late February.  The Mixtape will be released here, Live Mixtapes, Spinrilla, & Soundcloud", "tags":["GANDHI ALI","Drty Work Vol. 1"]},
+              {"title":"GANDHI Ali is releasing Drty Warhol Vol. 1", "date":new Date("2016-02-25 00:00:00"), "img":"imgs/art/DrtyWorkCover.jpg", "content":"GANDHI Ali is releasing Drty Work Vol. 1 produced by Drty Warhol in late February.  The Mixtape will be released here, Live Mixtapes, Spinrilla, & Soundcloud", "tags":["GANDHI ALI","Drty Work Vol. 1"]},
               {"title":"Website Launch", "date":new Date("2015-12-03 00:00:00"), "content":"The New Mind Control Empire website has officially been launched.  Welcome to the new Mind Control Empire Website", "tags":["Website","Mind Control Empire"]},
               {"title":"Drty Warhol Vol.1 coming soon", "date":new Date("2015-12-02 00:00:00"), "content":"Drty Warhol Vol.1 Mixtape coming in January will be released on the site.", "tags":["Mixtape","Mind Control Empire"], "image":"art/DrtyWorkCover.jpg"},
               {"title":"'The City' on the way", "date":new Date("2015-12-02 00:00:00"), "content":"The Video for 'The City' will be released this December.", "tags":["Video","Mind Control Empire"]}
@@ -209,7 +220,8 @@
               {"order":3, "artist":"GANDHI ALI", "title":"Tell The People", "type":"youtube","date":"2015-06-09","urlcode":"H0G2iBe0axQ","text":"'Tell The People' video produced by DWJproductions"},
               {"order":4, "artist":"GANDHI ALI","title":"Interview & Cypher @ The Eddie Kayne Show", "type":"youtube","date":"2015-11-05","urlcode":"dIi6AySJsI0","text":"Interview and Cypher with Gandhi Ali on the The Eddie Kayne Show"}
             ],
-          "slider": [{"image":"imgs/site-images/event_flyer.jpg", "title":"Midnight Flow 2", "text":"Hosted by Dro Victorious"},{"image":"imgs/slider/IMG0.jpg", "title":"Mind Control Empire", "text":""}, {"image":"imgs/art/DrtyWorkCover.jpg", "title":"New Release: DRTY WORKs VOL. 1", "text":"Download now on Spinrilla or Listen on the Releases Page"}, {"image":"imgs/art/RadioRemix.jpg", "title":"RADIO REMIX VOL. 1", "text":"Download Now on spinrella.com"}, {"image":"imgs/slider/SXsw1.jpg", "title":"Music Production And Management", "text":"Our Management team brings the world to the artist."}]
+          "slider": [{"image":"imgs/site-images/event_flyer.jpg", "title":"Midnight Flow 2", "text":"Hosted by Dro Victorious"},{"image":"imgs/slider/IMG0.jpg", "title":"Mind Control Empire", "text":""}, {"image":"imgs/art/DrtyWorkCover.jpg", "title":"New Release: DRTY Warhol VOL. 1", "text":"Download now on Spinrilla or Listen on the Releases Page"}, {"image":"imgs/art/RadioRemix.jpg", "title":"RADIO REMIX VOL. 1", "text":"Download Now on spinrella.com"}, {"image":"imgs/slider/SXsw1.jpg", "title":"Music Production And Management", "text":"Our Management team brings the world to the artist."}],
+          "media":["imgs/media/IMG1.jpg","imgs/media/IMG2.jpg","imgs/media/IMG4.jpg","imgs/media/IMG5.jpg","imgs/media/IMG6.jpg","imgs/media/IMG7.jpg","imgs/media/IMG8.jpg","imgs/media/IMG9.jpg","imgs/media/IMG10.png","imgs/media/IMG11.jpg","imgs/media/IMG12.jpg","imgs/media/IMG13.jpg","imgs/media/IMG14.jpg","imgs/media/IMG15.jpg"]
       };
 
      }
@@ -265,6 +277,15 @@
           'content@': {
             templateUrl: 'views/empire.html',
             controller: 'EmpireController as ec'
+          }
+        }
+      })
+      .state('app.empire.media', {
+        url: "/media",
+        views: {
+          'content@': {
+            templateUrl: 'views/media.html',
+            controller: 'MediaController as mc'
           }
         }
       })
@@ -671,6 +692,37 @@
 })();
 
 (function(){
+   "use strict";
+
+    angular.module('mediaCtrl').controller('MediaController', ['$state','mceInfo','$sce', function($state, mceInfo, $sce){
+      var vm = this;
+      vm.title = "Media";
+
+      vm.media = mceInfo.media.all();
+      vm.displayItems = vm.media;
+      vm.selectedid = vm.displayItems[0].id;
+
+      /*Functions */
+      vm.isSelected = isSelected;
+      vm.changeSelected = changeSelected;
+      vm.navSelected = navSelected;
+
+      function isSelected(id) {
+        return (id == vm.selectedid ? "selected" : "");
+      }
+      function changeSelected(item) {
+        vm.selectedid = item.id;
+      }
+      function navSelected(item) {
+        return (item.images == vm.displayItems ? "selected" : "");
+      }
+
+
+    }]);
+
+})();
+
+(function(){
  "use strict";
 
   angular.module('newsCtrl').controller('NewsController', ['$state','$stateParams','mceInfo', '$sce', function($state, $stateParams, mceInfo, $sce){
@@ -851,6 +903,61 @@
         }
       }
 
+    }]);
+
+})();
+
+(function(){
+   "use strict";
+
+    angular.module('directives').directive('photoMotion', ['$window', function() {
+      return {
+        restrict: 'EA',
+        link: function ($scope, element, attrs) {
+
+          var itemid = $scope.$eval(attrs.itemid);
+          var itemcount = $scope.$eval(attrs.itemcount);
+          var isNav = $scope.$eval(attrs.isnav);
+
+          //-item position function
+          function getItemLocation(locid, elemId){
+            //-selected id
+            var selectedid = (elemId == null ? $scope.$eval(attrs.selectedid) : elemId);
+
+            // Get element by id
+            var stackCont = angular.element(document).find('.stack-container');
+            var elemMove = stackCont.children()[locid];
+            var imgElem = elemMove.children[0].children[0];
+
+            var pageWidth = window.innerWidth;
+            var offsetX = ((imgElem.naturalWidth * ( pageWidth < 801 ? 170 : 320)) / imgElem.naturalHeight);
+            var defaultX = Math.floor((stackCont[0].offsetWidth - offsetX)/2);
+            var maxX = Math.floor(pageWidth * .86);
+
+            var x = (selectedid == locid ? (defaultX < 0 ? 0 : defaultX) : Math.floor(Math.random() * maxX) - 200);
+            var y = (selectedid == locid ? 50 : Math.floor(Math.random() * 401) - 100);
+            var angle = (selectedid == locid ? 0 : Math.floor(Math.random() * 80) - 40) ;
+
+            // Check Out of Bounds
+            x = (x < -50 ? -40 : x);
+            y = (y < 30 ? 30 : y);
+
+            elemMove.style.transform = "translate("+x+"px, "+ y+"px)"+ "rotate("+angle + "deg)";
+          }
+
+          // On click Set selected id
+          element.bind('click', function() {
+            if(itemid != $scope.$eval(attrs.selectedid)){
+              for(var i=0; i < itemcount; i++)
+              {
+                getItemLocation(i, itemid);
+              }
+            }
+          });
+          // Intitial Object Set
+          getItemLocation(itemid, null);
+        }
+      }
     }]);
 
 })();

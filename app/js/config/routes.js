@@ -47,6 +47,15 @@
           }
         }
       })
+      .state('app.empire.media', {
+        url: "/media",
+        views: {
+          'content@': {
+            templateUrl: 'views/media.html',
+            controller: 'MediaController as mc'
+          }
+        }
+      })
       .state('app.news', {
         url: "news",
         views: {

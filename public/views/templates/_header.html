@@ -12,7 +12,13 @@
       <div class="collapse navbar-collapse" id="mceNavbar">
         <ul class="nav navbar-nav pull-right">
           <li><a ui-sref="app.artists" ng-class="{'active':hdc.checkActivePage('artists')}"><span>A</span>rtists</a></li>
-          <li><a ui-sref="app.empire" ng-class="{'active':hdc.checkActivePage('empire')}"><span>T</span>he Empire</a></li>
+          <li class="dropdown">
+            <a ng-class="{'active':hdc.checkActivePage('empire')}" class="dropdown-toggle" data-toggle="dropdown" href="#"><span>T</span>he Empire<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a ui-sref="app.empire">About us</a></li>
+              <li><a ui-sref="app.empire.media">Media</a></li>
+            </ul>
+          </li>
           <li><a ui-sref="app.news" ng-class="{'active':hdc.checkActivePage('news')}"><span>N</span>ews</a></li>
           <li><a ui-sref="app.events" ng-class="{'active':hdc.checkActivePage('events')}"><span>E</span>vents</a></li>
           <li><a ui-sref="app.releases" ng-class="{'active':hdc.checkActivePage('releases')}"><span>R</span>eleases</a></li>
