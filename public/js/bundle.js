@@ -645,7 +645,7 @@
     }
 
     var navMain = $("#mceNavbar");
-     navMain.on("click", "a", null, function () {
+     navMain.on("click", ".link", null, function () {
          navMain.collapse('hide');
      });
 
