@@ -5,7 +5,7 @@
         <img ng-src="{{slide.image}}">
         <img class="special-slider-img" ng-src="{{slide.image}}">
         <div class="carousel-caption">
-          <h4>{{slide.title}}</h4>
+          <h4 class="fadeAmination">{{slide.title}}</h4>
           <p>{{slide.text}}</p>
         </div>
       </div>
@@ -28,7 +28,7 @@
               <img ng-src="{{news.img}}" ng-if="news.img != null">
             </div>
             <div class="home-subtitle">News</div>
-            <div class="news-title">{{news.title}}</div>
+            <div class="news-title" scroll-action=-100>{{news.title}}</div>
             <div class="news-content">{{news.content | limitTo: 50}}...</div>
             <div class="read-more">Read More...</div>
           </div>

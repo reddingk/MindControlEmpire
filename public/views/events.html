@@ -6,11 +6,12 @@
     </div>
 
     <div class="events-containers">
+      <div class="bouncing-logo" random-motion><img src="imgs/logos/logoB.png"></div>
       <div class="calender-section">
         <div ui-calendar="ec.uiConfig.calendar" class="span8 calendar" ng-model="ec.eventSources"></div>
       </div>
       <div class="list-section">
-        <div class="list-item" ng-repeat="event in ec.allEvents" ng-class-even="'alternate'" ng-class="ec.isPassed(event.date)">
+        <div class="list-item fadeAmination" ng-repeat="event in ec.allEvents" ng-class-even="'alternate'" ng-class="ec.isPassed(event.date)">
           <div class="event-item event-img artist-img" ui-sref="app.artists.details({artistId: event.artistname})" ng-if="event.artistimg != null">
             <img ng-src="imgs/artists/{{event.artistimg}}" >
             <div class="event-artist-name">{{event.artistname}}</div>

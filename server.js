@@ -18,6 +18,18 @@ var port = process.env.PORT || 1738;
 
 // connect to mongoDB database
 // mongoose.connect(db.url);
+// Beautify routes
+app.get('/artists', function(req, res) { res.redirect('/#/artists'); });
+app.get('/artists/details/:artistId', function(req, res) { res.redirect('/#/artists/details/'+req.params.artistId); });
+app.get('/empire', function(req, res) { res.redirect('/#/empire'); });
+app.get('/media', function(req, res) { res.redirect('/#/media'); });
+app.get('/news', function(req, res) { res.redirect('/#/news'); });
+app.get('/news/article/:newsid', function(req, res) { res.redirect('/#/news/article/'+req.params.newsid); });
+app.get('/events', function(req, res) { res.redirect('/#/events'); });
+app.get('/releases', function(req, res) { res.redirect('/#/releases'); });
+app.get('/contactus', function(req, res) { res.redirect('/#/contactus'); });
+app.get('/underconstruction', function(req, res) { res.redirect('/#/underconstruction'); });
+
 
 // get all data of the body (POST) params
 // parse application/json

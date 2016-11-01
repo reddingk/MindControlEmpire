@@ -10,6 +10,21 @@
       <div class="releases-profile" >
         <div class="profile-container">
 
+          <!-- Videos -->
+          <div class="videos-section release-section">
+            <div class="title">Videos</div>
+
+            <div class="release-paging"><i class="fa fa-caret-left" ng-click="rc.releasePaging('down', 'videos')" ng-if="rc.checkButton('down', 'videos')"></i><div class="page-number">{{rc.displayedReleases.videos.page}} / {{rc.displayedReleases.videos.totalpages}}</div><i class="fa fa-caret-right" ng-click="rc.releasePaging('up', 'videos')" ng-if="rc.checkButton('up', 'videos')"></i></div>
+            <div class="release-item" ng-repeat="item in rc.displayedReleases.videos.releases" scroll-action=250>
+              <div class="item item-youtube">
+                <!--<iframe ng-src="{{rc.URLClean(item.url)}}" frameborder="0" allowfullscreen></iframe>-->
+                <a ng-href="{{rc.youtubeURL(item.urlcode, 'site')}}" target="_blank"><img ng-src="{{rc.youtubeURL(item.urlcode, 'image')}}"/><i class="fa fa-youtube-play"></i></a>
+              </div>
+              <div class="item-title">{{item.title}}</div>
+              <div class="item-artist">{{item.artists}}</div>
+            </div>
+          </div>
+          
           <!-- MixTapes -->
           <div class="mixtape-section release-section">
             <div class="title">Mixtapes</div>
@@ -19,7 +34,7 @@
               <div class="item item-mixtape" ng-if="rc.displayedReleases.mixtapes.releases.type == 'spinrilla-mixtape'">
                 <iframe ng-src="{{rc.URLClean(rc.displayedReleases.mixtapes.releases.url)}}" frameborder="0" height="450px" allowtransparency='true'></iframe>
 
-                <div class="item-text">
+                <div class="item-text fadeAmination">
                   <div class="item-title">{{rc.displayedReleases.mixtapes.releases.title}}</div>
                   <div class="item-artist">{{rc.displayedReleases.mixtapes.releases.artists}}</div>
                   <div class="item-date">{{rc.displayedReleases.mixtapes.releases.date | date:"MMM-dd-yyyy"}}</div>
@@ -28,23 +43,24 @@
             </div>
           </div>
 
-          <!-- Videos -->
-          <div class="videos-section release-section">
-            <div class="title">Videos</div>
-
-            <div class="release-paging"><i class="fa fa-caret-left" ng-click="rc.releasePaging('down', 'videos')" ng-if="rc.checkButton('down', 'videos')"></i><div class="page-number">{{rc.displayedReleases.videos.page}} / {{rc.displayedReleases.videos.totalpages}}</div><i class="fa fa-caret-right" ng-click="rc.releasePaging('up', 'videos')" ng-if="rc.checkButton('up', 'videos')"></i></div>
-            <div class="release-item" ng-repeat="item in rc.displayedReleases.videos.releases">
-              <div class="item item-youtube">
-                <iframe ng-src="{{rc.URLClean(item.url)}}" frameborder="0" allowfullscreen></iframe>
-              </div>
-              <div class="item-title">{{item.title}}</div>
-              <div class="item-artist">{{item.artists}}</div>
-            </div>
-          </div>
 
           <!-- Music -->
           <div class="music-section release-section">
             <div class="title">Tracks</div>
+
+            <div class="release-paging"><i class="fa fa-caret-left" ng-click="rc.releasePaging('down', 'tracks')" ng-if="rc.checkButton('down', 'tracks')"></i><div class="page-number">{{rc.displayedReleases.tracks.page}} / {{rc.displayedReleases.tracks.totalpages}}</div><i class="fa fa-caret-right" ng-click="rc.releasePaging('up', 'tracks')" ng-if="rc.checkButton('up', 'tracks')"></i></div>
+            <div class="release-item" ng-repeat="item in rc.displayedReleases.tracks.releases" scroll-action=400>
+              <div class="item item-soundcloud-track">
+                <a ng-href="{{item.url}}" target="_blank">
+                  <img ng-src="{{item.img}}"/>
+                  <div class="item-info">
+                    <div class="item-title">{{item.title}}</div>
+                    <div class="item-artist">{{item.artists}}</div>
+                  </div>
+                  <div class="soundcloud-logo"><div class="text"><i class="fa fa-soundcloud"></i> Soundcloud</div></div>
+                </a>
+              </div>
+            </div>
           </div>
 
         </div>

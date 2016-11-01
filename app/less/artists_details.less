@@ -16,19 +16,20 @@
         .profile-container {
           .detail-section {
             display: block;
-            padding: 20px 20px;
+            padding: 20px;
+            @media @mobile-device { padding: 20px 5px; }
             .info-bio {
               padding: 20px;
               width: 49%;
               display: inline-block;
               float: left;
 
-              @media @mobile-device { width: 100%; }
+              @media @mobile-device { width: 100%; padding: 20px 5px;}
               .profile-row {
                 display: block;
                 padding: 10px 5px;
                 &+.profile-row { border-top: 1px solid #000000;}
-                .artist-name { font-size: 2.5rem; font-family: 'Rock Salt', cursive;}
+                .artist-name { font-size: 2.5rem; font-family: 'Rock Salt', cursive; @media @mobile-device { font-size: 2rem; }}
                 .artist-media {
                   display: inline-block;
                   padding: 10px;
@@ -86,7 +87,7 @@
               display: inline-block;
               height: 500px;
               //overflow: hidden;
-              @media @mobile-device { width: 100%; }
+              @media @mobile-device { width: 100%; padding: 20px 5px;}
               img {
                 height: 100%;
                 max-width: 100%;
@@ -114,14 +115,20 @@
                   display: inline-block;
                   width: 33%;
                   padding: 30px;
-                  @media @mobile-device { width: 100%; }
+                  @media @mobile-device { width: 100%; padding: 30px 5px; }
 
                   &.lrg { width: 100%; display: block;}
                   .item {
                     text-align: center;
                     &.item-youtube {
                       iframe { height: 200px; @media @mobile-device { width: 100% !important; }}
-                      &+.item-title { text-align: center;}
+                      a {
+                        position: relative;
+                        img { width: 100%; position: relative; }
+                        .fa { color:rgba(0,0,0,0.7); position: absolute; top: 45%; left: 45%; font-size: 75px; transition: all 0.1s ease; @media @mobile-device { top: -100%; left: 30%; }}
+                        &:hover, &:focus { .fa { color:rgba(187,0,0,0.7);}}
+                      }
+                      &+.item-title { padding-top: 10px; text-align: center;}
                     }
                     &.item-mixtape {
                       height: 500px;
@@ -172,6 +179,7 @@
                     padding: 20px;
                     width: 30%;
                     display: inline-block;
+                    @media @mobile-device { width: 100%; }
                     .event-day {
                       display: block;
                       font-size: 1.5rem;
@@ -184,6 +192,7 @@
                     padding: 20px;
                     width: 30%;
                     display: inline-block;
+                      @media @mobile-device { width: 100%; }
                     .event-title { display: block; font-size: 1.5rem; font-weight: bold; @media @mobile-device { font-size:1rem; }}
                     .event-location { }
                   }

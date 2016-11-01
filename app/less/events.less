@@ -1,7 +1,13 @@
 .events-page {
   .page-container {
     .events-containers {
-      padding: 40px;
+      z-index: 1;
+      background-color: rgba(255,255,255,0.7);
+      padding: 20px;
+      margin-top: 50px;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
       .calender-section {
         width: 40%;
         display: inline-block;
@@ -9,7 +15,7 @@
         float: left;
         padding: 10px;
         height: 500px;
-        @media @mobile-device { width: 100%; }
+        @media @mobile-device { width: 100%; height: initial; }
       }
       .list-section {
         width: 60%;
@@ -18,11 +24,12 @@
         padding: 10px;
         height: 500px;
         overflow-y: auto;
-        border: 10px solid @color-theme;
+        border: 10px solid rgba(0,0,0,0.5);
         @media @mobile-device { width: 100%; }
         .list-item {
           display: block;
           height: 150px;
+          @media @mobile-device { min-height: 250px; overflow: hidden; }
           &.alternate { background-color: rgba(0,0,0,0.2);}
           &.passed { .event-item { .event-title,.event-location, .event-day, .event-time { text-decoration: line-through; } } }
           .event-item {
@@ -59,8 +66,28 @@
               .event-title { width: 100%; display: block;}
               .event-location { width: 100%; display: block; }
             }
+            @media @mobile-device {
+              font-size: 1rem;
+              &.event-img, &.event-date, &.event-info {width: 100%; height: initial; }
+              &.event-img {
+                &.artist-img { img, .event-artist-name { display: inline-block; }  }
+                &.no-img { img { height: 80px;  width: 80px; }}
+              }
+            }
           }
+
         }
+      }
+
+      .bouncing-logo {
+        width: 300px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0.3;
+        img { width: 100%; }
       }
     }
   }
