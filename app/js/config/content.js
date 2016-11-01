@@ -174,11 +174,11 @@
           "mcempire":[
               {"name":"'G'", "position":"CEO", "img":"site-images/GField.jpg","icon":"fa-building", "bio":"", "social":[{"site":"twitter", "handle":"Sir_CEO"}, {"site":"instagram", "handle":"CEO_KING_FIELDMOB"}]},
               {"name":"Dwayne", "position":"Videographer & Photographer", "img":"site-images/Dwayne.jpg","icon":"fa-video-camera", "bio":"", "social":[{"site":"twitter", "handle":"DWJproduction"}, {"site":"instagram", "handle":"DWJproduction"}]},
-              {"name":"Drty Warhaul", "position":"Producer", "img":"site-images/Fields.jpg", "icon":"fa-headphones", "bio":"", "social":[{"site":"twitter", "handle":"inspiredmindz"},{"site":"soundcloud", "handle":"inspiredmindz"}]}
+              {"name":"Drty Warhol", "position":"Producer", "img":"site-images/Fields.jpg", "icon":"fa-headphones", "bio":"", "social":[{"site":"twitter", "handle":"inspiredmindz"},{"site":"soundcloud", "handle":"inspiredmindz"}]}
               ],
           "news":[
               {"title":"SXSW Performance", "date":new Date("2016-03-18 00:00:00"), "img":"imgs/site-images/Gandhi-sxsw.png", "content":"GANDHI Ali will be performing at this years SXSW (South By Southwest) music festival in Austin, TX. Visit http://www.sxsw.com/music for event and ticket information.", "tags":["GANDHI ALI","SXSW"]},
-              {"title":"GANDHI Ali is releasing Drty Work Vol. 1", "date":new Date("2016-02-25 00:00:00"), "img":"imgs/art/DrtyWorkCover.jpg", "content":"GANDHI Ali is releasing Drty Work Vol. 1 produced by Drty Warhol in late February.  The Mixtape will be released here, Live Mixtapes, Spinrilla, & Soundcloud", "tags":["GANDHI ALI","Drty Work Vol. 1"]},
+              {"title":"GANDHI Ali is releasing Drty Warhol Vol. 1", "date":new Date("2016-02-25 00:00:00"), "img":"imgs/art/DrtyWorkCover.jpg", "content":"GANDHI Ali is releasing Drty Work Vol. 1 produced by Drty Warhol in late February.  The Mixtape will be released here, Live Mixtapes, Spinrilla, & Soundcloud", "tags":["GANDHI ALI","Drty Work Vol. 1"]},
               {"title":"Website Launch", "date":new Date("2015-12-03 00:00:00"), "content":"The New Mind Control Empire website has officially been launched.  Welcome to the new Mind Control Empire Website", "tags":["Website","Mind Control Empire"]},
               {"title":"Drty Warhol Vol.1 coming soon", "date":new Date("2015-12-02 00:00:00"), "content":"Drty Warhol Vol.1 Mixtape coming in January will be released on the site.", "tags":["Mixtape","Mind Control Empire"], "image":"art/DrtyWorkCover.jpg"},
               {"title":"'The City' on the way", "date":new Date("2015-12-02 00:00:00"), "content":"The Video for 'The City' will be released this December.", "tags":["Video","Mind Control Empire"]}
@@ -189,7 +189,7 @@
               {"order":3, "artist":"GANDHI ALI", "title":"Tell The People", "type":"youtube","date":"2015-06-09","urlcode":"H0G2iBe0axQ","text":"'Tell The People' video produced by DWJproductions"},
               {"order":4, "artist":"GANDHI ALI","title":"Interview & Cypher @ The Eddie Kayne Show", "type":"youtube","date":"2015-11-05","urlcode":"dIi6AySJsI0","text":"Interview and Cypher with Gandhi Ali on the The Eddie Kayne Show"}
             ],
-          "slider": [{"image":"imgs/site-images/event_flyer.jpg", "title":"Midnight Flow 2", "text":"Hosted by Dro Victorious"},{"image":"imgs/slider/IMG0.jpg", "title":"Mind Control Empire", "text":""}, {"image":"imgs/art/DrtyWorkCover.jpg", "title":"New Release: DRTY WORKs VOL. 1", "text":"Download now on Spinrilla or Listen on the Releases Page"}, {"image":"imgs/art/RadioRemix.jpg", "title":"RADIO REMIX VOL. 1", "text":"Download Now on spinrella.com"}, {"image":"imgs/slider/SXsw1.jpg", "title":"Music Production And Management", "text":"Our Management team brings the world to the artist."}]
+          "slider": [{"image":"imgs/site-images/event_flyer.jpg", "title":"Midnight Flow 2", "text":"Hosted by Dro Victorious"},{"image":"imgs/slider/IMG0.jpg", "title":"Mind Control Empire", "text":""}, {"image":"imgs/art/DrtyWorkCover.jpg", "title":"New Release: DRTY Warhol VOL. 1", "text":"Download now on Spinrilla or Listen on the Releases Page"}, {"image":"imgs/art/RadioRemix.jpg", "title":"RADIO REMIX VOL. 1", "text":"Download Now on spinrella.com"}, {"image":"imgs/slider/SXsw1.jpg", "title":"Music Production And Management", "text":"Our Management team brings the world to the artist."}]
       };
 
      }
