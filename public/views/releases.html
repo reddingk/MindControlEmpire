@@ -24,7 +24,7 @@
               <div class="item-artist">{{item.artists}}</div>
             </div>
           </div>
-          
+
           <!-- MixTapes -->
           <div class="mixtape-section release-section">
             <div class="title">Mixtapes</div>
@@ -50,7 +50,8 @@
 
             <div class="release-paging"><i class="fa fa-caret-left" ng-click="rc.releasePaging('down', 'tracks')" ng-if="rc.checkButton('down', 'tracks')"></i><div class="page-number">{{rc.displayedReleases.tracks.page}} / {{rc.displayedReleases.tracks.totalpages}}</div><i class="fa fa-caret-right" ng-click="rc.releasePaging('up', 'tracks')" ng-if="rc.checkButton('up', 'tracks')"></i></div>
             <div class="release-item" ng-repeat="item in rc.displayedReleases.tracks.releases" scroll-action=400>
-              <div class="item item-soundcloud-track">
+              <!-- Soundcloud -->
+              <div class="item item-soundcloud-track" ng-if="item.type == 'soundcloud-track'">
                 <a ng-href="{{item.url}}" target="_blank">
                   <img ng-src="{{item.img}}"/>
                   <div class="item-info">
@@ -58,6 +59,18 @@
                     <div class="item-artist">{{item.artists}}</div>
                   </div>
                   <div class="soundcloud-logo"><div class="text"><i class="fa fa-soundcloud"></i> Soundcloud</div></div>
+                </a>
+              </div>
+
+              <!-- Spinrilla -->
+              <div class="item item-spinrilla-track" ng-if="item.type == 'spinrilla-track'">
+                <a ng-href="{{item.url}}" target="_blank">
+                  <img ng-src="{{item.img}}"/>
+                  <div class="item-info">
+                    <div class="item-title">{{item.title}}</div>
+                    <div class="item-artist">{{item.artists}}</div>
+                  </div>
+                  <div class="spinrilla-logo"><div class="text"><i class="fa fa-circle"></i> Spinrilla</div></div>
                 </a>
               </div>
             </div>

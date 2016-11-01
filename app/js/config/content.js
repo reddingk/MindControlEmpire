@@ -129,6 +129,9 @@
                   {"site":"instagram","handle":"gandhi3x"},
                   {"site":"soundcloud","handle":"gandhi3x"}],
               "releases":[
+                  {"title":"TD And Dab", "type":"spinrilla-track","date":new Date("2016-10-15"),"url":"https://spinrilla.com/singles/846503-gandhi-ali-td-and-dab","text":"Gandhi Ali - TD And Dab", "img":"https://cdn.spinrilla.com/tracks/846503/large/846503.jpg?1477514437"},
+                  {"title":"Lil Bih", "type":"spinrilla-track","date":new Date("2016-10-15"),"url":"https://spinrilla.com/singles/834636-gandhi-ali-lil-bih","text":"Gandhi Ali - Lil Bih", "img":"https://cdn.spinrilla.com/tracks/834636/large/834636.png?1476733332"},
+
                   {"title":"Kill Em All", "type":"soundcloud-track","date":new Date("2016-10-09"),"url":"https://soundcloud.com/gandhi3x/gandhi-ali-kill-em-all-prod-by-trackanometry-drty-warhol-rough","text":"Gandhi Ali - Kill Em All", "img":"https://i1.sndcdn.com/artworks-000187342796-09tszq-t200x200.jpg"},
                   {"title":"100% ft. Yung Sonic", "type":"soundcloud-track","date":new Date("2016-08-20"),"url":"https://soundcloud.com/gandhi3x/100-ft-yung-sonic","text":"Gandhi Ali ft. Yung Sonic - 100%" , "img":"https://i1.sndcdn.com/artworks-000175223671-v5zlyr-t200x200.jpg"},
                   {"title":"Sorry", "type":"soundcloud-track","date":new Date("2016-08-20"),"url":"https://soundcloud.com/gandhi3x/gandhi-ali-sorry","text":"Gandhi Ali - Sorry", "img":"https://i1.sndcdn.com/artworks-000173467761-h8v0ax-t200x200.jpg"},
@@ -154,6 +157,7 @@
               ]}
           ],
           "events":[
+              { "eventname":"Midnight Flow 2", "location":"8241 Georgia Ave., Silver Spring, Md. 20910", "date":new Date( "2016-11-02 21:00:00"), "artistname":"GANDHI ALI", "tags":[]},
               { "eventname":"SXSW Performance", "location":"South by Southwest Festival: Austin, Tx", "date":new Date( "2016-03-17 10:00:00"), "artistname":"GANDHI ALI", "tags":[]},
               { "eventname":"Hiphopyogalive performance", "location":"Washington Dc-Amsterdam Lounge", "date":new Date("2015-12-02 22:00:00"), "artistname":"GANDHI ALI",  "tags":[]},
               { "eventname":"Performance", "location":"Washington Dc:Zeba Bar", "date":new Date("2015-09-18 21:00:00"), "artistname":"MIND CONTROL EMPIRE",  "tags":[]},
@@ -169,7 +173,7 @@
               ],
           "mcempire":[
               {"name":"'G'", "position":"CEO", "img":"site-images/GField.jpg","icon":"fa-building", "bio":"", "social":[{"site":"twitter", "handle":"Sir_CEO"}, {"site":"instagram", "handle":"CEO_KING_FIELDMOB"}]},
-              {"name":"Dwayne", "position":"Videographer & Photographer", "img":"site-images/Dwayne.png","icon":"fa-video-camera", "bio":"", "social":[{"site":"twitter", "handle":"DWJproduction"}, {"site":"instagram", "handle":"DWJproduction"}]},
+              {"name":"Dwayne", "position":"Videographer & Photographer", "img":"site-images/Dwayne.jpg","icon":"fa-video-camera", "bio":"", "social":[{"site":"twitter", "handle":"DWJproduction"}, {"site":"instagram", "handle":"DWJproduction"}]},
               {"name":"Drty Warhaul", "position":"Producer", "img":"site-images/Fields.jpg", "icon":"fa-headphones", "bio":"", "social":[{"site":"twitter", "handle":"inspiredmindz"},{"site":"soundcloud", "handle":"inspiredmindz"}]}
               ],
           "news":[
@@ -185,7 +189,7 @@
               {"order":3, "artist":"GANDHI ALI", "title":"Tell The People", "type":"youtube","date":"2015-06-09","urlcode":"H0G2iBe0axQ","text":"'Tell The People' video produced by DWJproductions"},
               {"order":4, "artist":"GANDHI ALI","title":"Interview & Cypher @ The Eddie Kayne Show", "type":"youtube","date":"2015-11-05","urlcode":"dIi6AySJsI0","text":"Interview and Cypher with Gandhi Ali on the The Eddie Kayne Show"}
             ],
-          "slider": [{"image":"imgs/slider/IMG0.jpg", "title":"Mind Control Empire", "text":""}, {"image":"imgs/art/DrtyWorkCover.jpg", "title":"New Release: DRTY WORKs VOL. 1", "text":"Download now on Spinrilla or Listen on the Releases Page"}, {"image":"imgs/art/RadioRemix.jpg", "title":"RADIO REMIX VOL. 1", "text":"Download Now on spinrella.com"}, {"image":"imgs/slider/MCE1.jpg", "title":"Music Production And Management", "text":"Our Management team brings the world to the artist."}]
+          "slider": [{"image":"imgs/site-images/event_flyer.jpg", "title":"Midnight Flow 2", "text":"Hosted by Dro Victorious"},{"image":"imgs/slider/IMG0.jpg", "title":"Mind Control Empire", "text":""}, {"image":"imgs/art/DrtyWorkCover.jpg", "title":"New Release: DRTY WORKs VOL. 1", "text":"Download now on Spinrilla or Listen on the Releases Page"}, {"image":"imgs/art/RadioRemix.jpg", "title":"RADIO REMIX VOL. 1", "text":"Download Now on spinrella.com"}, {"image":"imgs/slider/SXsw1.jpg", "title":"Music Production And Management", "text":"Our Management team brings the world to the artist."}]
       };
 
      }

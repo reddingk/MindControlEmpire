@@ -149,13 +149,9 @@
                   {"site":"instagram","handle":"gandhi3x"},
                   {"site":"soundcloud","handle":"gandhi3x"}],
               "releases":[
-<<<<<<< HEAD
-                  {"title":"Kill Em All", "type":"soundcloud-track","date":new Date("2016-10-09"),"url":"https://soundcloud.com/gandhi3x/gandhi-ali-kill-em-all-prod-by-trackanometry-drty-warhol-rough","text":"Gandhi Ali - Kill Em All"},
-                  {"title":"100% ft. Yung Sonic", "type":"soundcloud-track","date":new Date("2016-08-20"),"url":"https://soundcloud.com/gandhi3x/100-ft-yung-sonic","text":"Gandhi Ali ft. Yung Sonic - 100%"},
-                  {"title":"Sorry", "type":"soundcloud-track","date":new Date("2016-08-20"),"url":"https://soundcloud.com/gandhi3x/gandhi-ali-sorry","text":"Gandhi Ali - Sorry"},
-                  {"title":"Dirty Work", "type":"spinrilla-mixtape", "date":new Date("2016-07-12"), "url":"https://spinrilla.com/mixtapes/gandhi-ali-dirty-work/embed","text":"Drty Work by Gandhi Ali"},
-                  {"title":"SoundCloudProfile", "type":"soundcloud-profile","date":"","url":"https://soundcloud.com/gandhi3x","text":"Gandhi Ali Sound Cloud Profile"},
-=======
+                  {"title":"TD And Dab", "type":"spinrilla-track","date":new Date("2016-10-15"),"url":"https://spinrilla.com/singles/846503-gandhi-ali-td-and-dab","text":"Gandhi Ali - TD And Dab", "img":"https://cdn.spinrilla.com/tracks/846503/large/846503.jpg?1477514437"},
+                  {"title":"Lil Bih", "type":"spinrilla-track","date":new Date("2016-10-15"),"url":"https://spinrilla.com/singles/834636-gandhi-ali-lil-bih","text":"Gandhi Ali - Lil Bih", "img":"https://cdn.spinrilla.com/tracks/834636/large/834636.png?1476733332"},
+
                   {"title":"Kill Em All", "type":"soundcloud-track","date":new Date("2016-10-09"),"url":"https://soundcloud.com/gandhi3x/gandhi-ali-kill-em-all-prod-by-trackanometry-drty-warhol-rough","text":"Gandhi Ali - Kill Em All", "img":"https://i1.sndcdn.com/artworks-000187342796-09tszq-t200x200.jpg"},
                   {"title":"100% ft. Yung Sonic", "type":"soundcloud-track","date":new Date("2016-08-20"),"url":"https://soundcloud.com/gandhi3x/100-ft-yung-sonic","text":"Gandhi Ali ft. Yung Sonic - 100%" , "img":"https://i1.sndcdn.com/artworks-000175223671-v5zlyr-t200x200.jpg"},
                   {"title":"Sorry", "type":"soundcloud-track","date":new Date("2016-08-20"),"url":"https://soundcloud.com/gandhi3x/gandhi-ali-sorry","text":"Gandhi Ali - Sorry", "img":"https://i1.sndcdn.com/artworks-000173467761-h8v0ax-t200x200.jpg"},
@@ -166,31 +162,22 @@
                   {"title":"Publicly Intoxicated ft. JA", "type":"soundcloud-track","date":new Date("2016-04-24"),"url":"https://soundcloud.com/gandhi3x/publiclyintoxicated","text":"Gandhi Ali - Girlfriend Remix", "img":"https://i1.sndcdn.com/artworks-000157641977-43mb86-t200x200.jpg"},
                   {"title":"Legal", "type":"soundcloud-track","date":new Date("2016-02-13"),"url":"https://soundcloud.com/gandhi3x/gandhi-ali-legal","text":"Gandhi Ali - Girlfriend Remix", "img":"https://i1.sndcdn.com/artworks-000148553495-n6d8ig-t200x200.jpg"},
                   {"title":"Deal (Prod By Drty Warhol x Carlos Montiel)", "type":"soundcloud-track","date":new Date("2016-2-20"),"url":"https://soundcloud.com/gandhi3x/gandhi-ali-deal-freestyle","text":"Gandhi Ali - Girlfriend Remix", "img":"https://i1.sndcdn.com/artworks-000147494836-o2mx79-t200x200.jpg"},
->>>>>>> 99eb96fff8b7cec739cc39643515d89dbdf65593
 
                   {"title":"Dapper", "type":"youtube","date":new Date("2016-08-13"),"url":"https://www.youtube.com/embed/cy4Jhd16VJE", "urlcode":"cy4Jhd16VJE","text":"'Dapper' video shot by TOA$T"},
                   {"title":"100%", "type":"youtube","date":new Date("2016-06-17"),"url":"https://www.youtube.com/embed/vKIc3P1o798", "urlcode":"vKIc3P1o798","text":"'100%' video produced by DWJproductions"},
                   {"title":"Tell The People", "type":"youtube","date":new Date("2016-06-09"),"url":"https://www.youtube.com/embed/H0G2iBe0axQ", "urlcode":"H0G2iBe0axQ","text":"'Tell The People' video produced by DWJproductions"},
 
-<<<<<<< HEAD
-                  {"title":"New Ballin feat. J.A.", "type":"youtube","date":new Date("2016-10-12"),"url":"https://www.youtube.com/embed/EY_1yEP8PJ8","text":"New Ballin feat. J.A.", "art":"art/new_ballin.PNG"},
-                  {"title":"Real Live", "type":"youtube","date":new Date("2015-08-20"),"url":"https://www.youtube.com/embed/UwYWQNkdF1Y","text":"The first track on Mind Control Empire"},
-                  {"title":"Poetic Justice Freestyle", "type":"youtube","date":new Date("2015-02-13"),"url":"https://www.youtube.com/embed/-JYqJd3irRw","text":"A freestyle to the classic poetic justice track"},
-                  {"title":"Call Em In", "type":"youtube","date":new Date("2016-02-04"),"url":"https://www.youtube.com/embed/OUaHK84TkBY","text":"'Call Em In' video produced by DWJproductions", "art":"art/Call_em_in.PNG"},
-                  {"title":"Loyal", "type":"youtube","date":new Date("2016-02-25"),"url":"https://www.youtube.com/embed/j5kak2e0S-8","text":"'Loyal' video produced by DWJproductions"},
-                  {"title":"Whole Time", "type":"youtube","date":new Date("2016-02-11"),"url":"https://www.youtube.com/embed/aM2K9vl5Z2Y","text":"'Whole Time' video produced by DWJproductions"},
-=======
                   {"title":"New Ballin feat. J.A.", "type":"youtube","date":new Date("2016-10-12"),"url":"https://www.youtube.com/embed/EY_1yEP8PJ8", "urlcode":"EY_1yEP8PJ8" ,"text":"New Ballin feat. J.A.", "art":"art/new_ballin.PNG"},
                   {"title":"Real Live", "type":"youtube","date":new Date("2015-08-20"),"url":"https://www.youtube.com/embed/UwYWQNkdF1Y",  "urlcode":"UwYWQNkdF1Y" ,"text":"The first track on Mind Control Empire"},
                   {"title":"Poetic Justice Freestyle", "type":"youtube","date":new Date("2015-02-13"),"url":"https://www.youtube.com/embed/-JYqJd3irRw",  "urlcode":"-JYqJd3irRw" ,"text":"A freestyle to the classic poetic justice track"},
                   {"title":"Call Em In", "type":"youtube","date":new Date("2016-02-04"),"url":"https://www.youtube.com/embed/OUaHK84TkBY",  "urlcode":"OUaHK84TkBY" ,"text":"'Call Em In' video produced by DWJproductions", "art":"art/Call_em_in.PNG"},
                   {"title":"Loyal", "type":"youtube","date":new Date("2016-02-25"),"url":"https://www.youtube.com/embed/j5kak2e0S-8",  "urlcode":"j5kak2e0S-8" ,"text":"'Loyal' video produced by DWJproductions"},
                   {"title":"Whole Time", "type":"youtube","date":new Date("2016-02-11"),"url":"https://www.youtube.com/embed/aM2K9vl5Z2Y",  "urlcode":"aM2K9vl5Z2Y" ,"text":"'Whole Time' video produced by DWJproductions"},
->>>>>>> 99eb96fff8b7cec739cc39643515d89dbdf65593
                   {"title":"Radio Remix Vol 1: Jackin Beats", "type":"spinrilla-mixtape", "date":new Date("2016-04-13"), "url":"https://spinrilla.com/mixtapes/gandhi-ali_dmv-radio-remix-vol-1-jackin-beats-by-gandhi-ali/embed","text":"Radio Remix Vol 1. by Gandhi Ali","content":"<iframe width='100%' height='450px' style='border: 0' src='https://spinrilla.com/mixtapes/gandhi-ali_dmv-radio-remix-vol-1-jackin-beats-by-gandhi-ali/embed' allowtransparency='true'></iframe>"}
               ]}
           ],
           "events":[
+              { "eventname":"Midnight Flow 2", "location":"8241 Georgia Ave., Silver Spring, Md. 20910", "date":new Date( "2016-11-02 21:00:00"), "artistname":"GANDHI ALI", "tags":[]},
               { "eventname":"SXSW Performance", "location":"South by Southwest Festival: Austin, Tx", "date":new Date( "2016-03-17 10:00:00"), "artistname":"GANDHI ALI", "tags":[]},
               { "eventname":"Hiphopyogalive performance", "location":"Washington Dc-Amsterdam Lounge", "date":new Date("2015-12-02 22:00:00"), "artistname":"GANDHI ALI",  "tags":[]},
               { "eventname":"Performance", "location":"Washington Dc:Zeba Bar", "date":new Date("2015-09-18 21:00:00"), "artistname":"MIND CONTROL EMPIRE",  "tags":[]},
@@ -206,7 +193,7 @@
               ],
           "mcempire":[
               {"name":"'G'", "position":"CEO", "img":"site-images/GField.jpg","icon":"fa-building", "bio":"", "social":[{"site":"twitter", "handle":"Sir_CEO"}, {"site":"instagram", "handle":"CEO_KING_FIELDMOB"}]},
-              {"name":"Dwayne", "position":"Videographer & Photographer", "img":"site-images/Dwayne.png","icon":"fa-video-camera", "bio":"", "social":[{"site":"twitter", "handle":"DWJproduction"}, {"site":"instagram", "handle":"DWJproduction"}]},
+              {"name":"Dwayne", "position":"Videographer & Photographer", "img":"site-images/Dwayne.jpg","icon":"fa-video-camera", "bio":"", "social":[{"site":"twitter", "handle":"DWJproduction"}, {"site":"instagram", "handle":"DWJproduction"}]},
               {"name":"Drty Warhaul", "position":"Producer", "img":"site-images/Fields.jpg", "icon":"fa-headphones", "bio":"", "social":[{"site":"twitter", "handle":"inspiredmindz"},{"site":"soundcloud", "handle":"inspiredmindz"}]}
               ],
           "news":[
@@ -222,7 +209,7 @@
               {"order":3, "artist":"GANDHI ALI", "title":"Tell The People", "type":"youtube","date":"2015-06-09","urlcode":"H0G2iBe0axQ","text":"'Tell The People' video produced by DWJproductions"},
               {"order":4, "artist":"GANDHI ALI","title":"Interview & Cypher @ The Eddie Kayne Show", "type":"youtube","date":"2015-11-05","urlcode":"dIi6AySJsI0","text":"Interview and Cypher with Gandhi Ali on the The Eddie Kayne Show"}
             ],
-          "slider": [{"image":"imgs/slider/IMG0.jpg", "title":"Mind Control Empire", "text":""}, {"image":"imgs/art/DrtyWorkCover.jpg", "title":"New Release: DRTY WORKs VOL. 1", "text":"Download now on Spinrilla or Listen on the Releases Page"}, {"image":"imgs/art/RadioRemix.jpg", "title":"RADIO REMIX VOL. 1", "text":"Download Now on spinrella.com"}, {"image":"imgs/slider/MCE1.jpg", "title":"Music Production And Management", "text":"Our Management team brings the world to the artist."}]
+          "slider": [{"image":"imgs/site-images/event_flyer.jpg", "title":"Midnight Flow 2", "text":"Hosted by Dro Victorious"},{"image":"imgs/slider/IMG0.jpg", "title":"Mind Control Empire", "text":""}, {"image":"imgs/art/DrtyWorkCover.jpg", "title":"New Release: DRTY WORKs VOL. 1", "text":"Download now on Spinrilla or Listen on the Releases Page"}, {"image":"imgs/art/RadioRemix.jpg", "title":"RADIO REMIX VOL. 1", "text":"Download Now on spinrella.com"}, {"image":"imgs/slider/SXsw1.jpg", "title":"Music Production And Management", "text":"Our Management team brings the world to the artist."}]
       };
 
      }
@@ -335,15 +322,8 @@
         }
       });
 
-<<<<<<< HEAD
-
-
-      $urlRouterProvider.otherwise('/');
-      //$locationProvider.html5Mode(true);
-=======
       $locationProvider.html5Mode(true);
       $urlRouterProvider.otherwise('/');
->>>>>>> 99eb96fff8b7cec739cc39643515d89dbdf65593
     }]);
 
 
@@ -642,47 +622,6 @@
          if (currentPage != null && currentPage.current.name.indexOf(current) > -1) { return true; }
          else { return false; }
     }
-<<<<<<< HEAD
-  }]);
-
-})();
-
-(function(){
-   "use strict";
-
-    angular.module('homeCtrl').controller('HomeController', ['$state','mceInfo','$sce', function($state, mceInfo, $sce){
-      var vm = this;
-      vm.title = "Home";
-
-      vm.recentNews = mceInfo.news.latests();
-      vm.newsBackSVG = "views/templates/_gravity.html";
-      vm.topArtists = mceInfo.artists.top();
-      vm.slider = mceInfo.slider.all();
-      vm.spotlights = mceInfo.spotlights.all();
-      vm.spotSelected = vm.spotlights[0];
-
-      vm.active = 0;
-      vm.interval = 0;
-      vm.configScroll = {
-          theme: 'dark-3',
-          setHeight: false,
-          scrollButtons: { enable: true },
-          scrollInertia: 0
-      };
-
-      /*Functions */
-      vm.youtubeURL = youtubeURL;
-      vm.swapSelected = swapSelected;
-
-      function youtubeURL(urlcode, type){
-        return $sce.trustAsResourceUrl((type == "video"? "https://www.youtube.com/embed/"+urlcode : "http://img.youtube.com/vi/"+urlcode+"/default.jpg"));
-      }
-      function swapSelected(item) {
-        vm.spotSelected = item;
-      }
-
-    }]);
-=======
 
     var navMain = $("#mceNavbar");
      navMain.on("click", "a", null, function () {
@@ -831,7 +770,6 @@
         vm.allReleases.tracks.push(tmpRelease);
       }
     }
->>>>>>> 99eb96fff8b7cec739cc39643515d89dbdf65593
 
     vm.displayedReleases = {
       "videos":{"page":1, "totalpages":Math.ceil(vm.allReleases.videos.length / itemDisplayMax), "releases":vm.allReleases.videos.slice(0,itemDisplayMax)},
@@ -839,127 +777,6 @@
       "tracks":{"page":1, "totalpages":Math.ceil(vm.allReleases.tracks.length / itemDisplayMax), "releases":vm.allReleases.tracks.slice(0,itemDisplayMax)},
     };
 
-<<<<<<< HEAD
-(function(){
- "use strict";
-
-  angular.module('newsCtrl').controller('NewsController', ['$state','$stateParams','mceInfo', '$sce', function($state, $stateParams, mceInfo, $sce){
-    var vm = this;
-
-    vm.allNews = mceInfo.news.all();
-    vm.displayedNews = {"page":1, "totalpages":Math.ceil(vm.allNews.length / 4), "display": vm.allNews.slice(0,4)};
-
-    /*News Article*/
-    var articleID = $stateParams.newsid;
-    if(articleID != null){
-        vm.articleNews = mceInfo.news.byName(articleID);
-        vm.articleContent = "";
-        vm.articleContent = specialTextChecks(vm.articleNews.content);
-    }
-
-    /*Functions*/
-    vm.checkButton = checkButton;
-    vm.newsPaging = newsPaging;
-    vm.buildArray = buildArray;
-
-    function checkButton(direction){
-      var bool = false;
-      if(direction == "up"){
-        if((vm.displayedNews.page + 1) <= vm.displayedNews.totalpages) {bool = true;}
-      }
-      else{
-        if((vm.displayedNews.page - 1) > 0) { bool = true;}
-      }
-      return bool;
-    }
-
-    function newsPaging(direction) {
-      if(direction == "up"){
-        if((vm.displayedNews.page + 1) <= vm.displayedNews.totalpages)
-        {
-          vm.displayedNews.page +=1;
-        }
-      }
-      else{
-        if((vm.displayedNews.page - 1) > 0)
-        {
-          vm.displayedNews.page -=1;
-        }
-      }
-      var first = 4 * (vm.displayedNews.page  - 1);
-      vm.displayedNews.display = vm.allNews.slice(first,first+ 4);
-    }
-
-    function buildArray(num) {
-      return new Array(num);
-    }
-
-    function specialTextChecks(phrase){
-      var returnPhrase = phrase;
-      if(phrase.includes(".com")){
-        var tmpPhrase = "";
-        var phraseArray = phrase.split(" ");
-
-        for(var i=0; i < phraseArray.length; i++){
-          if(phraseArray[i].includes(".com")){
-            var linkText = phraseArray[i].split(0,phraseArray[i].indexOf(".com")+4);
-            phraseArray[i] = phraseArray[i].replace(linkText, '<a href="'+linkText+'" target="_blank">'+linkText+'</a>');
-          }
-        }
-
-        returnPhrase = phraseArray.join(" ");
-      }
-      return returnPhrase;
-    }
-
-  }]);
-
-})();
-
-(function(){
- "use strict";
-
-  angular.module('releasesCtrl').controller('ReleasesController', ['$state', 'mceInfo', '$sce',function($state,mceInfo,$sce){
-    var vm = this;
-    vm.releasesList = mceInfo.releases.all();
-    vm.allReleases = {"videos":[], "mixtapes":[], "tracks":[]};
-    vm.backSVG = "views/templates/_gravity.html";
-
-    var itemDisplayMax = 3;
-
-    for(var i =0; i < vm.releasesList.length; i++)
-    {
-      var tmpRelease = vm.releasesList[i];
-      if(tmpRelease.type == "youtube"){
-        vm.allReleases.videos.push(tmpRelease);
-      }
-      else if(tmpRelease.type.includes("mixtape")){
-        vm.allReleases.mixtapes.push(tmpRelease);
-      }
-      else if(tmpRelease.type.includes("track")){
-        vm.allReleases.tracks.push(tmpRelease);
-      }
-    }
-
-    vm.displayedReleases = {
-      "videos":{"page":1, "totalpages":Math.ceil(vm.allReleases.videos.length / itemDisplayMax), "releases":vm.allReleases.videos.slice(0,3)},
-      "mixtapes":{"page":1, "totalpages":vm.allReleases.mixtapes.length , "releases":vm.allReleases.mixtapes[0]},
-      "profiles":{"page":1, "totalpages":Math.ceil(vm.allReleases.tracks.length / itemDisplayMax), "releases":vm.allReleases.tracks.slice(0,3)},
-    };
-
-    /*Functions*/
-    vm.releasePaging = releasePaging;
-    vm.checkButton = checkButton;
-    vm.URLClean = URLClean;
-
-    function URLClean(url) {
-      return $sce.trustAsResourceUrl(url);
-    }
-
-    function checkButton(direction, type) {
-      var bool = false;
-
-=======
     /*Functions*/
     vm.releasePaging = releasePaging;
     vm.checkButton = checkButton;
@@ -992,7 +809,6 @@
     function checkButton(direction, type) {
       var bool = false;
 
->>>>>>> 99eb96fff8b7cec739cc39643515d89dbdf65593
       if(direction == "up"){
         if((vm.displayedReleases[type].page + 1) <= vm.displayedReleases[type].totalpages) {bool = true;}
       }
