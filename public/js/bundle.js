@@ -1034,11 +1034,11 @@
           var selectOffset = (attrs.scrollAction == null ? 0 : attrs.scrollAction);
           var windowp = angular.element($window)[0];
           var offsetTop = element[0].offsetTop;
-          var topThreshHold = offsetTop - selectOffset;
+          var topThreshHold = element.position().top; //offsetTop - selectOffset;
           element.addClass("screenScroll");
 
           if(windowp.pageYOffset >= topThreshHold){
-            if(!element.hasClass("screenAction")){              
+            if(!element.hasClass("screenAction")){
               element.addClass("screenAction");
             }
           }
