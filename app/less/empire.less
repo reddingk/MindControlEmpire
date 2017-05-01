@@ -4,13 +4,15 @@
 
     .empire-containers {
       padding: 30px 50px;
-      @media @mobile-device { padding: 30px 5px; }
+      display: flex;
+      @media @mobile-device { display: block; padding: 30px 5px; }
       .empire-member {
         position: relative;
         display: inline-block;
         width: 500px;
         height: 500px;
         padding: 10px;
+        overflow: hidden;
 
         @media @mobile-device { width: 100%; }
         .back-content {
@@ -23,15 +25,15 @@
         .front-content {
           position: absolute;;
           bottom: 10px;
-          width: 480px;
+          width: calc(~"100% - 20px");
           z-index: 2;
-          @media @mobile-device { width: 94%;}
           .empire-row {
             padding: 15px 25px;
             background-color: rgba(0,0,0,0.5);
             color: rgba(255,255,255,1);
-            .section-left { display: inline-block; float: left; }
-            .section-right { display: inline-block; float: right; text-align: right;}
+            display: flex;
+            justify-content: space-between;
+            .section-left , .section-right { display: inline-block; }
             .name { font-size: 2.5rem;}
             .position { font-size: 1.5rem; }
             .social {

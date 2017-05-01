@@ -7,11 +7,9 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var path = require('path');
 
 // configuration
-
-// config files
-//var db = require('./config/db');
 
 // set ports
 var port = process.env.PORT || 1738;
@@ -19,7 +17,7 @@ var port = process.env.PORT || 1738;
 // connect to mongoDB database
 // mongoose.connect(db.url);
 // Beautify routes
-app.get('/artists', function(req, res) { res.redirect('/#/artists'); });
+/*app.get('/artists', function(req, res) { res.redirect('/#/artists'); });
 app.get('/artists/details/:artistId', function(req, res) { res.redirect('/#/artists/details/'+req.params.artistId); });
 app.get('/empire', function(req, res) { res.redirect('/#/empire'); });
 app.get('/empire/media', function(req, res) { res.redirect('/#/empire/media'); });
@@ -30,6 +28,7 @@ app.get('/events', function(req, res) { res.redirect('/#/events'); });
 app.get('/releases', function(req, res) { res.redirect('/#/releases'); });
 app.get('/contactus', function(req, res) { res.redirect('/#/contactus'); });
 app.get('/underconstruction', function(req, res) { res.redirect('/#/underconstruction'); });
+*/
 
 
 // get all data of the body (POST) params
@@ -49,8 +48,9 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(__dirname + '/public'));
 
 // routes
-// Route for database set up
-//require('./app/routes')(app);
+app.get('*', function(req, res) {
+    res.sendFile('index.html',  { root: path.join(__dirname, './public') });
+});
 
 // start app
 app.listen(port);

@@ -28,8 +28,9 @@
               .profile-row {
                 display: block;
                 padding: 10px 5px;
+                @media @mobile-device {  text-align: center; }
                 &+.profile-row { border-top: 1px solid #000000;}
-                .artist-name { font-size: 2.5rem; font-family: 'Rock Salt', cursive; @media @mobile-device { font-size: 2rem; }}
+                .artist-name { font-size: 2.5rem; font-family: 'Abel', sans-serif; @media @mobile-device { font-size: 2rem; }}
                 .artist-media {
                   display: inline-block;
                   padding: 10px;
@@ -51,7 +52,7 @@
                     &.soundcloud { box-shadow: 0 0 24px 0 #ff3a00; i { color: #ff3a00; }}
                   }
                 }
-                .artist-bio { }
+                .artist-bio { @media @mobile-device {  text-align: center; } }
                 .profile-additional-imgs {
                   height: 100px;
                   .additional-nav {
@@ -60,7 +61,7 @@
                     height: 100%;
                     overflow: hidden;
                     text-align: center;
-                    i { font-size: 7rem; }
+                    i { font-size: 5rem; }
                     @media @mobile-device { width: 15%; }
                   }
                   .img-container {
@@ -69,6 +70,7 @@
                     height: 100%;
                     overflow: hidden;
                     background: rgba(0,0,0,0.5);
+                    @media @mobile-device { width: 68%; }
                     .additional-images {
                       width: 25%;
                       position: relative;
@@ -110,7 +112,7 @@
               .title { display: block; width: 100%; font-size: 3rem; padding:0px 40px;}
               .item-container {
                 position: relative;
-                .sub-title { font-family: 'Rock Salt', cursive; text-decoration: underline; font-size: 1.5rem; display: block; padding: 20px 40px; }
+                .sub-title { font-family: 'Abel', sans-serif; text-decoration: underline; font-size: 1.5rem; display: block; padding: 20px 40px; }
                 .release-item {
                   display: inline-block;
                   width: 33%;
@@ -118,6 +120,15 @@
                   @media @mobile-device { width: 100%; padding: 30px 5px; }
 
                   &.lrg { width: 100%; display: block;}
+                  &.ng-enter {
+                    //-webkit-animation:1s fadeIn ease;
+                          //animation:1s fadeInLeftBig ease;
+                  }
+                  &.ng-leave {
+                    -webkit-animation:0s fadeOut ease;
+                          animation:0s fadeOut ease;
+                  }
+
                   .item {
                     text-align: center;
                     &.item-youtube {
@@ -125,7 +136,7 @@
                       a {
                         position: relative;
                         img { width: 100%; position: relative; }
-                        .fa { color:rgba(0,0,0,0.7); position: absolute; top: 45%; left: 45%; font-size: 75px; transition: all 0.1s ease; @media @mobile-device { top: -100%; left: 30%; }}
+                        .fa { color:rgba(255,255,255,0.7); position: absolute; top: 45%; left: 45%; font-size: 75px; transition: all 0.1s ease; @media @mobile-device { top: -100%; left: 30%; }}
                         &:hover, &:focus { .fa { color:rgba(187,0,0,0.7);}}
                       }
                       &+.item-title { padding-top: 10px; text-align: center;}

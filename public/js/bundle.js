@@ -160,9 +160,12 @@
                   {"site":"instagram","handle":"gandhi3x"},
                   {"site":"soundcloud","handle":"gandhi3x"}],
               "releases":[
+                  {"title":"Yeah2x", "type":"spinrilla-track","date":new Date("2017-04-15"),"url":"https://spinrilla.com/singles/1139484-gandhi-ali-yeah2x","text":"Gandhi Ali - Yeah2x", "img":"https://cdn.spinrilla.com/tracks/1139484/large/1139484.png?1492712270"},
+                  {"title":"Freestyle", "type":"youtube","date":new Date("2017-04-15"),"urlcode":"BlCM6L4Gbss","text":"Freestyle  shot by: @ShotByRayGun"},
+                  {"title":"Lucky", "type":"youtube","date":new Date("2017-02-24"),"urlcode":"DJGjXKln8L8","text":"Lucky"},
+
                   {"title":"TD And Dab", "type":"spinrilla-track","date":new Date("2016-10-15"),"url":"https://spinrilla.com/singles/846503-gandhi-ali-td-and-dab","text":"Gandhi Ali - TD And Dab", "img":"https://cdn.spinrilla.com/tracks/846503/large/846503.jpg?1477514437"},
                   {"title":"Lil Bih", "type":"spinrilla-track","date":new Date("2016-10-15"),"url":"https://spinrilla.com/singles/834636-gandhi-ali-lil-bih","text":"Gandhi Ali - Lil Bih", "img":"https://cdn.spinrilla.com/tracks/834636/large/834636.png?1476733332"},
-
                   {"title":"Kill Em All", "type":"soundcloud-track","date":new Date("2016-10-09"),"url":"https://soundcloud.com/gandhi3x/gandhi-ali-kill-em-all-prod-by-trackanometry-drty-warhol-rough","text":"Gandhi Ali - Kill Em All", "img":"https://i1.sndcdn.com/artworks-000187342796-09tszq-t200x200.jpg"},
                   {"title":"100% ft. Yung Sonic", "type":"soundcloud-track","date":new Date("2016-08-20"),"url":"https://soundcloud.com/gandhi3x/100-ft-yung-sonic","text":"Gandhi Ali ft. Yung Sonic - 100%" , "img":"https://i1.sndcdn.com/artworks-000175223671-v5zlyr-t200x200.jpg"},
                   {"title":"Sorry", "type":"soundcloud-track","date":new Date("2016-08-20"),"url":"https://soundcloud.com/gandhi3x/gandhi-ali-sorry","text":"Gandhi Ali - Sorry", "img":"https://i1.sndcdn.com/artworks-000173467761-h8v0ax-t200x200.jpg"},
@@ -208,6 +211,8 @@
               {"name":"Drty Warhol", "position":"Producer", "img":"site-images/Fields.jpg", "icon":"fa-headphones", "bio":"", "social":[{"site":"twitter", "handle":"inspiredmindz"},{"site":"soundcloud", "handle":"inspiredmindz"}]}
               ],
           "news":[
+              {"title":"'Never Mind Em' Out Now", "date":new Date("2017-04-18 00:00:00"), "img":"imgs/site-images/nevermindem.jpg", "content":"Never Mind Em Single Out now on ITunes, Spotify, and more", "tags":["GANDHI ALI","Spotify", "Itunes"]},
+
               {"title":"SXSW Performance", "date":new Date("2016-03-18 00:00:00"), "img":"imgs/site-images/Gandhi-sxsw.png", "content":"GANDHI Ali will be performing at this years SXSW (South By Southwest) music festival in Austin, TX. Visit http://www.sxsw.com/music for event and ticket information.", "tags":["GANDHI ALI","SXSW"]},
               {"title":"GANDHI Ali is releasing Drty Warhol Vol. 1", "date":new Date("2016-02-25 00:00:00"), "img":"imgs/art/DrtyWorkCover.jpg", "content":"GANDHI Ali is releasing Drty Work Vol. 1 produced by Drty Warhol in late February.  The Mixtape will be released here, Live Mixtapes, Spinrilla, & Soundcloud", "tags":["GANDHI ALI","Drty Work Vol. 1"]},
               {"title":"Website Launch", "date":new Date("2015-12-03 00:00:00"), "content":"The New Mind Control Empire website has officially been launched.  Welcome to the new Mind Control Empire Website", "tags":["Website","Mind Control Empire"]},
@@ -215,12 +220,18 @@
               {"title":"'The City' on the way", "date":new Date("2015-12-02 00:00:00"), "content":"The Video for 'The City' will be released this December.", "tags":["Video","Mind Control Empire"]}
               ],
           "spotlights":[
-              {"order":1, "artist":"GANDHI ALI","title":"Chocolate City (Teaser)", "type":"youtube","date":"2016-08-25","urlcode":"LUHaEGtSHmc","text":"Walk with Gandhi Ali as he takes his new song through DC aka 'Chocolate City'"},
-              {"order":2, "artist":"GANDHI ALI", "title":"100%", "type":"youtube","date":"2015-06-17","urlcode":"vKIc3P1o798","text":"'100%' video produced by DWJproductions"},
-              {"order":3, "artist":"GANDHI ALI", "title":"Tell The People", "type":"youtube","date":"2015-06-09","urlcode":"H0G2iBe0axQ","text":"'Tell The People' video produced by DWJproductions"},
-              {"order":4, "artist":"GANDHI ALI","title":"Interview & Cypher @ The Eddie Kayne Show", "type":"youtube","date":"2015-11-05","urlcode":"dIi6AySJsI0","text":"Interview and Cypher with Gandhi Ali on the The Eddie Kayne Show"}
+              {"order":1, "artist":"GANDHI ALI","title":"Gandhi Ali - Freestyle", "type":"youtube","date":"2017-04-15","urlcode":"BlCM6L4Gbss","text":"Listen to Gandhi Ali's Freestyle  shot by: @ShotByRayGun"},
+              {"order":2, "artist":"GANDHI ALI","title":"Gandhi Ali - Lucky", "type":"youtube","date":"2017-02-24","urlcode":"DJGjXKln8L8","text":"Listen to Gandhi Ali's Lucky"},
+              {"order":3, "artist":"GANDHI ALI","title":"Chocolate City (Teaser)", "type":"youtube","date":"2016-08-25","urlcode":"LUHaEGtSHmc","text":"Walk with Gandhi Ali as he takes his new song through DC aka 'Chocolate City'"},
+              {"order":4, "artist":"GANDHI ALI", "title":"100%", "type":"youtube","date":"2015-06-17","urlcode":"vKIc3P1o798","text":"'100%' video produced by DWJproductions"}
             ],
-          "slider": [{"image":"imgs/site-images/event_flyer.jpg", "title":"Midnight Flow 2", "text":"Hosted by Dro Victorious"},{"image":"imgs/slider/IMG0.jpg", "title":"Mind Control Empire", "text":""}, {"image":"imgs/art/DrtyWorkCover.jpg", "title":"New Release: DRTY Warhol VOL. 1", "text":"Download now on Spinrilla or Listen on the Releases Page"}, {"image":"imgs/art/RadioRemix.jpg", "title":"RADIO REMIX VOL. 1", "text":"Download Now on spinrilla.com"}, {"image":"imgs/slider/SXsw1.jpg", "title":"Music Production And Management", "text":"Our Management team brings the world to the artist."}],
+          "slider": [
+            {"image":"imgs/site-images/doubledrop1.jpg", "title":"Gandhi Video's Drop", "text":"Check out Gandhi's two new video release's 'Freestyle' & 'Lucky' "},
+            {"image":"imgs/slider/IMG0.jpg", "title":"Mind Control Empire", "text":""},
+            {"image":"imgs/art/DrtyWorkCover.jpg", "title":"New Release: DRTY Warhol VOL. 1", "text":"Download now on Spinrilla or Listen on the Releases Page"},
+            {"image":"imgs/art/RadioRemix.jpg", "title":"RADIO REMIX VOL. 1", "text":"Download Now on spinrilla.com"},
+            {"image":"imgs/slider/SXsw1.jpg", "title":"Music Production And Management", "text":"Our Management team brings the world to the artist."}
+          ],
           "media":["imgs/media/IMG1.jpg","imgs/media/IMG2.jpg","imgs/media/IMG4.jpg","imgs/media/IMG5.jpg","imgs/media/IMG6.jpg","imgs/media/IMG7.jpg","imgs/media/IMG8.jpg","imgs/media/IMG9.jpg","imgs/media/IMG10.png","imgs/media/IMG11.jpg","imgs/media/IMG12.jpg","imgs/media/IMG13.jpg","imgs/media/IMG14.jpg","imgs/media/IMG15.jpg"]
       };
 

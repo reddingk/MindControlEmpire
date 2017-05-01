@@ -49,7 +49,8 @@
         <div style="clear:both;"></div>
       </div>
       <div class="spotlight-container">
-        <div class="spotlight-selected swap-animation top-down" ng-animate-swap="hc.spotSelected">
+        <!--<div class="spotlight-selected swap-animation top-down" ng-animate-swap="hc.spotSelected">-->
+        <div class="spotlight-selected" ng-animate-swap="hc.spotSelected">
           <div class="spotlight-video"><iframe ng-src="{{hc.youtubeURL(hc.spotSelected.urlcode, 'video')}}" frameborder="0" allowfullscreen></iframe></div>
           <div class="spotlight-info">
             <div class="spotlight-title">{{hc.spotSelected.title}}</div>
