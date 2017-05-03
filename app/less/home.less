@@ -1,22 +1,23 @@
 @carousel-height: calc(~"100vh - 125px");
+@mobile-carousel-height: calc(~"100vh - 125px");
 
 .home-page {
   .mce-carousel {
     height: @carousel-height;
-    @media @mobile-device { height: 300px; }
+    @media @mobile-device { height: @mobile-carousel-height; }
     .carousel{
       .carousel-inner {
         min-height: @carousel-height;
-        @media @mobile-device { min-height: 300px; }
+        @media @mobile-device { min-height: @mobile-carousel-height; }
         .item {
             height: @carousel-height;
             overflow-y: hidden;
             background-color: rgba(255,255,255,1);
-            @media @mobile-device { height: 300px; }
+            @media @mobile-device { height: @mobile-carousel-height; }
             img {
               height: @carousel-height;
               margin: 0 auto;
-              @media @mobile-device { height: 300px; }
+              @media @mobile-device { height: @mobile-carousel-height; }
             }
             .special-slider-img {
               z-index: -1;
@@ -202,6 +203,7 @@
           background-color: rgba(0,0,0,1);
           height: 300px;
           margin-bottom: 30px;
+          cursor: pointer;
           .card-back {
             position: relative;
             z-index: 1;

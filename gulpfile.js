@@ -34,7 +34,8 @@ var config = {
       'app/libs/fullcalendar/dist/fullcalendar.min.js',
       'app/libs/fullcalendar/dist/gcal.js',
       'app/libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
-      'app/libs/ng-scrollbars/dist/scrollbars.min.js'
+      'app/libs/ng-scrollbars/dist/scrollbars.min.js',
+      'app/libs/ngInfiniteScroll/build/ng-infinite-scroll.min.js'
     ],
     libsCSS: [
       'app/libs/angular-material/angular-material.min.css',

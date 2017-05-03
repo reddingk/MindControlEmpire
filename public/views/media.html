@@ -7,22 +7,21 @@
   <div class="media">
     <div class="page-container">
       <div class="gallery-container">
-        <section id="photostack-1" class="photostack">
-          <div class="stack-container">
-            <!-- Repeat -->
-            <figure ng-repeat="item in mc.displayItems" ng-click="mc.changeSelected(item)" ng-class="mc.isSelected(item.id)" ng-attr-id="{{'photo-'+ item.id}}" photo-motion selectedid="{{mc.selectedid}}" itemid="{{item.id}}" itemcount="{{mc.displayItems.length}}">
-              <div class="photostack-img"><img ng-src="{{item.img}}" alt="{{item.img}}"></div>
-              <figcaption>
-                <h2 class="photostack-title">Photo {{item.id}}</h2>
-              </figcaption>
-            </figure>
-            <div class="photo-nav">
-              <div ng-repeat="item in mc.displayItems" class="nav-icon" ng-class="mc.isSelected(item.id)" ng-click="mc.changeSelected(item)" photo-motion selectedid="{{mc.selectedid}}" itemid="{{item.id}}" itemcount="{{mc.displayItems.length}}" isnav="true"></div>
+
+        <div class="gallery-item-container" infinite-scroll='mc.loadMore()'>
+          <div class="image-item" ng-repeat="item in mc.displayItems">
+            <div class="item-container" ng-click="mc.enlargeImage($event, item)">
+              <img ng-src="{{item.img}}">
             </div>
           </div>
-        </section>
+          <div class="loading-animation" ng-if="mc.loading">
+            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</div>
 
 </div>

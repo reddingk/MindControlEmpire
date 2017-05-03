@@ -18,7 +18,7 @@
     {
       vm.artistProfile = mceInfo.artists.byName(vm.artistId);
       vm.displayedImg = vm.artistProfile.image;
-      vm.allReleases = {"videos":[], "mixtapes":[], "profiles":[]};
+      vm.allReleases = {"videos":[], "mixtapes":[], "profiles":[], "itunes":[]};
 
       for(var i =0; i < vm.artistProfile.releases.length; i++)
       {
@@ -32,13 +32,18 @@
         else if(tmpRelease.type.includes("profile")){
           vm.allReleases.profiles.push(tmpRelease);
         }
+        else if(tmpRelease.type.includes("itunes")){
+          vm.allReleases.itunes.push(tmpRelease);
+        }
       }
 
       vm.displayedReleases = {
         "imgs":{"page":1, "totalpages":Math.ceil(vm.artistProfile.addimages.length / 4), "display": vm.artistProfile.addimages.slice(0,4)},
         "videos":{"page":1, "totalpages":Math.ceil(vm.allReleases.videos.length / itemDisplayMax), "releases":vm.allReleases.videos.slice(0,3)},
         "mixtapes":{"page":1, "totalpages":vm.allReleases.mixtapes.length , "releases":vm.allReleases.mixtapes[0]},
-        "profiles":vm.allReleases.profiles
+        "itunes":{"page":1, "totalpages":Math.ceil(vm.allReleases.itunes.length / itemDisplayMax), "releases":vm.allReleases.itunes.slice(0,3)},
+        "profiles":vm.allReleases.profiles,
+        "defaultImg": "imgs/logos/logoR.png"
       };
     }
 

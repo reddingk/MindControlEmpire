@@ -3,7 +3,7 @@
 
   angular
     .module('dataconfig')
-    .service('mceInfo', [ 'MCEData', '$filter', function MCEInfo(MCEData, $filter){
+    .service('mceInfo', [ 'MCEData', '$filter', '$http', function MCEInfo(MCEData, $filter, $http){
       var artists = MCEData.siteData.artists;
       var events = MCEData.siteData.events;
       var news = MCEData.siteData.news;
@@ -21,6 +21,15 @@
           }
         }
         return returnedEvents;
+      }
+
+      function stringFormat(str, args) {
+         var content = str;
+         for (var i=0; i < args.length; i++) {
+              var replacement = '{' + i + '}';
+              content = content.replace(replacement, args[i]);
+         }
+         return content;
       }
 
       return {
@@ -121,6 +130,29 @@
               mediaList.push({"id":i, "img":media[i]});
             }
             return mediaList;
+          },
+          flickrAll: function(callback){
+            var url = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key={0}&photoset_id={1}&user_id={2}&format=json&nojsoncallback=1";
+            var fullUrl = stringFormat(url, ["37ecabdfda65c6e2cf2847f4bc54ce44", "72157680164158474", "149188780@N02"]);
+
+            $http({
+              method: 'GET',
+              url: fullUrl,
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            }).then(function successCallback(response) {
+                var responseList = response.data.photoset.photo;
+                var photoUrl = "http://c1.staticflickr.com/{0}/{1}/{2}_{3}_b.jpg";
+                var tmpObj = [];
+                for(var j=0; j < responseList.length; j++){
+                  tmpObj.push({"id":j, "title":responseList[j].title, "img":stringFormat(photoUrl, [responseList[j].farm, responseList[j].server, responseList[j].id, responseList[j].secret])});
+                }
+                callback(tmpObj);
+            }, function errorCallback(response){
+
+            });
+
           }
         }
       }
@@ -132,13 +164,22 @@
 
        vm.siteData = {
           "artists":[
-              {"name":"GANDHI ALI", "quote":"Real Live", "bio":"Mind Control Empire's first solo artist","image":"GandhiAli/GandhiAli.png",
-                "addimages":["GandhiAli/GandhiAli1.jpg","GandhiAli/GandhiAli2.jpg","GandhiAli/GandhiAli3.jpg","GandhiAli/GandhiAli4.jpg","GandhiAli/GandhiAli5.jpg","GandhiAli/GandhiAli6.jpg","GandhiAli/GandhiAli7.jpg"],
+              {"name":"GANDHI ALI", "quote":"Real Live", "bio":"Mind Control Empire's first solo artist","image":"GandhiAli/GandhiAli.jpg",
+                "addimages":["GandhiAli/GandhiAli.png", "GandhiAli/GandhiAli1.jpg","GandhiAli/GandhiAli2.jpg","GandhiAli/GandhiAli3.jpg","GandhiAli/GandhiAli4.jpg","GandhiAli/GandhiAli5.jpg","GandhiAli/GandhiAli6.jpg","GandhiAli/GandhiAli7.jpg"],
               "social":[
                   {"site":"twitter","handle":"gandhi3x"},
                   {"site":"instagram","handle":"gandhi3x"},
                   {"site":"soundcloud","handle":"gandhi3x"}],
               "releases":[
+                  {"title":"Never Mind Em", "type":"itunes", "url":"https://itunes.apple.com/us/album/never-mind-em-single/id1227808499", "img":"imgs/art/neverMindEm.png"},
+                  {"title":"Kill Em All", "type":"itunes", "url":"https://itunes.apple.com/album/id1167613517?ls=1&amp;app=itunes", "img":""},
+                  {"title":"D.D.M.", "type":"itunes", "url":"https://itunes.apple.com/album/id1135657412?ls=1&amp;app=itunes", "img":"imgs/art/DDM.jpg"},
+                  {"title":"Sorry", "type":"itunes", "url":"https://itunes.apple.com/album/id1137842803?ls=1&amp;app=itunes", "img":""},
+
+                  {"title":"Five", "type":"youtube","date":new Date("2016-09-15"),"urlcode":"8YyLoJkPYRI","text":"Gandhi Ali Five"},
+                  {"title":"Riding", "type":"youtube","date":new Date("2016-12-07"),"urlcode":"34YuaewcAzo","text":"Gandhi Ali Ridin' ft. King Kla$$"},
+                  {"title":"Jumpman", "type":"youtube","date":new Date("2015-12-12"),"urlcode":"bjMnCi8KEFg","text":"Jumpman"},
+
                   {"title":"Yeah2x", "type":"spinrilla-track","date":new Date("2017-04-15"),"url":"https://spinrilla.com/singles/1139484-gandhi-ali-yeah2x","text":"Gandhi Ali - Yeah2x", "img":"https://cdn.spinrilla.com/tracks/1139484/large/1139484.png?1492712270"},
                   {"title":"Freestyle", "type":"youtube","date":new Date("2017-04-15"),"urlcode":"BlCM6L4Gbss","text":"Freestyle  shot by: @ShotByRayGun"},
                   {"title":"Lucky", "type":"youtube","date":new Date("2017-02-24"),"urlcode":"DJGjXKln8L8","text":"Lucky"},
@@ -190,7 +231,7 @@
               {"name":"Drty Warhol", "position":"Producer", "img":"site-images/Fields.jpg", "icon":"fa-headphones", "bio":"", "social":[{"site":"twitter", "handle":"inspiredmindz"},{"site":"soundcloud", "handle":"inspiredmindz"}]}
               ],
           "news":[
-              {"title":"'Never Mind Em' Out Now", "date":new Date("2017-04-18 00:00:00"), "img":"imgs/site-images/nevermindem.jpg", "content":"Never Mind Em Single Out now on ITunes, Spotify, and more", "tags":["GANDHI ALI","Spotify", "Itunes"]},
+              {"title":"'Never Mind Em' Out Now", "date":new Date("2017-04-18 00:00:00"), "img":"imgs/site-images/nevermindem.jpg", "content":"Never Mind Em Single Out now on ITunes, Spotify, and more....", "link":{"url":"https://itunes.apple.com/us/album/never-mind-em-single/id1227808499", "text":"Itunes Download"}, "tags":["GANDHI ALI","Spotify", "Itunes"]},
 
               {"title":"SXSW Performance", "date":new Date("2016-03-18 00:00:00"), "img":"imgs/site-images/Gandhi-sxsw.png", "content":"GANDHI Ali will be performing at this years SXSW (South By Southwest) music festival in Austin, TX. Visit http://www.sxsw.com/music for event and ticket information.", "tags":["GANDHI ALI","SXSW"]},
               {"title":"GANDHI Ali is releasing Drty Warhol Vol. 1", "date":new Date("2016-02-25 00:00:00"), "img":"imgs/art/DrtyWorkCover.jpg", "content":"GANDHI Ali is releasing Drty Work Vol. 1 produced by Drty Warhol in late February.  The Mixtape will be released here, Live Mixtapes, Spinrilla, & Soundcloud", "tags":["GANDHI ALI","Drty Work Vol. 1"]},
@@ -205,11 +246,11 @@
               {"order":4, "artist":"GANDHI ALI", "title":"100%", "type":"youtube","date":"2015-06-17","urlcode":"vKIc3P1o798","text":"'100%' video produced by DWJproductions"}
             ],
           "slider": [
+            {"image":"imgs/slider/main1.png", "title":"Mind Control Empire", "text":""},
+            {"image":"imgs/art/neverMindEm.png", "title":"Never Mind Em Now Avaliable", "text":"Gandhi's Single 'Never Mind Em' now avaliable on ITunes", "link":{"url":"https://itunes.apple.com/us/album/never-mind-em-single/id1227808499", "text":"Download Now"}},
             {"image":"imgs/site-images/doubledrop1.jpg", "title":"Gandhi Video's Drop", "text":"Check out Gandhi's two new video release's 'Freestyle' & 'Lucky' "},
-            {"image":"imgs/slider/IMG0.jpg", "title":"Mind Control Empire", "text":""},
             {"image":"imgs/art/DrtyWorkCover.jpg", "title":"New Release: DRTY Warhol VOL. 1", "text":"Download now on Spinrilla or Listen on the Releases Page"},
-            {"image":"imgs/art/RadioRemix.jpg", "title":"RADIO REMIX VOL. 1", "text":"Download Now on spinrilla.com"},
-            {"image":"imgs/slider/SXsw1.jpg", "title":"Music Production And Management", "text":"Our Management team brings the world to the artist."}
+            {"image":"imgs/art/RadioRemix.jpg", "title":"RADIO REMIX VOL. 1", "text":"Download Now on spinrilla.com"}
           ],
           "media":["imgs/media/IMG1.jpg","imgs/media/IMG2.jpg","imgs/media/IMG4.jpg","imgs/media/IMG5.jpg","imgs/media/IMG6.jpg","imgs/media/IMG7.jpg","imgs/media/IMG8.jpg","imgs/media/IMG9.jpg","imgs/media/IMG10.png","imgs/media/IMG11.jpg","imgs/media/IMG12.jpg","imgs/media/IMG13.jpg","imgs/media/IMG14.jpg","imgs/media/IMG15.jpg"]
       };

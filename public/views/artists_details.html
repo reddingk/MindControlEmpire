@@ -36,7 +36,22 @@
           <!-- Releases -->
           <div class="detail-section release-section">
             <div class="title">Releases</div>
+            <!-- Itunes -->
+            <div class="item-container" ng-animate-swap="ac.displayedReleases">
+              <div class="sub-title">Itunes</div>
+              <div class="release-paging"><i class="fa fa-caret-left" ng-click="ac.releasePaging('down', 'itunes')" ng-if="ac.checkButton('down', 'itunes')"></i><div class="page-number">{{ac.displayedReleases.itunes.page}} / {{ac.displayedReleases.itunes.totalpages}}</div><i class="fa fa-caret-right" ng-click="ac.releasePaging('up', 'itunes')" ng-if="ac.checkButton('up', 'itunes')"></i></div>
+              <div class="release-item" ng-repeat="item in ac.displayedReleases.itunes.releases">
+                <a class="item item-itunes" ng-href="{{item.url}}" target="_blank">
+                  <div class="cover-img">
+                    <img class="no-img" ng-src="{{ac.displayedReleases.defaultImg}}" ng-if="item.img == ''"/>
+                    <img class="cover-img" ng-src="{{item.img}}" ng-if="item.img != ''"/>
+                  </div>
+                  <div class="item-title">{{item.title}}</div>
+                </a>
+              </div>
+            </div>
 
+            <!-- Mixtapes -->
             <div class="item-container" ng-animate-swap="ac.displayedReleases">
               <div class="sub-title">Mixtapes</div>
               <div class="release-paging"><i class="fa fa-caret-left" ng-click="ac.releasePaging('down', 'mixtapes')" ng-if="ac.checkButton('down', 'mixtapes')"></i><div class="page-number">{{ac.displayedReleases.mixtapes.page}} / {{ac.displayedReleases.mixtapes.totalpages}}</div><i class="fa fa-caret-right" ng-click="ac.releasePaging('up', 'mixtapes')" ng-if="ac.checkButton('up', 'mixtapes')"></i></div>
@@ -51,6 +66,7 @@
               </div>
             </div>
 
+            <!-- Videos -->
             <div class="item-container item-video" ng-animate-swap="ac.displayedReleases">
               <div class="sub-title">Videos</div>
               <div class="release-paging"><i class="fa fa-caret-left" ng-click="ac.releasePaging('down', 'videos')" ng-if="ac.checkButton('down', 'videos')"></i><div class="page-number">{{ac.displayedReleases.videos.page}} / {{ac.displayedReleases.videos.totalpages}}</div><i class="fa fa-caret-right" ng-click="ac.releasePaging('up', 'videos')" ng-if="ac.checkButton('up', 'videos')"></i></div>

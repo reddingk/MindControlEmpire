@@ -6,7 +6,7 @@
         <img class="special-slider-img" ng-src="{{slide.image}}">
         <div class="carousel-caption">
           <h4 class="fadeAmination">{{slide.title}}</h4>
-          <p>{{slide.text}}</p>
+          <p>{{slide.text}} <span ng-if="slide.link != null"><a ng-href="{{slide.link.url}}" target="_blank">{{slide.link.text}}</a></span></p>
         </div>
       </div>
     </div>

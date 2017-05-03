@@ -131,6 +131,23 @@
 
                   .item {
                     text-align: center;
+                    &.item-itunes {
+                      color: rgba(0,0,0,1) !important;
+                      .cover-img {
+                        display: block;
+                        text-align: center;
+                        img {
+                          width: 120px;
+                          display: inline-block;
+                          &.no-img { background: rgba(0,0,0,1);}
+                          &.cover-img { }
+                        }
+                      }
+                      .item-title {
+                        text-align: center;
+                      }
+                      &:hover { text-decoration: none !important; color: rgba(255,255,255,1) !important; }
+                    }
                     &.item-youtube {
                       iframe { height: 200px; @media @mobile-device { width: 100% !important; }}
                       a {

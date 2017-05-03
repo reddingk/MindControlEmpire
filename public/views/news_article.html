@@ -14,6 +14,7 @@
         <div class="article-content-section">
           <div class="article-img" ng-if="nc.articleNews.img != null"><img ng-src="{{nc.articleNews.img}}"></div>
           <div class="article-content" ng-bind-html="nc.articleContent"></div>
+          <p ng-if="nc.articleNews.link != null"><a ng-href="{{nc.articleNews.link.url}}">{{nc.articleNews.link.text}}</a> </p>
         </div>
       </div>
     </div>
