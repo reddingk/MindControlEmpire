@@ -248,7 +248,7 @@
           "slider": [
             {"image":"imgs/slider/main1.png", "title":"Mind Control Empire", "text":""},
             {"image":"imgs/art/neverMindEm.png", "title":"Never Mind Em Now Avaliable", "text":"Gandhi's Single 'Never Mind Em' now avaliable on ITunes", "link":{"url":"https://itunes.apple.com/us/album/never-mind-em-single/id1227808499", "text":"Download Now"}},
-            {"image":"imgs/site-images/doubledrop1.jpg", "title":"Gandhi Video's Drop", "text":"Check out Gandhi's two new video release's 'Freestyle' & 'Lucky' "},
+            {"image":"imgs/site-images/doubleDrop2.jpg", "title":"Gandhi Video's Drop", "text":"Check out Gandhi's two new video release's 'Freestyle' & 'Lucky' "},
             {"image":"imgs/art/DrtyWorkCover.jpg", "title":"New Release: DRTY Warhol VOL. 1", "text":"Download now on Spinrilla or Listen on the Releases Page"},
             {"image":"imgs/art/RadioRemix.jpg", "title":"RADIO REMIX VOL. 1", "text":"Download Now on spinrilla.com"}
           ],
