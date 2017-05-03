@@ -254,7 +254,6 @@
           ],
           "media":["imgs/media/IMG1.jpg","imgs/media/IMG2.jpg","imgs/media/IMG4.jpg","imgs/media/IMG5.jpg","imgs/media/IMG6.jpg","imgs/media/IMG7.jpg","imgs/media/IMG8.jpg","imgs/media/IMG9.jpg","imgs/media/IMG10.png","imgs/media/IMG11.jpg","imgs/media/IMG12.jpg","imgs/media/IMG13.jpg","imgs/media/IMG14.jpg","imgs/media/IMG15.jpg"]
       };
-
      }
 
      return new MCEInfoData();
