@@ -249,7 +249,7 @@
               {"order":4, "artist":"GANDHI ALI","title":"Chocolate City (Teaser)", "type":"youtube","date":"2016-08-25","urlcode":"LUHaEGtSHmc","text":"Walk with Gandhi Ali as he takes his new song through DC aka 'Chocolate City'"}
             ],
           "slider": [
-            {"image":"imgs/media/basementEvent.jpg", "title":"Basement Tuesdays Performance", "text":"Gandhi Ali will be performing this tuesday at Pure Lounge's 'Basement Tuesdays'" , "link":{"url":"http://www.mindcontrolempire.com/news/article/Gandhi%20Ali%20Live%20@%20Basement%20Tuesday's", "text":"More Info"}},
+            {"image":"imgs/media/basementEvent.jpg", "title":"Basement Tuesdays Performance", "text":"Gandhi Ali will be performing this tuesday at Pure Lounge's 'Basement Tuesdays'" , "link":{"url":"http://www.mindcontrolempire.com/news/article/Gandhi%20Ali%20Live%20@%20Basement%20Tuesdays", "text":"More Info"}},
             {"image":"imgs/site-images/NevermindemVid.JPG", "title":"New Video 'Never Mind Em'", "text":"Video for Gandhi's Single 'Never Mind Em' now avaliable on Youtube", "link":{"url":"https://www.youtube.com/watch?v=5WkiBOylzC0", "text":"Watch Now"}},
 
             {"image":"imgs/slider/main1.png", "title":"Mind Control Empire", "text":""},
