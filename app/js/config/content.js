@@ -171,6 +171,8 @@
                   {"site":"instagram","handle":"gandhi3x"},
                   {"site":"soundcloud","handle":"gandhi3x"}],
               "releases":[
+                  {"title":"Never Mind Em", "type":"youtube","date":new Date("2017-06-18"),"urlcode":"5WkiBOylzC0","text":"Gandhi Ali Never Mind Em"},
+
                   {"title":"Never Mind Em", "type":"itunes", "url":"https://itunes.apple.com/us/album/never-mind-em-single/id1227808499", "img":"imgs/art/neverMindEm.png"},
                   {"title":"Kill Em All", "type":"itunes", "url":"https://itunes.apple.com/album/id1167613517?ls=1&amp;app=itunes", "img":""},
                   {"title":"D.D.M.", "type":"itunes", "url":"https://itunes.apple.com/album/id1135657412?ls=1&amp;app=itunes", "img":"imgs/art/DDM.jpg"},
@@ -241,17 +243,18 @@
               {"title":"'The City' on the way", "date":new Date("2015-12-02 00:00:00"), "content":"The Video for 'The City' will be released this December.", "tags":["Video","Mind Control Empire"]}
               ],
           "spotlights":[
-              {"order":1, "artist":"GANDHI ALI","title":"Gandhi Ali - Freestyle", "type":"youtube","date":"2017-04-15","urlcode":"BlCM6L4Gbss","text":"Listen to Gandhi Ali's Freestyle  shot by: @ShotByRayGun"},
-              {"order":2, "artist":"GANDHI ALI","title":"Gandhi Ali - Lucky", "type":"youtube","date":"2017-02-24","urlcode":"DJGjXKln8L8","text":"Listen to Gandhi Ali's Lucky"},
-              {"order":3, "artist":"GANDHI ALI","title":"Chocolate City (Teaser)", "type":"youtube","date":"2016-08-25","urlcode":"LUHaEGtSHmc","text":"Walk with Gandhi Ali as he takes his new song through DC aka 'Chocolate City'"},
-              {"order":4, "artist":"GANDHI ALI", "title":"100%", "type":"youtube","date":"2015-06-17","urlcode":"vKIc3P1o798","text":"'100%' video produced by DWJproductions"}
+              {"order":1, "artist":"GANDHI ALI","title":"Never Mind Em", "type":"youtube","date":"2016-06-18","urlcode":"5WkiBOylzC0","text":"Gandhi Ali Never Mind Em"},
+              {"order":2, "artist":"GANDHI ALI","title":"Gandhi Ali - Freestyle", "type":"youtube","date":"2017-04-15","urlcode":"BlCM6L4Gbss","text":"Listen to Gandhi Ali's Freestyle  shot by: @ShotByRayGun"},
+              {"order":3, "artist":"GANDHI ALI","title":"Gandhi Ali - Lucky", "type":"youtube","date":"2017-02-24","urlcode":"DJGjXKln8L8","text":"Listen to Gandhi Ali's Lucky"},
+              {"order":4, "artist":"GANDHI ALI","title":"Chocolate City (Teaser)", "type":"youtube","date":"2016-08-25","urlcode":"LUHaEGtSHmc","text":"Walk with Gandhi Ali as he takes his new song through DC aka 'Chocolate City'"}
             ],
           "slider": [
-            {"image":"imgs/media/basementEvent.jpg", "title":"Basement Tuesdays Performance", "text":"Gandhi Ali will be performing this tuesday at Pure Lounge's 'Basement Tuesdays'" , "link":{"url":"https://http://www.mindcontrolempire.com/news/article/Gandhi%20Ali%20Live%20@%20Basement%20Tuesday's", "text":"More Info"}},
+            {"image":"imgs/media/basementEvent.jpg", "title":"Basement Tuesdays Performance", "text":"Gandhi Ali will be performing this tuesday at Pure Lounge's 'Basement Tuesdays'" , "link":{"url":"https://www.mindcontrolempire.com/news/article/Gandhi%20Ali%20Live%20@%20Basement%20Tuesday's", "text":"More Info"}},
+            {"image":"imgs/site-images/NevermindemVid.JPG", "title":"New Video 'Never Mind Em'", "text":"Video for Gandhi's Single 'Never Mind Em' now avaliable on Youtube", "link":{"url":"https://www.youtube.com/watch?v=5WkiBOylzC0", "text":"Watch Now"}},
+
             {"image":"imgs/slider/main1.png", "title":"Mind Control Empire", "text":""},
             {"image":"imgs/art/neverMindEm.png", "title":"Never Mind Em Now Avaliable", "text":"Gandhi's Single 'Never Mind Em' now avaliable on ITunes", "link":{"url":"https://itunes.apple.com/us/album/never-mind-em-single/id1227808499", "text":"Download Now"}},
-            {"image":"imgs/site-images/doubleDrop2.jpg", "title":"Gandhi Video's Drop", "text":"Check out Gandhi's two new video release's 'Freestyle' & 'Lucky' "},
-            {"image":"imgs/art/DrtyWorkCover.jpg", "title":"New Release: DRTY Warhol VOL. 1", "text":"Download now on Spinrilla or Listen on the Releases Page"}            
+            {"image":"imgs/site-images/doubleDrop2.jpg", "title":"Gandhi Video's Drop", "text":"Check out Gandhi's two new video release's 'Freestyle' & 'Lucky' "}        
           ],
           "media":["imgs/media/IMG1.jpg","imgs/media/IMG2.jpg","imgs/media/IMG4.jpg","imgs/media/IMG5.jpg","imgs/media/IMG6.jpg","imgs/media/IMG7.jpg","imgs/media/IMG8.jpg","imgs/media/IMG9.jpg","imgs/media/IMG10.png","imgs/media/IMG11.jpg","imgs/media/IMG12.jpg","imgs/media/IMG13.jpg","imgs/media/IMG14.jpg","imgs/media/IMG15.jpg"]
       };

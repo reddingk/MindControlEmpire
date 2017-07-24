@@ -192,6 +192,8 @@
                   {"site":"instagram","handle":"gandhi3x"},
                   {"site":"soundcloud","handle":"gandhi3x"}],
               "releases":[
+                  {"title":"Never Mind Em", "type":"youtube","date":new Date("2017-06-18"),"urlcode":"5WkiBOylzC0","text":"Gandhi Ali Never Mind Em"},
+
                   {"title":"Never Mind Em", "type":"itunes", "url":"https://itunes.apple.com/us/album/never-mind-em-single/id1227808499", "img":"imgs/art/neverMindEm.png"},
                   {"title":"Kill Em All", "type":"itunes", "url":"https://itunes.apple.com/album/id1167613517?ls=1&amp;app=itunes", "img":""},
                   {"title":"D.D.M.", "type":"itunes", "url":"https://itunes.apple.com/album/id1135657412?ls=1&amp;app=itunes", "img":"imgs/art/DDM.jpg"},
@@ -262,17 +264,18 @@
               {"title":"'The City' on the way", "date":new Date("2015-12-02 00:00:00"), "content":"The Video for 'The City' will be released this December.", "tags":["Video","Mind Control Empire"]}
               ],
           "spotlights":[
-              {"order":1, "artist":"GANDHI ALI","title":"Gandhi Ali - Freestyle", "type":"youtube","date":"2017-04-15","urlcode":"BlCM6L4Gbss","text":"Listen to Gandhi Ali's Freestyle  shot by: @ShotByRayGun"},
-              {"order":2, "artist":"GANDHI ALI","title":"Gandhi Ali - Lucky", "type":"youtube","date":"2017-02-24","urlcode":"DJGjXKln8L8","text":"Listen to Gandhi Ali's Lucky"},
-              {"order":3, "artist":"GANDHI ALI","title":"Chocolate City (Teaser)", "type":"youtube","date":"2016-08-25","urlcode":"LUHaEGtSHmc","text":"Walk with Gandhi Ali as he takes his new song through DC aka 'Chocolate City'"},
-              {"order":4, "artist":"GANDHI ALI", "title":"100%", "type":"youtube","date":"2015-06-17","urlcode":"vKIc3P1o798","text":"'100%' video produced by DWJproductions"}
+              {"order":1, "artist":"GANDHI ALI","title":"Never Mind Em", "type":"youtube","date":"2016-06-18","urlcode":"5WkiBOylzC0","text":"Gandhi Ali Never Mind Em"},
+              {"order":2, "artist":"GANDHI ALI","title":"Gandhi Ali - Freestyle", "type":"youtube","date":"2017-04-15","urlcode":"BlCM6L4Gbss","text":"Listen to Gandhi Ali's Freestyle  shot by: @ShotByRayGun"},
+              {"order":3, "artist":"GANDHI ALI","title":"Gandhi Ali - Lucky", "type":"youtube","date":"2017-02-24","urlcode":"DJGjXKln8L8","text":"Listen to Gandhi Ali's Lucky"},
+              {"order":4, "artist":"GANDHI ALI","title":"Chocolate City (Teaser)", "type":"youtube","date":"2016-08-25","urlcode":"LUHaEGtSHmc","text":"Walk with Gandhi Ali as he takes his new song through DC aka 'Chocolate City'"}
             ],
           "slider": [
-            {"image":"imgs/media/basementEvent.jpg", "title":"Basement Tuesdays Performance", "text":"Gandhi Ali will be performing this tuesday at Pure Lounge's 'Basement Tuesdays'" , "link":{"url":"https://http://www.mindcontrolempire.com/news/article/Gandhi%20Ali%20Live%20@%20Basement%20Tuesday's", "text":"More Info"}},
+            {"image":"imgs/media/basementEvent.jpg", "title":"Basement Tuesdays Performance", "text":"Gandhi Ali will be performing this tuesday at Pure Lounge's 'Basement Tuesdays'" , "link":{"url":"https://www.mindcontrolempire.com/news/article/Gandhi%20Ali%20Live%20@%20Basement%20Tuesday's", "text":"More Info"}},
+            {"image":"imgs/site-images/NevermindemVid.JPG", "title":"New Video 'Never Mind Em'", "text":"Video for Gandhi's Single 'Never Mind Em' now avaliable on Youtube", "link":{"url":"https://www.youtube.com/watch?v=5WkiBOylzC0", "text":"Watch Now"}},
+
             {"image":"imgs/slider/main1.png", "title":"Mind Control Empire", "text":""},
             {"image":"imgs/art/neverMindEm.png", "title":"Never Mind Em Now Avaliable", "text":"Gandhi's Single 'Never Mind Em' now avaliable on ITunes", "link":{"url":"https://itunes.apple.com/us/album/never-mind-em-single/id1227808499", "text":"Download Now"}},
-            {"image":"imgs/site-images/doubleDrop2.jpg", "title":"Gandhi Video's Drop", "text":"Check out Gandhi's two new video release's 'Freestyle' & 'Lucky' "},
-            {"image":"imgs/art/DrtyWorkCover.jpg", "title":"New Release: DRTY Warhol VOL. 1", "text":"Download now on Spinrilla or Listen on the Releases Page"}            
+            {"image":"imgs/site-images/doubleDrop2.jpg", "title":"Gandhi Video's Drop", "text":"Check out Gandhi's two new video release's 'Freestyle' & 'Lucky' "}        
           ],
           "media":["imgs/media/IMG1.jpg","imgs/media/IMG2.jpg","imgs/media/IMG4.jpg","imgs/media/IMG5.jpg","imgs/media/IMG6.jpg","imgs/media/IMG7.jpg","imgs/media/IMG8.jpg","imgs/media/IMG9.jpg","imgs/media/IMG10.png","imgs/media/IMG11.jpg","imgs/media/IMG12.jpg","imgs/media/IMG13.jpg","imgs/media/IMG14.jpg","imgs/media/IMG15.jpg"]
       };
@@ -399,6 +402,218 @@
       $urlRouterProvider.otherwise('/');
     }]);
 
+
+})();
+
+(function(){
+   "use strict";
+
+    angular.module('directives').directive('backImg', ['$window', function($window) {
+      return {
+        restrict: 'EA',
+        link: function ($scope, element, attrs) {
+          var url = attrs.backImg;
+          element.css({'background-image': 'url(' + url +')'});
+        }
+      }
+
+    }]);
+
+})();
+
+(function(){
+   "use strict";
+
+    angular.module('directives').directive('photoMotion', ['$window', function() {
+      return {
+        restrict: 'EA',
+        link: function ($scope, element, attrs) {
+
+          var itemid = $scope.$eval(attrs.itemid);
+          var itemcount = $scope.$eval(attrs.itemcount);
+          var isNav = $scope.$eval(attrs.isnav);
+
+          //-item position function
+          function getItemLocation(locid, elemId){
+            //-selected id
+            var selectedid = (elemId == null ? $scope.$eval(attrs.selectedid) : elemId);
+
+            // Get element by id
+            var stackCont = angular.element(document).find('.stack-container');
+            var elemMove = stackCont.children()[locid];
+            var imgElem = elemMove.children[0].children[0];
+
+            var pageWidth = window.innerWidth;
+            var offsetX = ((imgElem.naturalWidth * ( pageWidth < 801 ? 170 : 320)) / imgElem.naturalHeight);
+            var defaultX = Math.floor((stackCont[0].offsetWidth - offsetX)/2);
+            var maxX = Math.floor(pageWidth * .86);
+
+            var x = (selectedid == locid ? (defaultX < 0 ? 0 : defaultX) : Math.floor(Math.random() * maxX) - 200);
+            var y = (selectedid == locid ? 50 : Math.floor(Math.random() * 401) - 100);
+            var angle = (selectedid == locid ? 0 : Math.floor(Math.random() * 80) - 40) ;
+
+            // Check Out of Bounds
+            x = (x < -50 ? -40 : x);
+            y = (y < 30 ? 30 : y);
+
+            elemMove.style.transform = "translate("+x+"px, "+ y+"px)"+ "rotate("+angle + "deg)";
+          }
+
+          // On click Set selected id
+          element.bind('click', function() {
+            if(itemid != $scope.$eval(attrs.selectedid)){
+              for(var i=0; i < itemcount; i++)
+              {
+                getItemLocation(i, itemid);
+              }
+            }
+          });
+          // Intitial Object Set
+          getItemLocation(itemid, null);
+        }
+      }
+    }]);
+
+})();
+
+(function(){
+   "use strict";
+
+    angular.module('directives').directive('randomMotion', ['$timeout', function($timeout) {
+      return {
+        restrict: 'EA',
+        link: function ($scope, element, attrs) {
+          console.log("Start Motion");
+          var parentContainer = element[0].offsetParent;
+
+          // Randomly Set Postion & Velocity
+          var maxVelocity = 150;
+          var posX = (Math.random() * parentContainer.clientWidth);//Math.min(0, Math.max(20, (Math.random() * 0)));
+          var posY = (Math.random() * parentContainer.clientHeight);//Math.min(0, Math.max(20, (Math.random() * 10)));
+          var velX = (Math.random() * maxVelocity);
+          var velY = (Math.random() * maxVelocity);
+          var timestamp = null;
+
+
+
+          // Move Object
+          (function tick() {
+            var now = new Date().getTime();
+            var borderX = 250; //parentContainer.clientWidth *.05;
+            var borderY = 250; //parentContainer.clientHeight *.20;
+
+            var maxX = parentContainer.clientWidth - borderX;
+            var maxY = parentContainer.clientHeight - borderY;
+
+            var elapsed = (timestamp || now) - now;
+            timestamp = now;
+            posX += elapsed * velX / 1000;
+            posY += elapsed * velY / 1000;
+
+            if (posX > maxX) {
+                posX = 2 * maxX - posX;
+                velX *= -1;
+            }
+            if (posX < -60) {
+                posX = -60;
+                velX *= -1;
+            }
+            if (posY > maxY) {
+                posY = 2 * maxY - posY;
+                velY *= -1;
+            }
+            if (posY < -60) {
+                posY = -60;
+                velY *= -1;
+            }
+            element.css({ "top": posY, "left": posX });
+            // Set Position to $element top and left
+            // Loop to Move object
+            $timeout(tick, 30);
+          })();
+        }
+      }
+    }]);
+
+})();
+
+(function(){
+   "use strict";
+
+    angular.module('directives').directive('scrollAction', ['$window', function($window) {
+      return {
+        restrict: 'EA',
+        link: function ($scope, element, attrs) {
+
+          var selectOffset = (attrs.scrollAction == null ? 0 : attrs.scrollAction);
+          var windowp = angular.element($window)[0];
+          var offsetTop = element[0].offsetTop;
+          var topThreshHold = element.position().top; //offsetTop - selectOffset;
+          element.addClass("screenScroll");
+
+          if(windowp.pageYOffset >= topThreshHold){
+            if(!element.hasClass("screenAction")){
+              element.addClass("screenAction");
+            }
+          }
+          else {
+            element.addClass("screenEmpty");
+          }
+
+          angular.element($window).bind("scroll", function() {
+            selectOffset = (attrs.scrollAction == null ? 0 : attrs.scrollAction);
+            windowp = angular.element($window)[0];
+            offsetTop = element[0].offsetTop;
+            //(element[0].offsetParent != null && element[0].offsetTop < element[0].offsetParent.offsetTop ? element[0].offsetParent.offsetTop : element[0].offsetTop);
+            topThreshHold = offsetTop - selectOffset;
+
+            if(windowp.pageYOffset >= topThreshHold){
+              if(!element.hasClass("screenAction")){
+                element.removeClass("screenEmpty");
+                element.addClass("screenAction");
+              }
+            }
+
+          });
+        }
+      }
+
+    }]);
+
+})();
+
+(function(){
+   "use strict";
+
+    angular.module('directives').directive('sectionSelect', ['$window', function($window) {
+      return {
+        restrict: 'EA',
+        link: function ($scope, element, attrs) {
+
+          angular.element($window).bind("scroll", function() {
+
+            var selectOffset = 200;
+
+            var windowp = angular.element($window)[0];
+            var topThreshHold = element[0].offsetTop - selectOffset;
+            var bottomThreshHold = (element[0].offsetTop + element[0].offsetHeight) - selectOffset;
+
+            if(windowp.pageYOffset >= topThreshHold && windowp.pageYOffset < bottomThreshHold){
+              if(!element.hasClass("screenSelect")){
+                element.addClass("screenSelect");
+              }
+            }
+            else {
+              if(element.hasClass("screenSelect")){
+                element.removeClass("screenSelect");
+              }
+            }
+
+          });
+        }
+      }
+
+    }]);
 
 })();
 
@@ -990,217 +1205,5 @@
     }
 
   }]);
-
-})();
-
-(function(){
-   "use strict";
-
-    angular.module('directives').directive('backImg', ['$window', function($window) {
-      return {
-        restrict: 'EA',
-        link: function ($scope, element, attrs) {
-          var url = attrs.backImg;
-          element.css({'background-image': 'url(' + url +')'});
-        }
-      }
-
-    }]);
-
-})();
-
-(function(){
-   "use strict";
-
-    angular.module('directives').directive('photoMotion', ['$window', function() {
-      return {
-        restrict: 'EA',
-        link: function ($scope, element, attrs) {
-
-          var itemid = $scope.$eval(attrs.itemid);
-          var itemcount = $scope.$eval(attrs.itemcount);
-          var isNav = $scope.$eval(attrs.isnav);
-
-          //-item position function
-          function getItemLocation(locid, elemId){
-            //-selected id
-            var selectedid = (elemId == null ? $scope.$eval(attrs.selectedid) : elemId);
-
-            // Get element by id
-            var stackCont = angular.element(document).find('.stack-container');
-            var elemMove = stackCont.children()[locid];
-            var imgElem = elemMove.children[0].children[0];
-
-            var pageWidth = window.innerWidth;
-            var offsetX = ((imgElem.naturalWidth * ( pageWidth < 801 ? 170 : 320)) / imgElem.naturalHeight);
-            var defaultX = Math.floor((stackCont[0].offsetWidth - offsetX)/2);
-            var maxX = Math.floor(pageWidth * .86);
-
-            var x = (selectedid == locid ? (defaultX < 0 ? 0 : defaultX) : Math.floor(Math.random() * maxX) - 200);
-            var y = (selectedid == locid ? 50 : Math.floor(Math.random() * 401) - 100);
-            var angle = (selectedid == locid ? 0 : Math.floor(Math.random() * 80) - 40) ;
-
-            // Check Out of Bounds
-            x = (x < -50 ? -40 : x);
-            y = (y < 30 ? 30 : y);
-
-            elemMove.style.transform = "translate("+x+"px, "+ y+"px)"+ "rotate("+angle + "deg)";
-          }
-
-          // On click Set selected id
-          element.bind('click', function() {
-            if(itemid != $scope.$eval(attrs.selectedid)){
-              for(var i=0; i < itemcount; i++)
-              {
-                getItemLocation(i, itemid);
-              }
-            }
-          });
-          // Intitial Object Set
-          getItemLocation(itemid, null);
-        }
-      }
-    }]);
-
-})();
-
-(function(){
-   "use strict";
-
-    angular.module('directives').directive('randomMotion', ['$timeout', function($timeout) {
-      return {
-        restrict: 'EA',
-        link: function ($scope, element, attrs) {
-          console.log("Start Motion");
-          var parentContainer = element[0].offsetParent;
-
-          // Randomly Set Postion & Velocity
-          var maxVelocity = 150;
-          var posX = (Math.random() * parentContainer.clientWidth);//Math.min(0, Math.max(20, (Math.random() * 0)));
-          var posY = (Math.random() * parentContainer.clientHeight);//Math.min(0, Math.max(20, (Math.random() * 10)));
-          var velX = (Math.random() * maxVelocity);
-          var velY = (Math.random() * maxVelocity);
-          var timestamp = null;
-
-
-
-          // Move Object
-          (function tick() {
-            var now = new Date().getTime();
-            var borderX = 250; //parentContainer.clientWidth *.05;
-            var borderY = 250; //parentContainer.clientHeight *.20;
-
-            var maxX = parentContainer.clientWidth - borderX;
-            var maxY = parentContainer.clientHeight - borderY;
-
-            var elapsed = (timestamp || now) - now;
-            timestamp = now;
-            posX += elapsed * velX / 1000;
-            posY += elapsed * velY / 1000;
-
-            if (posX > maxX) {
-                posX = 2 * maxX - posX;
-                velX *= -1;
-            }
-            if (posX < -60) {
-                posX = -60;
-                velX *= -1;
-            }
-            if (posY > maxY) {
-                posY = 2 * maxY - posY;
-                velY *= -1;
-            }
-            if (posY < -60) {
-                posY = -60;
-                velY *= -1;
-            }
-            element.css({ "top": posY, "left": posX });
-            // Set Position to $element top and left
-            // Loop to Move object
-            $timeout(tick, 30);
-          })();
-        }
-      }
-    }]);
-
-})();
-
-(function(){
-   "use strict";
-
-    angular.module('directives').directive('scrollAction', ['$window', function($window) {
-      return {
-        restrict: 'EA',
-        link: function ($scope, element, attrs) {
-
-          var selectOffset = (attrs.scrollAction == null ? 0 : attrs.scrollAction);
-          var windowp = angular.element($window)[0];
-          var offsetTop = element[0].offsetTop;
-          var topThreshHold = element.position().top; //offsetTop - selectOffset;
-          element.addClass("screenScroll");
-
-          if(windowp.pageYOffset >= topThreshHold){
-            if(!element.hasClass("screenAction")){
-              element.addClass("screenAction");
-            }
-          }
-          else {
-            element.addClass("screenEmpty");
-          }
-
-          angular.element($window).bind("scroll", function() {
-            selectOffset = (attrs.scrollAction == null ? 0 : attrs.scrollAction);
-            windowp = angular.element($window)[0];
-            offsetTop = element[0].offsetTop;
-            //(element[0].offsetParent != null && element[0].offsetTop < element[0].offsetParent.offsetTop ? element[0].offsetParent.offsetTop : element[0].offsetTop);
-            topThreshHold = offsetTop - selectOffset;
-
-            if(windowp.pageYOffset >= topThreshHold){
-              if(!element.hasClass("screenAction")){
-                element.removeClass("screenEmpty");
-                element.addClass("screenAction");
-              }
-            }
-
-          });
-        }
-      }
-
-    }]);
-
-})();
-
-(function(){
-   "use strict";
-
-    angular.module('directives').directive('sectionSelect', ['$window', function($window) {
-      return {
-        restrict: 'EA',
-        link: function ($scope, element, attrs) {
-
-          angular.element($window).bind("scroll", function() {
-
-            var selectOffset = 200;
-
-            var windowp = angular.element($window)[0];
-            var topThreshHold = element[0].offsetTop - selectOffset;
-            var bottomThreshHold = (element[0].offsetTop + element[0].offsetHeight) - selectOffset;
-
-            if(windowp.pageYOffset >= topThreshHold && windowp.pageYOffset < bottomThreshHold){
-              if(!element.hasClass("screenSelect")){
-                element.addClass("screenSelect");
-              }
-            }
-            else {
-              if(element.hasClass("screenSelect")){
-                element.removeClass("screenSelect");
-              }
-            }
-
-          });
-        }
-      }
-
-    }]);
 
 })();
