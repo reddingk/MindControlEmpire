@@ -234,6 +234,7 @@
               ]}
           ],
           "events":[
+              { "eventname":"Basement Tuesdays", "location":"Pure Lounge - 1326 U Street, NW, DC", "date":new Date( "2017-08-29 19:00:00"), "artistname":"GANDHI ALI", "tags":[]},
               { "eventname":"Basement Tuesdays", "location":"Pure Lounge - 1326 U Street, NW, DC", "date":new Date( "2017-07-25 19:00:00"), "artistname":"GANDHI ALI", "tags":[]},
               { "eventname":"Midnight Flow 2", "location":"8241 Georgia Ave., Silver Spring, Md. 20910", "date":new Date( "2016-11-02 21:00:00"), "artistname":"GANDHI ALI", "tags":[]},
               { "eventname":"SXSW Performance", "location":"South by Southwest Festival: Austin, Tx", "date":new Date( "2016-03-17 10:00:00"), "artistname":"GANDHI ALI", "tags":[]},
@@ -255,6 +256,7 @@
               {"name":"Drty Warhol", "position":"Producer", "img":"site-images/Fields.jpg", "icon":"fa-headphones", "bio":"", "social":[{"site":"twitter", "handle":"inspiredmindz"},{"site":"soundcloud", "handle":"inspiredmindz"}]}
               ],
           "news":[
+              {"title":"Gandhi Ali Back Live @ Basement Tuesdays", "date":new Date("2017-08-29 00:00:00"), "img":"imgs/media/74001.jpeg", "content":"Gandhi Ali will be performing Live at Pure Lounge's Basement Tuesday's.  This Tuesday, August 29 Doors open at 7pm, 21 and up, @ 1326 U Street, NW, DC", "tags":["GANDHI ALI","Basement Tuesday"]},
               {"title":"Gandhi Ali Live @ Basement Tuesdays", "date":new Date("2017-07-23 00:00:00"), "img":"imgs/media/basementEvent.jpg", "content":"Gandhi Ali will be performing Live at Pure Lounge's Basement Tuesday's.  This Tuesday, July 25 Doors open at 7pm, 21 and up, @ 1326 U Street, NW, DC", "tags":["GANDHI ALI","Basement Tuesday"]},
               {"title":"'Never Mind Em' Out Now", "date":new Date("2017-04-18 00:00:00"), "img":"imgs/site-images/nevermindem.jpg", "content":"Never Mind Em Single Out now on ITunes, Spotify, and more....", "link":{"url":"https://itunes.apple.com/us/album/never-mind-em-single/id1227808499", "text":"Itunes Download"}, "tags":["GANDHI ALI","Spotify", "Itunes"]},
               {"title":"SXSW Performance", "date":new Date("2016-03-18 00:00:00"), "img":"imgs/site-images/Gandhi-sxsw.png", "content":"GANDHI Ali will be performing at this years SXSW (South By Southwest) music festival in Austin, TX. Visit http://www.sxsw.com/music for event and ticket information.", "tags":["GANDHI ALI","SXSW"]},
@@ -270,7 +272,7 @@
               {"order":4, "artist":"GANDHI ALI","title":"Chocolate City (Teaser)", "type":"youtube","date":"2016-08-25","urlcode":"LUHaEGtSHmc","text":"Walk with Gandhi Ali as he takes his new song through DC aka 'Chocolate City'"}
             ],
           "slider": [
-            {"image":"imgs/media/basementEvent.jpg", "title":"Basement Tuesdays Performance", "text":"Gandhi Ali will be performing this tuesday at Pure Lounge's 'Basement Tuesdays'" , "link":{"url":"http://www.mindcontrolempire.com/news/article/Gandhi%20Ali%20Live%20@%20Basement%20Tuesdays", "text":"More Info"}},
+            {"image":"imgs/media/74001.jpeg", "title":"Basement Tuesdays Performance", "text":"Gandhi Ali will be performing this tuesday at Pure Lounge's 'Basement Tuesdays'" , "link":{"url":"http://www.mindcontrolempire.com/news/article/Gandhi%20Ali%20Back%20Live%20@%20Basement%20Tuesdays", "text":"More Info"}},
             {"image":"imgs/site-images/NevermindemVid.JPG", "title":"New Video 'Never Mind Em'", "text":"Video for Gandhi's Single 'Never Mind Em' now avaliable on Youtube", "link":{"url":"https://www.youtube.com/watch?v=5WkiBOylzC0", "text":"Watch Now"}},
 
             {"image":"imgs/slider/main1.png", "title":"Mind Control Empire", "text":""},
