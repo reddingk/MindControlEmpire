@@ -191,6 +191,8 @@
                   {"site":"twitter","handle":"gandhi3x"},
                   {"site":"instagram","handle":"gandhi3x"},
                   {"site":"soundcloud","handle":"gandhi3x"}],
+              "validation":
+              {"site":"spotify", "content":"https://open.spotify.com/follow/1/?uri=spotify:artist:0zMOUBNL8MR0eTOGUgUFA6&size=detail&theme=light"},
               "releases":[
                   {"title":"Never Mind Em", "type":"youtube","date":new Date("2017-06-18"),"urlcode":"5WkiBOylzC0","text":"Gandhi Ali Never Mind Em"},
 
@@ -469,6 +471,11 @@
     vm.goToSocial = goToSocial;
     vm.buildArray = buildArray;
     vm.youtubeURL = youtubeURL;
+    vm.cleanUrl = cleanUrl;
+
+    function cleanUrl(url){
+      return $sce.trustAsResourceUrl(url);
+    }
 
     function youtubeURL(urlcode, type){
       var returnUrl = "";

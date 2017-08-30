@@ -60,6 +60,11 @@
     vm.goToSocial = goToSocial;
     vm.buildArray = buildArray;
     vm.youtubeURL = youtubeURL;
+    vm.cleanUrl = cleanUrl;
+
+    function cleanUrl(url){
+      return $sce.trustAsResourceUrl(url);
+    }
 
     function youtubeURL(urlcode, type){
       var returnUrl = "";
