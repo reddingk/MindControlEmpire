@@ -173,6 +173,7 @@
               "validation":
               {"site":"spotify", "content":"https://open.spotify.com/follow/1/?uri=spotify:artist:0zMOUBNL8MR0eTOGUgUFA6&size=detail&theme=light"},
               "releases":[
+                  {"title":"That Way", "type":"itunes", "url":"https://itunes.apple.com/us/album/that-way-feat-sleep/id1276026221?i=1276026223", "img":"imgs/media/76639.png"},
                   {"title":"Never Mind Em", "type":"youtube","date":new Date("2017-06-18"),"urlcode":"5WkiBOylzC0","text":"Gandhi Ali Never Mind Em"},
 
                   {"title":"Never Mind Em", "type":"itunes", "url":"https://itunes.apple.com/us/album/never-mind-em-single/id1227808499", "img":"imgs/art/neverMindEm.png"},
@@ -253,12 +254,12 @@
               {"order":4, "artist":"GANDHI ALI","title":"Chocolate City (Teaser)", "type":"youtube","date":"2016-08-25","urlcode":"LUHaEGtSHmc","text":"Walk with Gandhi Ali as he takes his new song through DC aka 'Chocolate City'"}
             ],
           "slider": [
+            {"image":"imgs/media/76639.png", "title":"New Release: 'That Way'", "text":"Gandhi Ali's latest release 'That Way' is now avaliable on all platforms", "link":{"url":"https://itunes.apple.com/us/album/that-way-feat-sleep/id1276026221?i=1276026223", "text":"Download Now"}},
             {"image":"imgs/media/74001.jpeg", "title":"Basement Tuesdays Performance", "text":"Gandhi Ali will be performing this tuesday at Pure Lounge's 'Basement Tuesdays'" , "link":{"url":"http://www.mindcontrolempire.com/news/article/Gandhi%20Ali%20Back%20Live%20@%20Basement%20Tuesdays", "text":"More Info"}},
             {"image":"imgs/site-images/NevermindemVid.JPG", "title":"New Video 'Never Mind Em'", "text":"Video for Gandhi's Single 'Never Mind Em' now avaliable on Youtube", "link":{"url":"https://www.youtube.com/watch?v=5WkiBOylzC0", "text":"Watch Now"}},
 
             {"image":"imgs/slider/main1.png", "title":"Mind Control Empire", "text":""},
-            {"image":"imgs/art/neverMindEm.png", "title":"Never Mind Em Now Avaliable", "text":"Gandhi's Single 'Never Mind Em' now avaliable on ITunes", "link":{"url":"https://itunes.apple.com/us/album/never-mind-em-single/id1227808499", "text":"Download Now"}},
-            {"image":"imgs/site-images/doubleDrop2.jpg", "title":"Gandhi Video's Drop", "text":"Check out Gandhi's two new video release's 'Freestyle' & 'Lucky' "}        
+            {"image":"imgs/art/neverMindEm.png", "title":"Never Mind Em Now Avaliable", "text":"Gandhi's Single 'Never Mind Em' now avaliable on ITunes", "link":{"url":"https://itunes.apple.com/us/album/never-mind-em-single/id1227808499", "text":"Download Now"}}
           ],
           "media":["imgs/media/IMG1.jpg","imgs/media/IMG2.jpg","imgs/media/IMG4.jpg","imgs/media/IMG5.jpg","imgs/media/IMG6.jpg","imgs/media/IMG7.jpg","imgs/media/IMG8.jpg","imgs/media/IMG9.jpg","imgs/media/IMG10.png","imgs/media/IMG11.jpg","imgs/media/IMG12.jpg","imgs/media/IMG13.jpg","imgs/media/IMG14.jpg","imgs/media/IMG15.jpg"]
       };
