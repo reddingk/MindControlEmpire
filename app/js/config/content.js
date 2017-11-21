@@ -173,6 +173,8 @@
               "validation":
               {"site":"spotify", "content":"https://open.spotify.com/follow/1/?uri=spotify:artist:0zMOUBNL8MR0eTOGUgUFA6&size=detail&theme=light"},
               "releases":[
+                  {"title":"Trap blues", "type":"soundcloud-track", "date":new Date("2017-11-20"),"url":"https://soundcloud.com/gandhi3x/sets/trapblues","text":"Gandhi Ali - Trap Blues", "img":"https://i1.sndcdn.com/artworks-000258935201-05rbst-t500x500.jpg"},
+                  
                   {"title":"That Way", "type":"itunes", "url":"https://itunes.apple.com/us/album/that-way-feat-sleep/id1276026221?i=1276026223", "img":"imgs/media/76639.png"},
                   {"title":"Never Mind Em", "type":"youtube","date":new Date("2017-06-18"),"urlcode":"5WkiBOylzC0","text":"Gandhi Ali Never Mind Em"},
 
@@ -216,6 +218,10 @@
               ]}
           ],
           "events":[
+              { "eventname":"Panda's Play House II: A Trippy Affair", "location":"MilkBoy ART HOUSE - 7416 Baltimore Ave., College Park, MD.", "date":new Date( "2017-12-01 21:00:00"), "artistname":"GANDHI ALI", "tags":[]},
+              { "eventname":"Basement Tuesdays", "location":"Pure Lounge - 1326 U Street, NW, DC", "date":new Date( "2017-11-28 19:00:00"), "artistname":"GANDHI ALI", "tags":[]},
+              { "eventname":"DanksGiving", "location":"HollyWood Hemp Museum - 6140 Hollywood Blvd., Los Angeles, CA.", "date":new Date( "2017-11-24 22:00:00"), "artistname":"GANDHI ALI", "tags":[]},
+
               { "eventname":"Basement Tuesdays", "location":"Pure Lounge - 1326 U Street, NW, DC", "date":new Date( "2017-08-29 19:00:00"), "artistname":"GANDHI ALI", "tags":[]},
               { "eventname":"Basement Tuesdays", "location":"Pure Lounge - 1326 U Street, NW, DC", "date":new Date( "2017-07-25 19:00:00"), "artistname":"GANDHI ALI", "tags":[]},
               { "eventname":"Midnight Flow 2", "location":"8241 Georgia Ave., Silver Spring, Md. 20910", "date":new Date( "2016-11-02 21:00:00"), "artistname":"GANDHI ALI", "tags":[]},
@@ -238,8 +244,10 @@
               {"name":"Drty Warhol", "position":"Producer", "img":"site-images/Fields.jpg", "icon":"fa-headphones", "bio":"", "social":[{"site":"twitter", "handle":"inspiredmindz"},{"site":"soundcloud", "handle":"inspiredmindz"}]}
               ],
           "news":[
-              {"title":"Gandhi Ali Back Live @ Basement Tuesdays", "date":new Date("2017-08-29 00:00:00"), "img":"imgs/media/74001.jpeg", "content":"Gandhi Ali will be performing Live at Pure Lounge's Basement Tuesday's.  This Tuesday, August 29 Doors open at 7pm, 21 and up, @ 1326 U Street, NW, DC", "tags":["GANDHI ALI","Basement Tuesday"]},
-              {"title":"Gandhi Ali Live @ Basement Tuesdays", "date":new Date("2017-07-23 00:00:00"), "img":"imgs/media/basementEvent.jpg", "content":"Gandhi Ali will be performing Live at Pure Lounge's Basement Tuesday's.  This Tuesday, July 25 Doors open at 7pm, 21 and up, @ 1326 U Street, NW, DC", "tags":["GANDHI ALI","Basement Tuesday"]},
+              {"title":"Gandhi Ali Back Live @ Basement Tuesdays", "date":new Date("2017-11-21 00:00:00"), "img":"imgs/media/basement1.jpeg", "content":"Gandhi Ali will be performing Live at Pure Lounge's Basement Tuesday's.  This Tuesday, November 28 Doors open at 7pm, 21 and up, @ 1326 U Street, NW, DC", "tags":["GANDHI ALI","Basement Tuesday"]},
+              {"title":"Gandhi Ali Back Performing @ Danksgiving Celebration", "date":new Date("2017-11-21 00:00:00"), "img":"imgs/media/danksgiving1.jpeg", "content":"Gandhi Ali will be performing Live Danksgiving Celebration (11/24).  HollyWood Hemp Museum - 6140 Hollywood Blvd., Los Angeles, CA.", "link":{"url":"https://www.eventbrite.com/e/danksgiving-tickets-39818657677", "text":"Purchase Tickets"}, "tags":["GANDHI ALI","Basement Tuesday"]},              
+              {"title":"CMOG Releasing Later this Winter", "date":new Date("2016-11-21 00:00:00"), "img":"imgs/media/CMOG.jpeg", "content":"CMOG will be released later this winter", "tags":["GANDHI ALI","CMOG"]},
+
               {"title":"'Never Mind Em' Out Now", "date":new Date("2017-04-18 00:00:00"), "img":"imgs/site-images/nevermindem.jpg", "content":"Never Mind Em Single Out now on ITunes, Spotify, and more....", "link":{"url":"https://itunes.apple.com/us/album/never-mind-em-single/id1227808499", "text":"Itunes Download"}, "tags":["GANDHI ALI","Spotify", "Itunes"]},
               {"title":"SXSW Performance", "date":new Date("2016-03-18 00:00:00"), "img":"imgs/site-images/Gandhi-sxsw.png", "content":"GANDHI Ali will be performing at this years SXSW (South By Southwest) music festival in Austin, TX. Visit http://www.sxsw.com/music for event and ticket information.", "tags":["GANDHI ALI","SXSW"]},
               {"title":"GANDHI Ali is releasing Drty Warhol Vol. 1", "date":new Date("2016-02-25 00:00:00"), "img":"imgs/art/DrtyWorkCover.jpg", "content":"GANDHI Ali is releasing Drty Work Vol. 1 produced by Drty Warhol in late February.  The Mixtape will be released here, Live Mixtapes, Spinrilla, & Soundcloud", "tags":["GANDHI ALI","Drty Work Vol. 1"]},
@@ -254,12 +262,11 @@
               {"order":4, "artist":"GANDHI ALI","title":"Chocolate City (Teaser)", "type":"youtube","date":"2016-08-25","urlcode":"LUHaEGtSHmc","text":"Walk with Gandhi Ali as he takes his new song through DC aka 'Chocolate City'"}
             ],
           "slider": [
-            {"image":"imgs/media/76639.png", "title":"New Release: 'That Way'", "text":"Gandhi Ali's latest release 'That Way' is now avaliable on all platforms", "link":{"url":"https://itunes.apple.com/us/album/that-way-feat-sleep/id1276026221?i=1276026223", "text":"Download Now"}},
-            {"image":"imgs/media/74001.jpeg", "title":"Basement Tuesdays Performance", "text":"Gandhi Ali will be performing this tuesday at Pure Lounge's 'Basement Tuesdays'" , "link":{"url":"http://www.mindcontrolempire.com/news/article/Gandhi%20Ali%20Back%20Live%20@%20Basement%20Tuesdays", "text":"More Info"}},
-            {"image":"imgs/site-images/NevermindemVid.JPG", "title":"New Video 'Never Mind Em'", "text":"Video for Gandhi's Single 'Never Mind Em' now avaliable on Youtube", "link":{"url":"https://www.youtube.com/watch?v=5WkiBOylzC0", "text":"Watch Now"}},
-
-            {"image":"imgs/slider/main1.png", "title":"Mind Control Empire", "text":""},
-            {"image":"imgs/art/neverMindEm.png", "title":"Never Mind Em Now Avaliable", "text":"Gandhi's Single 'Never Mind Em' now avaliable on ITunes", "link":{"url":"https://itunes.apple.com/us/album/never-mind-em-single/id1227808499", "text":"Download Now"}}
+            {"image":"imgs/media/danksgiving1.jpeg", "title":"Danksgiving 2017 Performance", "text":"Gandhi Ali will be performing live at Danksgiving, in Los Angeles, CA. 11/24", "link":{"url":"https://www.eventbrite.com/e/danksgiving-tickets-39818657677", "text":"Purchase Tickets Here"}},            
+            {"image":"imgs/media/CMOG.jpeg", "title":"Future Release: 'CMOG'", "text":"CMOG, the album will be released on 11/28 via all platforms"},
+            {"image":"imgs/media/panda1.jpeg", "title":"Panda's Play House II: A Trippy Affair", "text":"Come checkout Gandhi Ali at MilkBoy Arthouse out in College Park, MD. 12/1", "link":{"url":"https://www.ticketfly.com/event/1598104-pandas-playhouse-ii-live-college-park/", "text":"Purchase Tickets Here"}},            
+            {"image":"imgs/media/trapblues1.jpeg", "title":"New Release: 'Trap Blues'", "text":"Listen to Trap Blue's buy Gandhi Ali", "link":{"url":"https://soundcloud.com/gandhi3x/sets/trapblues", "text":"Listen Here"}},            
+            {"image":"imgs/media/basement1.jpeg", "title":"Basement Tuesdays Performance", "text":"Gandhi Ali will be performing this tuesday at Pure Lounge's 'Basement Tuesdays'" , "link":{"url":"http://www.mindcontrolempire.com/news/article/Gandhi%20Ali%20Back%20Live%20@%20Basement%20Tuesdays", "text":"More Info"}}
           ],
           "media":["imgs/media/IMG1.jpg","imgs/media/IMG2.jpg","imgs/media/IMG4.jpg","imgs/media/IMG5.jpg","imgs/media/IMG6.jpg","imgs/media/IMG7.jpg","imgs/media/IMG8.jpg","imgs/media/IMG9.jpg","imgs/media/IMG10.png","imgs/media/IMG11.jpg","imgs/media/IMG12.jpg","imgs/media/IMG13.jpg","imgs/media/IMG14.jpg","imgs/media/IMG15.jpg"]
       };
